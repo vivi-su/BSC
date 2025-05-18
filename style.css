@@ -1,0 +1,225 @@
+/*
+Theme Name: Divi Child
+Theme URI: https://example.com/
+Description: Child theme for Divi
+Author: Your Name
+Author URI: https://example.com/
+Template: Divi
+Version: 1.2
+*/
+
+:root {
+  font-size: 16px; /* 1rem = 16px */
+  --color-primary: #BD6A3A;      /* Brown */
+  --color-secondary: #385846;    /* Green */
+  --color-accent: #233A2D ;       
+  --color-light: #FCF8F1;        
+  --color-dark: #65361A;         
+}
+
+/* ================================
+   Global Typography
+   ================================ */
+
+body, html, h1, h2, h3, h4, h5, h6, p {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 1rem!important;
+  line-height: 1.2!important;
+}
+
+p{
+  margin-bottom: 2rem!important;
+  line-height: 1.6!important; 
+}
+
+.alt-text {
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* ================================
+   Fluid Typography with clamp()
+   ================================ */
+
+h1 {
+  font-size: clamp(2.986rem, 5vw + 1rem, 3.5rem); /* ~32px to ~56px */
+}
+
+h2 {
+  font-size: clamp(1.75rem, 4vw + 1rem, 3rem); /* ~28px to ~48px */
+}
+
+h3 {
+  font-size: clamp(1.5rem, 3vw + 1rem, 2.5rem); /* ~24px to ~40px */
+}
+
+h4 {
+  font-size: clamp(1.25rem, 2.5vw + 1rem, 2rem); /* ~20px to ~32px */
+}
+
+h5 {
+  font-size: clamp(1.125rem, 2vw + 1rem, 1.5rem); /* ~18px to ~24px */
+}
+
+h6 {
+  font-size: clamp(1rem, 1.5vw + 1rem, 1.25rem); /* ~16px to ~20px */
+}
+
+p {
+  font-size: clamp(1rem, 1.2vw + 1rem, 1.125rem); /* ~16px to ~18px */
+}
+
+
+/* Target Divi module headings */
+.et_pb_module h1,
+.et_pb_module h2,
+.et_pb_module h3,
+.et_pb_module h4,
+.et_pb_module h5,
+.et_pb_module h6,
+.et_pb_module p {
+  font-family: 'Poppins', sans-serif;  
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+/*Typography Utility Classes*/
+.text-xl { font-size: clamp(2rem, 5vw, 3.5rem); }
+.text-lg { font-size: clamp(1.5rem, 4vw, 2.5rem); }
+.text-md { font-size: clamp(1.25rem, 2.5vw, 2rem); }
+.text-sm { font-size: clamp(1rem, 2vw, 1.25rem); }
+.text-xs { font-size: clamp(0.875rem, 1.5vw, 1rem); }
+
+/* Desktop default - background centered */
+.hero-background{
+  background-image: url('/wp-content/uploads/2025/05/Hero-BG-Dr-Schulz-curtain_3.webp');
+  background-size: cover;
+  background-position: 90% center;
+  background-repeat: no-repeat;
+}
+
+/* On mobile: shift background to right center */
+@media (max-width: 768px) {
+  .hero-background {
+    background-position: 75% center;
+  }
+}
+
+.btn.et_pb_button{
+    color:#000!important;
+    background-color:var(--color-primary);
+    border: 2px solid var(--color-primary);
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    transition: background-color 0.3s, color 0.3s; 
+}
+
+.btn.et_pb_button:hover{
+    color:#000!important;
+    background-color:transparent;
+    border: 2px solid var(--color-primary);
+    padding: 0.8rem 2rem;
+}
+
+.btn-sec.et_pb_button{
+ color:#fff!important;
+ background-color:var(--color-secondary);
+ border: 2px solid var(--color-secondary);
+}
+
+
+/* Hero Section Styles */
+.et_pb_section.hero-left {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+}
+
+/* Inner Content Alignment */
+.et_pb_section.hero-left .et_pb_row {
+  max-width: 600px;
+  padding: 2rem;
+}
+
+.hero-text-box.et_pb_row {
+  width: 50%;
+  max-width: 50%;
+  max-height: 100%;
+  padding: 2rem;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  /* background: rgba(255, 255, 255, 0.9); */
+  background: rgba(35, 40, 68, 0.9);
+  transition: all 0.3s ease;
+}
+
+
+.hero-text-box.et_pb_row p,h1{
+color:#fff;
+}
+
+/* Tablet and mobile: full width and centered */
+@media (max-width: 980px) {
+  .hero-text-box.et_pb_row  {
+    width:100%!important;
+    max-width: 100%!important;
+    margin: 0 auto;
+    justify-content: center;
+    text-align: left;
+    flex-direction: column;
+    background: rgba(35, 40, 68, 0.7);
+  }
+}
+
+
+/* CTA Button Group */
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  flex-wrap: wrap; /* stack on mobile */
+}
+
+/* Button Base Styles */
+.cta-buttons .btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+/* Primary Button */
+.btn-primary {
+  background: #fff;
+  color: var(--color-dark);
+  border: 2px solid var(--color-dark);
+}
+
+.btn-primary:hover {
+  background: var(--color-dark);
+  color: white;
+   border: 2px solid var(--color-dark);
+}
+
+
+
+/* Secondary Button */
+.btn-secondary {
+  background: var(--color-secondary);
+  color: #fff;
+}
+
+.btn-secondary:hover {
+  background: var(--color-accent);
+}
+
