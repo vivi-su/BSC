@@ -1,11 +1,10 @@
 /*
 Theme Name: Divi Child
-Theme URI: https://example.com/
+Theme URI: https://benjaminschulzcounsellingbc.ca
 Description: Child theme for Divi
-Author: Your Name
-Author URI: https://example.com/
+Author: Vivian
 Template: Divi
-Version: 1.2
+Version: 2.0
 */
 
 :root {
@@ -97,10 +96,11 @@ p {
 
 /* Desktop default - background centered */
 .hero-background{
-  background-image: url('/wp-content/uploads/2025/05/Hero-BG-Dr-Schulz-curtain_3.webp');
+  background-image: url('https://christiancounsellingbc.ca/wp-content/uploads/2025/05/Hero-BG-Dr-Schulz-curtain_3.webp');
   background-size: cover;
   background-position: 90% center;
   background-repeat: no-repeat;
+  min-height: 70vh;
 }
 
 /* On mobile: shift background to right center */
@@ -133,6 +133,10 @@ p {
 }
 
 
+.et_pb_section {
+  padding: 0 !important;;
+}
+
 /* Hero Section Styles */
 .et_pb_section.hero-left {
   display: flex;
@@ -150,14 +154,17 @@ p {
 .hero-text-box.et_pb_row {
   width: 50%;
   max-width: 50%;
-  max-height: 100%;
+  height: 70vh;
   padding: 2rem;
-  margin: 0;
+  margin: 0!important;
   display: flex;
   align-items: center;
+  justify-content: center;
   /* background: rgba(255, 255, 255, 0.9); */
   background: rgba(35, 40, 68, 0.9);
   transition: all 0.3s ease;
+  display: flex;
+
 }
 
 
@@ -174,7 +181,7 @@ color:#fff;
     justify-content: center;
     text-align: left;
     flex-direction: column;
-    background: rgba(35, 40, 68, 0.7);
+    background: rgba(35, 40, 68, 0.8);
   }
 }
 

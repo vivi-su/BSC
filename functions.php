@@ -10,6 +10,6 @@ add_action('wp_enqueue_scripts', function() {
 });
 
 
-add_action('wp_footer', function() {
-    echo '<p style="text-align:center; color:red;">Child theme is active!</p>';
-});
+// add_action('wp_footer', function() {
+//     echo '<p style="text-align:center; color:red;">Child theme is active!</p>';
+// });
