@@ -134,7 +134,7 @@ p {
 
 
 .et_pb_section {
-  padding: 0 !important;;
+  padding: 0 !important;
 }
 
 /* Hero Section Styles */
@@ -230,3 +230,35 @@ color:#fff;
   background: var(--color-accent);
 }
 
+
+.section-christian-counselling {
+  padding: 2rem;
+  color:#333333;
+}
+
+.counselling-container {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.counselling-col {
+  flex: 1 1 45%;
+  min-width: 300px;
+}
+
+@media screen and (max-width: 767px) {
+  .counselling-container {
+    flex-direction: column;
+  }
+}
+
+
+
+.no-bullets {
+    list-style: none!important;
+    padding: 0!important;
+    margin: 0!important;
+}
