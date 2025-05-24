@@ -106,7 +106,8 @@ p {
 /* On mobile: shift background to right center */
 @media (max-width: 768px) {
   .hero-background {
-    background-position: 75% center;
+    background-image: url('https://christiancounsellingbc.ca/wp-content/uploads/2025/05/Hero-BG-Dr-Schulz-curtain-mobile1.jpg') !important;
+    background-position: center;
   }
 }
 
