@@ -95,21 +95,21 @@ p {
 .text-xs { font-size: clamp(0.875rem, 1.5vw, 1rem); }
 
 /* Desktop default - background centered */
-/* .hero-background{
+.hero-background{
   background-image: url('https://christiancounsellingbc.ca/wp-content/uploads/2025/05/Hero-BG-Dr-Schulz-curtain_3.webp');
   background-size: cover;
   background-position: 90% center;
   background-repeat: no-repeat;
   min-height: 70vh;
-} */
+}
 
 /* On mobile: shift background to right center */
-/* @media (max-width: 768px) {
+@media (max-width: 768px) {
   .hero-background {
     background-image: url('https://christiancounsellingbc.ca/wp-content/uploads/2025/05/Hero-BG-Dr-Schulz-curtain-mobile1.jpg') !important;
     background-position: center;
   }
-} */
+}
 
 .btn.et_pb_button{
     color:#000!important;
