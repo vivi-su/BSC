@@ -95,21 +95,21 @@ p {
 .text-xs { font-size: clamp(0.875rem, 1.5vw, 1rem); }
 
 /* Desktop default - background centered */
-.hero-background{
+/* .hero-background{
   background-image: url('https://christiancounsellingbc.ca/wp-content/uploads/2025/05/Hero-BG-Dr-Schulz-curtain_3.webp');
   background-size: cover;
   background-position: 90% center;
   background-repeat: no-repeat;
   min-height: 70vh;
-}
+} */
 
 /* On mobile: shift background to right center */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .hero-background {
     background-image: url('https://christiancounsellingbc.ca/wp-content/uploads/2025/05/Hero-BG-Dr-Schulz-curtain-mobile1.jpg') !important;
     background-position: center;
   }
-}
+} */
 
 .btn.et_pb_button{
     color:#000!important;
@@ -267,10 +267,9 @@ color:#fff;
 
 /* Make section container full-width background */
 
-/* .et_pb_code_inner {
+.et_pb_code_inner {
   position: relative;
   width: 100% !important;
-  height:60vh;
   display:flex;
   align-items: stretch;
   overflow: hidden;
@@ -278,6 +277,7 @@ color:#fff;
 
 .hero-section{
 width: 100% !important;
+height:60vh;
 }
 
 
@@ -349,9 +349,11 @@ max-width:none!important;
   text-align: left;
 }
 
-.hero-content h1,p{
-  color: #fff!important;
+.hero-content h1,
+.hero-content p {
+  color: #fff !important;
 }
+
 
 .hero-right{
   flex:1 1 50%;
@@ -373,4 +375,10 @@ max-width:none!important;
   .hero-overlay{
   background: rgba(35, 40, 68, 0.7);
 }
-} */
+}
+
+
+
+.et_pb_row.why-christian{
+max-width:  1440px!important;
+}
