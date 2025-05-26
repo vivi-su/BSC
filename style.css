@@ -100,7 +100,7 @@ p {
   background-size: cover;
   background-position: 90% center;
   background-repeat: no-repeat;
-  min-height: 70vh;
+  min-height: 60vh;
 }
 
 /* On mobile: shift background to right center */
