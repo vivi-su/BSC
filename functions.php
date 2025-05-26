@@ -5,6 +5,18 @@ function divi_child_enqueue_styles() {
 }
 add_action('wp_enqueue_scripts', 'divi_child_enqueue_styles');
 
+add_action('wp_head', function () {
+    if (is_front_page()) {
+        ?>
+        <!-- Preload desktop hero background -->
+        <link rel="preload" as="image" href="https://christiancounsellingbc.ca/wp-content/uploads/2025/05/Hero-BG-Dr-Schulz-curtain_3.webp" imagesrcset="https://christiancounsellingbc.ca/wp-content/uploads/2025/05/Hero-BG-Dr-Schulz-curtain_3.webp 1200w" imagesizes="100vw">
+
+        <!-- Preload mobile hero background -->
+        <link rel="preload" as="image" href="https://christiancounsellingbc.ca/wp-content/uploads/2025/05/Hero-BG-Dr-Schulz-curtain-mobile1.jpg" media="(max-width: 768px)" imagesrcset="https://christiancounsellingbc.ca/wp-content/uploads/2025/05/Hero-BG-Dr-Schulz-curtain-mobile1.jpg 768w" imagesizes="100vw">
+        <?php
+    }
+});
+
 // Add preconnect, preload fonts, and lazy-load stylesheet
 add_action('wp_head', function () {
     // Preconnect to font domains
@@ -20,14 +32,21 @@ add_action('wp_head', function () {
     echo '<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"></noscript>' . PHP_EOL;
 });
 
-//Add loading="lazy" attribute for proper lazy loading of offscreen images.
-
-add_filter('wp_get_attachment_image_attributes', function($attr) {
-    if (!isset($attr['loading'])) {
-        $attr['loading'] = 'lazy';
-    }
-    return $attr;
-});
+function remove_fetchpriority_js_script() {
+    ?>
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      document.querySelectorAll('img[fetchpriority="high"]').forEach(function (img) {
+        // Only change if not above the fold
+        if (img.getBoundingClientRect().top > window.innerHeight) {
+          img.removeAttribute("fetchpriority");
+        }
+      });
+    });
+    </script>
+    <?php
+}
+add_action('wp_footer', 'remove_fetchpriority_js_script', 100);
 
 
 // add_action('wp_footer', function() {
