@@ -20,6 +20,15 @@ add_action('wp_head', function () {
     echo '<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"></noscript>' . PHP_EOL;
 });
 
+//Add loading="lazy" attribute for proper lazy loading of offscreen images.
+
+add_filter('wp_get_attachment_image_attributes', function($attr) {
+    if (!isset($attr['loading'])) {
+        $attr['loading'] = 'lazy';
+    }
+    return $attr;
+});
+
 
 // add_action('wp_footer', function() {
 //     echo '<p style="text-align:center; color:red;">Child theme is active!</p>';
