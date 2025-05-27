@@ -43,9 +43,6 @@ p{
   line-height: 1.6!important; 
 }
 
-.alt-text {
-  font-family: 'Open Sans', sans-serif;
-}
 
 /* ================================
    Fluid Typography with clamp()
@@ -102,6 +99,7 @@ p {
 
 /* Desktop default - background centered */
 .hero-background{
+  background-color: #1c1f30;
   background-image: url('https://christiancounsellingbc.ca/wp-content/uploads/2025/05/Hero-BG-Dr-Schulz-curtain_3.webp');
   background-size: cover;
   background-position: 90% center;
