@@ -16,6 +16,12 @@ Version: 2.1
   --color-dark: #65361A;         
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 /* ================================
    Global Typography
    ================================ */
@@ -100,7 +106,10 @@ p {
   background-size: cover;
   background-position: 90% center;
   background-repeat: no-repeat;
+  height:60vh;
   min-height: 60vh;
+  max-height:60vh;
+  overflow:hidden;
 }
 
 /* On mobile: shift background to right center */
@@ -108,7 +117,10 @@ p {
   .hero-background {
     background-image: url('https://christiancounsellingbc.ca/wp-content/uploads/2025/05/Hero-BG-Dr-Schulz-curtain-mobile1.jpg') !important;
     background-position: center;
-    
+    height:70vh;
+    min-height:70vh;
+    max-height:70vh;
+    overflow:hidden;
   }
 }
 
@@ -156,7 +168,7 @@ p {
 .hero-text-box.et_pb_row {
   width: 50%;
   max-width: 50%;
-  height: 70vh;
+  height: 60vh;
   padding: 2rem;
   margin: 0!important;
   display: flex;
@@ -175,13 +187,10 @@ color:#fff;
 
 /* Tablet and mobile: full width and centered */
 @media (max-width: 980px) {
- .et_pb_section.hero-background{
-    min-height: 70vh!important;
- }
-
   .hero-text-box.et_pb_row  {
     width:100%!important;
     max-width: 100%!important;
+    height: 70vh;
     margin: 0 auto;
     justify-content: center;
     text-align: left;
@@ -266,122 +275,3 @@ color:#fff;
     padding: 0!important;
     margin: 0!important;
 }
-
-
-/* Make section container full-width background */
-
-/* .et_pb_code_inner {
-  position: relative;
-  width: 100% !important;
-  display:flex;
-  align-items: stretch;
-  overflow: hidden;
-}
-
-.hero-section{
-width: 100% !important;
-height:60vh;
-}
-
-
-.hero-row {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-  padding: 0; 
-}
-
-.hero-background-image {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  width:100%;
-  height:100%;
-}
-
-.hero-background-image picture,
-.hero-background-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: 80% center;
-  display: block;
-}
-
-.et_pb_row{
-max-width:none!important;
-}
-
-
-.et_pb_section.hero-container{
-  width: 100%!important;
-  margin:0 auto!important;
-  padding:0!important;
-}
-
-.hero-container{
-  position:relative;
-  display:flex;
-  width: 100%!important;
-  height: 100%!important;
-  z-index:1;
-
-}
-
-.hero-left{
-  flex: 1 1 50%;
-  display:flex;
-  align-items:center;
-  justify-content: center;
-  position:relative;
-}
-
-.hero-overlay{
-  background: rgba(35, 40, 68, 0.9);
-  width: 100%;
-  height: 100%;           
-  padding: 2rem;
-  display: flex;         
-  flex-direction: column;
-  justify-content: center;
-}
-
-.hero-content {
-  max-width: 600px;
-  margin: 0 auto; 
-  text-align: left;
-}
-
-.hero-content h1,
-.hero-content p {
-  color: #fff !important;
-}
-
-
-.hero-right{
-  flex:1 1 50%;
-}
-
-@media (max-width: 768px) {
-  .hero-container {
-    flex-direction: column;
-  }
-
-  .hero-left {
-    flex: 1 1 100%;
-  }
-
-  .hero-right {
-    display: none;
-  }
-
-  .hero-overlay{
-  background: rgba(35, 40, 68, 0.7);
-}
-}
-
-
-
-.et_pb_row.why-christian{
-max-width:  1440px!important;
-} */
