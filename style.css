@@ -175,6 +175,10 @@ color:#fff;
 
 /* Tablet and mobile: full width and centered */
 @media (max-width: 980px) {
+ .et_pb_section.hero-background{
+    min-height:70vh;
+ }
+
   .hero-text-box.et_pb_row  {
     width:100%!important;
     max-width: 100%!important;
@@ -183,11 +187,8 @@ color:#fff;
     text-align: left;
     flex-direction: column;
     background: rgba(35, 40, 68, 0.8);
-    min-height:70vh;
   }
 }
-
-
 
 
 /* CTA Button Group */
