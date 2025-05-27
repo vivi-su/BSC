@@ -18,10 +18,6 @@ add_action('wp_head', function () {
 });
 
 add_action('wp_enqueue_scripts', function() {
-    wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;700&family=Open+Sans&display=swap');
+    wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
 });
-
-// add_action('wp_footer', function() {
-//     echo '<p style="text-align:center; color:red;">Child theme is active!</p>';
-// });
