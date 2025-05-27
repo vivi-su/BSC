@@ -176,7 +176,7 @@ color:#fff;
 /* Tablet and mobile: full width and centered */
 @media (max-width: 980px) {
  .et_pb_section.hero-background{
-    min-height:70vh;
+    min-height: 70vh!important;
  }
 
   .hero-text-box.et_pb_row  {
