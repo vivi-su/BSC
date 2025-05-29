@@ -300,8 +300,9 @@ color:#fff;
 }
 
 /* where to begin section*/
-.et_pb_section .where-begin_container {
-  display: flex;
+.where-begin_container {
+  display: flex!important;
+  flex-direction: row!important;
   gap: 2rem;
   height:700px;
 }
@@ -325,7 +326,7 @@ color:#fff;
 .where-begin_top-images img:first-child {
   width: 48%;
   height: auto;
-  border-radius: 12px;
+  border-radius: 12px!important;
   display: block;
   object-fit: contain;
 }
@@ -353,7 +354,7 @@ color:#fff;
   top: 65%;
   left: 68%;
   width: 60%;
-  border-radius: 12px;
+  border-radius: 12px!important;
   z-index: 2;
   transform:translate(-50%,-50%);
 }
