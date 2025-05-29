@@ -398,7 +398,7 @@ color:#fff;
 
 @media (max-width: 767px) {
   .where-begin_container {
-    flex-direction: column;
+    flex-direction: column!important;
     height:1100px;
   }
 
@@ -433,4 +433,5 @@ color:#fff;
     width: 50%;
   }
 }
+
 
