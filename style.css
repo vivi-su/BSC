@@ -100,15 +100,9 @@ p {
   line-height: 1.2;
 }
 
-/*Typography Utility Classes*/
-.text-xl { font-size: clamp(2rem, 5vw, 3.5rem); }
-.text-lg { font-size: clamp(1.5rem, 4vw, 2.5rem); }
-.text-md { font-size: clamp(1.25rem, 2.5vw, 2rem); }
-.text-sm { font-size: clamp(1rem, 2vw, 1.25rem); }
-.text-xs { font-size: clamp(0.875rem, 1.5vw, 1rem); }
 
 /* Desktop default - background centered */
-.hero-background{
+/* .hero-background{
   background-color: #1c1f30;
   background-image: url('https://christiancounsellingbc.ca/wp-content/uploads/2025/05/Hero-BG-Dr-Schulz-curtain_3.webp');
   background-size: cover;
@@ -120,7 +114,7 @@ p {
   overflow:hidden;
 }
 
-/* On mobile: shift background to right center */
+
 @media (max-width: 768px) {
   .hero-background {
     background-image: url('https://christiancounsellingbc.ca/wp-content/uploads/2025/05/Hero-BG-Dr-Schulz-curtain-mobile1.jpg') !important;
@@ -159,7 +153,7 @@ p {
   margin: 0 !important;
 }
 
-/* Hero Section Styles */
+
 .et_pb_section.hero-left {
   display: flex;
   align-items: center;
@@ -167,7 +161,7 @@ p {
   min-height: 100vh;
 }
 
-/* Inner Content Alignment */
+
 .et_pb_section.hero-left .et_pb_row {
   max-width: 600px;
   padding: 2rem;
@@ -193,7 +187,7 @@ p {
 color:#fff;
 }
 
-/* Tablet and mobile: hero text full width and centered */
+
 @media (max-width: 980px) {
   .hero-text-box.et_pb_row  {
     width:100%!important;
@@ -205,6 +199,166 @@ color:#fff;
     flex-direction: column;
     background: rgba(35, 40, 68, 0.8);
   }
+} */
+
+
+/* Make section container full-width background */
+
+
+.hero-section{
+ width: 100vw !important;
+ min-height:60vh;
+ height: 60vh!important;
+ position: relative;
+ overflow: hidden;
+}
+
+
+.hero-row {
+  position: relative;
+  width: 100%!important;
+  overflow: hidden;
+  padding: 0; 
+}
+
+.et_pb_section{
+  padding: 0 !important;
+  margin: 0 !important;
+  /* border: 2px solid seagreen; */
+}
+
+
+/* Only affect hero section */
+.et_pb_section.hero-wrapper,
+.et_pb_section.hero-wrapper .et_pb_row,
+.et_pb_section.hero-wrapper .et_pb_column {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+
+/* .et_pb_row {
+  background-color: yellow;
+} */
+
+/* .et_pb_column{
+background-color:peachpuff;
+} */
+
+.hero-background-image {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%!important;
+  height: 100%!important;
+}
+
+.hero-background-image picture, 
+.hero-background-image img {
+  width: 100%!important;
+  height: 100%!important;
+  object-fit: cover;
+  object-position: 80% center;
+  display: block;
+}
+
+
+/* .hero-background-image{
+  width: 100%;
+  height: auto; 
+  object-fit: cover; 
+  display: block;
+}
+
+.hero-background-image picture, 
+.hero-background-image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background: rgba(35, 40, 68, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+} */
+
+
+
+/* Hero Left Side Flex container */
+.et_pb_section.hero-container{
+  width: 100%!important;
+  margin:0 auto!important;
+  padding:0!important;
+}
+
+.hero-container{
+  position:relative;
+  display:flex;
+  width: 100%!important;
+  height: 100%!important;
+  z-index:1;
+
+}
+
+.hero-left{
+  height: 100%;
+  flex: 1 1 50%;
+  display:flex;
+  align-items:center;
+  justify-content: center;
+  position:relative;
+}
+
+.hero-overlay{
+  background: rgba(35, 40, 68, 0.9);
+  width: 100%;
+  height: 100%;           
+  padding: 2rem;
+  display: flex;          /*inner content alignment */
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-content {
+  max-width: 600px;
+  margin: 0 auto; 
+  text-align: left;
+}
+
+.hero-left .hero-content h1,
+.hero-left .hero-content p{
+  color: #fff!important;
+}
+
+.hero-right{
+  flex:1 1 50%;
+}
+
+@media (max-width: 768px) {
+  .hero-section{
+
+ min-height:75vh;
+ height: 75vh!important;
+}
+
+  .hero-container {
+    flex-direction: column;
+  }
+
+  .hero-left {
+    flex: 1 1 100%;
+  }
+
+  .hero-right {
+    display: none;
+  }
+
+  .hero-overlay{
+  background: rgba(35, 40, 68, 0.7);
+}
 }
 
 

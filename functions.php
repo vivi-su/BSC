@@ -17,18 +17,6 @@ add_action('wp_head', function () {
     }
 });
 
-// automatically add width and height to lazyloaded images 
-add_filter('wp_get_attachment_image_attributes', function($attr, $attachment) {
-    if (!isset($attr['width']) || !isset($attr['height'])) {
-        $image = wp_get_attachment_metadata($attachment->ID);
-        if ($image && isset($image['width']) && isset($image['height'])) {
-            $attr['width'] = $image['width'];
-            $attr['height'] = $image['height'];
-        }
-    }
-    return $attr;
-}, 10, 2);
-
 
 add_action('wp_enqueue_scripts', function() {
     wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
