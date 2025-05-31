@@ -167,6 +167,10 @@ p {
 }
 
 @media screen and (max-width: 767px) {
+  .section-christian-counselling {
+  padding:0;
+}
+
   .counselling-container {
     flex-direction: column;
   }
