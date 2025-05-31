@@ -167,8 +167,9 @@ p {
 }
 
 @media screen and (max-width: 767px) {
-  .section-christian-counselling {
-  padding:0;
+  .et_pb_code_inner .section-christian-counselling {
+  padding: 1rem;
+  text-align: center;
 }
 
   .counselling-container {
