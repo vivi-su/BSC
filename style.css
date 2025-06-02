@@ -290,6 +290,7 @@ p {
 @media (max-width: 1400px) {
 .where-begin_container {
   height:600px;
+  padding-bottom: 37.5rem;
 }
 
  .where-begin_overlay img{
