@@ -28,7 +28,7 @@ Version: 2.1
 
 body, html, h1, h2, h3, h4, h5, h6, p {
     font-family: 'Poppins', sans-serif;
-    color: #333;
+    color: #333!important;
     margin: 0;
     padding: 0;
 }
@@ -40,7 +40,7 @@ h1, h2, h3, h4, h5, h6 {
 
 p{
   margin-bottom: 2rem!important;
-  line-height: 1.6!important; 
+  line-height: 1.7!important; 
 }
 
 
@@ -54,6 +54,7 @@ h1,
   font-size: clamp(1.875rem, 2vw + 1rem, 3rem) !important;
   line-height: 1.2;
    letter-spacing: -0.015em;
+    margin-bottom: 1.5rem;
 }
 
 h2,
@@ -101,6 +102,13 @@ p {
 }
 
 
+.text-center{
+  text-align: center;
+}
+
+.module-container {
+  padding: 4rem 1rem;
+}
 
 /* CTA Button Group */
 .cta-buttons {
@@ -147,11 +155,6 @@ p {
 }
 
 /* Section for Christian Counselling Overview */
-
-.section-christian-counselling {
-  padding: 2rem;
-  color:#333333;
-}
 
 .counselling-container {
   display: flex;
@@ -207,6 +210,15 @@ p {
     flex-direction: column;
   }
 }
+
+
+/* Finding Hope and Healing section */
+
+.faith-healing-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
 
 /* where to begin section*/
 .where-begin_container {
