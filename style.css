@@ -287,21 +287,21 @@ p {
 }
 
 /* Responsive styling */
-@media (max-width: 1920px) {
+@media (max-width: 1800px) {
 .where-begin_container {
-  height:700px;
+  height:600px;
 }
 
  .where-begin_overlay img{
-    top: 70%;
-    left: 70%;
+    top: 68%;
+    left: 68%;
   }
 }
 
 @media (max-width: 1400px) {
-.where-begin_container {
+/* .where-begin_container {
   height:600px;
-}
+} */
 
  .where-begin_overlay img{
     top: 60%;
