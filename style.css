@@ -289,7 +289,7 @@ p {
 /* Responsive styling */
 @media (max-width: 1920px) {
 .where-begin_container {
-  height:600px;
+  height:700px;
 }
 
  .where-begin_overlay img{
@@ -299,9 +299,9 @@ p {
 }
 
 @media (max-width: 1400px) {
-/* .where-begin_container {
+.where-begin_container {
   height:600px;
-} */
+}
 
  .where-begin_overlay img{
     top: 60%;
