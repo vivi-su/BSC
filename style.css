@@ -272,7 +272,7 @@ p {
 .where-begin_overlay img{
 
   position: absolute;
-  top: 65%;
+  top: 68%;
   left: 68%;
   width: 60%;
   border-radius: 12px!important;
@@ -288,20 +288,20 @@ p {
 
 /* Responsive styling */
 @media (max-width: 1800px) {
-.where-begin_container {
+/* .where-begin_container {
   height:600px;
 }
 
  .where-begin_overlay img{
     top: 68%;
     left: 68%;
-  }
+  } */
 }
 
 @media (max-width: 1400px) {
-/* .where-begin_container {
+.where-begin_container {
   height:600px;
-} */
+}
 
  .where-begin_overlay img{
     top: 60%;
