@@ -9,10 +9,10 @@ add_action('wp_head', function () {
     if (is_front_page()) {
         ?>
         <!-- Preload desktop hero background -->
-        <link rel="preload" as="image" href="https://christiancounsellingbc.ca/wp-content/uploads/2025/05/Hero-BG-Dr-Schulz-curtain_3.webp" imagesrcset="https://christiancounsellingbc.ca/wp-content/uploads/2025/05/Hero-BG-Dr-Schulz-curtain_3.webp 1200w" imagesizes="100vw">
+        <link rel="preload" as="image" href="https://christiancounsellingbc.ca/wp-content/uploads/2025/05/Hero-BG-Dr-Schulz-curtain_3.webp" type="image/webp">
 
         <!-- Preload mobile hero background -->
-        <link rel="preload" as="image" href="https://christiancounsellingbc.ca/wp-content/uploads/2025/05/Hero-BG-Dr-Schulz-curtain-mobile1.jpg" media="(max-width: 768px)" imagesrcset="https://christiancounsellingbc.ca/wp-content/uploads/2025/05/Hero-BG-Dr-Schulz-curtain-mobile1.jpg 768w" imagesizes="100vw">
+        <link rel="preload" as="image" href="https://christiancounsellingbc.ca/wp-content/uploads/2025/05/Hero-BG-Dr-Schulz-curtain-mobile1.jpg" type="image/jpeg" media="(max-width: 768px)">
         <?php
     }
 });
