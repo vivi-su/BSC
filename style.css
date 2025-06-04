@@ -223,7 +223,7 @@ p {
 }
 
 .carousel-track {
-  display: flex;
+  display: flex!important;
   flex-wrap:nowrap;
   gap:2rem;
   animation: scroll-left 50s linear infinite;
