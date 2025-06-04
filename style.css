@@ -223,10 +223,10 @@ p {
 }
 
 .carousel-track {
-  display: flex;
-  flex-wrap:nowrap;
+  display: flex!important;
+  flex-wrap:nowrap!important;
   gap:2rem;
-  animation: scroll-left 50s linear infinite;
+  animation: scroll-left 50s linear infinite!important;
   width:max-content;
   will-change:transform;
 }
@@ -258,18 +258,17 @@ p {
 }
 
 
-/* @media (max-width: 768px) {
-  .association-wrapper {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-
+@media (max-width: 768px) {
   .carousel-track {
-    animation: none; 
+    animation: scroll-left 50s linear infinite;
     gap: 1rem;
     padding-inline: 1rem;
   }
-} */
+
+  .association-wrapper {
+    overflow-x: hidden;
+  }
+}
 
 
 /* Finding Hope and Healing section */
