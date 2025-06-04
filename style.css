@@ -217,14 +217,52 @@ p {
 }
 
 .association-wrapper{
-  display:flex;
-  justify-content:center;
-  overflow-x:auto;
-  white-space:wrap;
-  overflow: visible;
-  gap:1.5rem;
+  overflow-x: hidden;
+  width:100%;
+  cursor:grab;
 }
 
+.carousel-track {
+  display: flex;
+  gap:2rem;
+  animation: scroll-left 50s linear infinite;
+  width:max-content;
+}
+
+.carousel-track img{
+  border-radius: 12px;
+  min-width: 200px;
+  max-width: 250px;
+  height:auto;
+  object-fit: contain;
+}
+
+.association-wrapper:hover .carousel-traack{
+  animation-play-state:paused;
+}
+
+/* Smooth horizontal scroll animation */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 768px) {
+  .association-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .carousel-track {
+    animation: none; /* stop auto scroll on small screens */
+    gap: 1rem;
+    padding-inline: 1rem;
+  }
+}
 
 
 /* Finding Hope and Healing section */
