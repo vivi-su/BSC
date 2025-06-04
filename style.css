@@ -224,9 +224,9 @@ p {
 
 .carousel-track {
   display: flex!important;
-  flex-wrap:nowrap;
+  flex-wrap:nowrap!important;
   gap:2rem;
-  animation: scroll-left 50s linear infinite;
+  animation: scroll-left 50s linear infinite!important;
   width:max-content;
   will-change:transform;
 }
