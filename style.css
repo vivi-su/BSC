@@ -219,7 +219,7 @@ p {
 .association-wrapper{
   overflow-x: hidden;
   width:100%;
-  cursor:grab;
+  position:relative;
 }
 
 .carousel-track {
@@ -227,6 +227,7 @@ p {
   gap:2rem;
   animation: scroll-left 50s linear infinite;
   width:max-content;
+  will-change:transform;
 }
 
 .carousel-track img{
@@ -235,10 +236,7 @@ p {
   max-width: 250px;
   height:auto;
   object-fit: contain;
-}
-
-.association-wrapper:hover .carousel-traack{
-  animation-play-state:paused;
+  flex-shrink:0;
 }
 
 /* Smooth horizontal scroll animation */
@@ -250,6 +248,14 @@ p {
     transform: translateX(-50%);
   }
 }
+
+/* Pause on hover for desktop only */
+@media (hover: hover) and (pointer: fine) {
+  .association-wrapper:hover .carousel-track {
+    animation-play-state: paused;
+  }
+}
+
 
 @media (max-width: 768px) {
   .association-wrapper {
