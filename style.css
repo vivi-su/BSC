@@ -332,8 +332,8 @@ p {
 /* Overlay image */
 .where-begin_overlay img{
   position: absolute;
-  top: 80%;
-  left: 76%;
+  top: 75%;
+  left: 74%;
   width: 48%;
   border-radius: 12px!important;
   z-index: 2;
