@@ -211,6 +211,21 @@ p {
   }
 }
 
+/* Association Section */
+.association-title{
+  padding-bottom:1.5rem;
+}
+
+.association-wrapper{
+  display:flex;
+  justify-content:center;
+  overflow-x:auto;
+  white-space:wrap;
+  overflow: visible;
+  gap:1.5rem;
+}
+
+
 
 /* Finding Hope and Healing section */
 
@@ -222,6 +237,7 @@ p {
 
 /* where to begin section*/
 .where-begin_container {
+  padding:4rem 2rem;
   display: flex!important;
   flex-direction: row!important;
   gap: 2rem;
