@@ -281,11 +281,11 @@ p {
 
 /* where to begin section*/
 .where-begin_container {
-  padding:4rem 2rem;
   display: flex!important;
   flex-direction: row!important;
   gap: 2rem;
-  height:700px;
+  height:600px;
+  /* background-color: red; */
 }
 
 .where-begin_left {
@@ -301,6 +301,7 @@ p {
   gap: 1rem;
   align-items: flex-start;
   width: 100%;
+  /* border:2px solid black; */
 }
 
 /* First image — auto height */
@@ -330,11 +331,10 @@ p {
 
 /* Overlay image */
 .where-begin_overlay img{
-
   position: absolute;
-  top: 70%;
-  left: 68%;
-  width: 60%;
+  top: 80%;
+  left: 76%;
+  width: 48%;
   border-radius: 12px!important;
   z-index: 2;
   transform:translate(-50%,-50%);
@@ -344,19 +344,9 @@ p {
 .where-begin_right {
   width: 50%;
   max-width: 600px;
+  /* background-color: yellow; */
 }
 
-/* Responsive styling */
-@media (max-width: 1800px) {
-.where-begin_container {
-  height:600px;
-}
-
- .where-begin_overlay img{
-    top: 68%;
-    left: 68%;
-  }
-}
 
 @media (max-width: 1400px) {
 .where-begin_container {
