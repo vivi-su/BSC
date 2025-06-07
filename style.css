@@ -419,4 +419,37 @@ p {
   }
 }
 
+/* Direct Billing Section */
 
+.insurance-link {
+  display: inline-block;
+  margin-bottom: 4rem;
+  color: var(--color-dark);;
+  text-decoration: underline;
+}
+
+.insurance-logos {
+  display: grid;
+ grid-template-columns:repeat(2, 1fr);
+  gap: 2rem;
+  align-items: center;
+  justify-items: center;
+}
+
+.insurance-logos img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+@media (min-width: 768px) {
+  .insurance-logos {
+    grid-template-columns: repeat(3, 1fr); /* Tablet: 3 per row */
+  }
+}
+
+@media (min-width: 1024px) {
+  .insurance-logos {
+    grid-template-columns: repeat(5, 1fr); /* Desktop: 5 per row */
+  }
+}
