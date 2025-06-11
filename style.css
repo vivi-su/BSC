@@ -65,19 +65,30 @@ h2,
    letter-spacing: -0.01em;
 }
 
-
-
-h3 {
-  font-size: clamp(1.5rem, 3vw + 1rem, 2.5rem); /* ~24px to ~40px */
+h3,
+.et_pb_module h3,
+.et_pb_text h3 {
+  font-size: clamp(1.125rem, 1.2vw + 0.5rem, 1.5rem) !important;
+  line-height: 1.4;
+  letter-spacing: -0.005em;
 }
 
-h4 {
-  font-size: clamp(1.25rem, 2.5vw + 1rem, 2rem); /* ~20px to ~32px */
+h4,
+.et_pb_module h4,
+.et_pb_text h4 {
+  font-size: clamp(1rem, 1vw + 0.4rem, 1.25rem) !important;
+  line-height: 1.5;
+  letter-spacing: 0;
 }
 
-h5 {
-  font-size: clamp(1.125rem, 2vw + 1rem, 1.5rem); /* ~18px to ~24px */
+h5,
+.et_pb_module h5,
+.et_pb_text h5 {
+  font-size: clamp(0.875rem, 0.8vw + 0.4rem, 1.125rem) !important;
+  line-height: 1.5;
+  letter-spacing: 0.005em;
 }
+
 
 h6 {
   font-size: clamp(1rem, 1.5vw + 1rem, 1.25rem); /* ~16px to ~20px */
@@ -109,6 +120,11 @@ p {
 .module-container {
   padding: 4rem 1rem;
 }
+
+.page-container {
+  padding: 2rem 1rem;
+}
+
 
 /* CTA Button Group */
 .cta-buttons {
@@ -259,6 +275,11 @@ p {
 
 
 @media (max-width: 768px) {
+
+  .association-title{
+  padding-bottom:1rem;
+}
+
   .carousel-track {
     animation: scroll-left 50s linear infinite;
     gap: 1rem;
