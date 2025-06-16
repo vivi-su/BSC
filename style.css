@@ -42,10 +42,26 @@ h1,
 .et_pb_module h1,
 .et_pb_text h1 {
   font-family: 'Lora', serif;
- font-size: clamp(2rem, 0.8vw + 0.5rem, 3rem) !important;
+  font-size: 2.25rem !important; /* ~36px by default */
   line-height: 1.2;
   letter-spacing: -0.015em;
   margin-bottom: 1.5rem;
+}
+
+@media (min-width: 1440px) {
+  h1,
+  .et_pb_module h1,
+  .et_pb_text h1 {
+    font-size: 2.75rem !important; /* ~44px on large monitors */
+  }
+}
+
+@media (min-width: 1920px) {
+  h1,
+  .et_pb_module h1,
+  .et_pb_text h1 {
+    font-size: 3.25rem !important; /* ~52px only on very large screens */
+  }
 }
 
 h2,
