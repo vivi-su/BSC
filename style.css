@@ -65,6 +65,7 @@ h3,
   letter-spacing: -0.005em;
 }
 
+
 @media (min-width: 1440px) {
   h1,
   .et_pb_module h1,
@@ -101,6 +102,27 @@ h3,
   .et_pb_module h3,
   .et_pb_text h3 {
     font-size: 2rem; 
+  }
+}
+
+
+@media (max-width: 767px) {
+  h1,
+  .et_pb_module h1,
+  .et_pb_text h1 {
+    font-size: 1.75rem; /* ~28px for mobile */
+  }
+
+  h2,
+  .et_pb_module h2,
+  .et_pb_text h2 {
+    font-size: 1.5rem; /* ~24px */
+  }
+
+  h3,
+  .et_pb_module h3,
+  .et_pb_text h3 {
+    font-size: 1.25rem; /* ~20px */
   }
 }
 
@@ -251,14 +273,6 @@ p,
   .rating-container{
     flex-direction: column;
   }
-}
-
-
-/* Finding Hope and Healing section */
-
-.faith-healing-content {
-  max-width: 800px;
-  margin: 0 auto;
 }
 
 
