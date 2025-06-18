@@ -196,14 +196,14 @@ p,
 /* Primary Button */
 .btn-primary {
   background: #fff;
-  color: var(--color-dark);
-  border: 2px solid var(--color-dark);
+  color: var(--color-secondary);
+  border: 2px solid var(--color-secondary);
 }
 
 .btn-primary:hover {
-  background: var(--color-dark);
+  background: var(--color-secondary);
   color: white;
-   border: 2px solid var(--color-dark);
+   border: 2px solid var(--color-secondary);
 }
 
 
