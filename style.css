@@ -418,7 +418,7 @@ p,
 
 /* Direct Billing Section */
 
-.insurance-link {
+.go-to-link {
   display: inline-block;
   margin-bottom: 4rem;
   color: var(--color-dark);;
