@@ -165,6 +165,19 @@ p,
   text-align: center;
 }
 
+
+img{
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.go-to-link {
+  display: inline-block;
+  color: var(--color-dark);;
+  text-decoration: underline;
+}
+
+
 .module-container {
   padding: 4rem 1rem;
 }
@@ -413,43 +426,5 @@ p,
     top:75%;
     left: 70%;
     width: 50%;
-  }
-}
-
-/* Direct Billing Section */
-
-.go-to-link {
-  display: inline-block;
-  color: var(--color-dark);;
-  text-decoration: underline;
-}
-
-.insurance-link{
-   margin-bottom: 4rem;
-}
-
-.insurance-logos {
-  display: grid;
- grid-template-columns:repeat(2, 1fr);
-  gap: 2rem;
-  align-items: center;
-  justify-items: center;
-}
-
-.insurance-logos img {
-  max-width: 100%;
-  height: auto;
-  object-fit: contain;
-}
-
-@media (min-width: 768px) {
-  .insurance-logos {
-    grid-template-columns: repeat(3, 1fr); /* Tablet: 3 per row */
-  }
-}
-
-@media (min-width: 1024px) {
-  .insurance-logos {
-    grid-template-columns: repeat(5, 1fr); /* Desktop: 5 per row */
   }
 }
