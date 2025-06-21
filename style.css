@@ -165,12 +165,6 @@ p,
   text-align: center;
 }
 
-
-img{
-  border-radius: 1rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-}
-
 .go-to-link {
   display: inline-block;
   color: var(--color-dark);;
@@ -194,7 +188,6 @@ img{
 .page-container {
   padding: 2rem 1rem;
 }
-
 
 /* CTA Button Group */
 .cta-buttons {
