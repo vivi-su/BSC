@@ -25,32 +25,52 @@ add_action('wp_enqueue_scripts', function() {
 
 function vivi_enqueue_assets() {
 
-    // Base
-    wp_enqueue_style(
-        'typography',
-        get_stylesheet_directory_uri() . '/assets/css/base/typography.css'
+    $theme_dir = get_stylesheet_directory();
+    $theme_uri = get_stylesheet_directory_uri();
+
+    $styles = array(
+        'vivi-variables'  => array(
+            'path' => '/assets/css/base/variables.css',
+            'deps' => array(),
+        ),
+        'vivi-reset' => array(
+            'path' => '/assets/css/base/reset.css',
+            'deps' => array('vivi-variables'),
+        ),
+        'vivi-typography' => array(
+            'path' => '/assets/css/base/typography.css',
+            'deps' => array('vivi-reset'),
+        ),
+        'vivi-buttons' => array(
+            'path' => '/assets/css/components/buttons.css',
+            'deps' => array('vivi-variables', 'vivi-typography'),
+        ),
+        'vivi-hero' => array(
+            'path' => '/assets/css/components/hero.css',
+            'deps' => array('vivi-variables', 'vivi-typography'),
+        ),
+        'vivi-faq' => array(
+            'path' => '/assets/css/components/faq.css',
+            'deps' => array('vivi-variables', 'vivi-typography'),
+        ),
     );
 
-    wp_enqueue_style(
-        'global',
-        get_stylesheet_directory_uri() . '/assets/css/base/global.css'
-    ); // not used yet
+    foreach ($styles as $handle => $style) {
 
-    // Components
-    wp_enqueue_style(
-        'hero',
-        get_stylesheet_directory_uri() . '/assets/css/components/hero.css'
-    ); // not used yet
+        $file_path = $theme_dir . $style['path'];
+        $file_url  = $theme_uri . $style['path'];
 
-    wp_enqueue_style(
-        'buttons',
-        get_stylesheet_directory_uri() . '/assets/css/components/buttons.css'
-    ); // not used yet
-
-    wp_enqueue_style(
-        'faq',
-        get_stylesheet_directory_uri() . '/assets/css/components/faq.css'
-    ); // not used yet
-
+        if (file_exists($file_path)) {
+            wp_enqueue_style(
+                $handle,
+                $file_url,
+                $style['deps'],
+                filemtime($file_path)
+            );
+        } else {
+            error_log('Missing stylesheet: ' . $file_path);
+        }
+    }
 }
-add_action('wp_enqueue_scripts', 'vivi_enqueue_assets');
+
+add_action('wp_enqueue_scripts', 'vivi_enqueue_assets', 20);
