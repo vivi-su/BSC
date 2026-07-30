@@ -1,26 +1,71 @@
 <?php
-// Enqueue parent and child styles
+
+/* ==========================================================
+   Parent Theme
+========================================================== */
+
 function divi_child_enqueue_styles() {
-    wp_enqueue_style('parent-style', get_template_directory_uri() . '/style.css');
+
+    wp_enqueue_style(
+        'divi-parent-style',
+        get_template_directory_uri() . '/style.css',
+        array(),
+        wp_get_theme(get_template())->get('Version')
+    );
+
 }
 add_action('wp_enqueue_scripts', 'divi_child_enqueue_styles');
 
+
+/* ==========================================================
+   Google Fonts
+========================================================== */
+
+function vivi_enqueue_google_fonts() {
+
+    wp_enqueue_style(
+        'vivi-google-fonts',
+        'https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Poppins:wght@400;500;600;700&display=swap',
+        array(),
+        null
+    );
+
+}
+add_action('wp_enqueue_scripts', 'vivi_enqueue_google_fonts');
+
+
+/* ==========================================================
+   Hero Image Preload
+========================================================== */
+
 add_action('wp_head', function () {
-    if (is_front_page()) {
-        ?>
-        <!-- Preload desktop hero background -->
-        <link rel="preload" as="image" href="https://christiancounsellingbc.ca/wp-content/uploads/2025/05/Hero-BG-Dr-Schulz-curtain_3.webp" type="image/webp">
 
-        <!-- Preload mobile hero background -->
-        <link rel="preload" as="image" href="https://christiancounsellingbc.ca/wp-content/uploads/2025/05/Hero-BG-Dr-Schulz-curtain-mobile1.jpg" type="image/jpeg" media="(max-width: 768px)">
-        <?php
+    if (!is_front_page()) {
+        return;
     }
+
+?>
+<link
+    rel="preload"
+    as="image"
+    href="https://christiancounsellingbc.ca/wp-content/uploads/2025/05/Hero-BG-Dr-Schulz-curtain_3.webp"
+    type="image/webp">
+
+<link
+    rel="preload"
+    as="image"
+    href="https://christiancounsellingbc.ca/wp-content/uploads/2025/05/Hero-BG-Dr-Schulz-curtain-mobile1.jpg"
+    type="image/jpeg"
+    media="(max-width:768px)">
+
+<?php
+
 });
 
 
-add_action('wp_enqueue_scripts', function() {
-    wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css2?family=Poppins:wght@400&family=Lora:wght@400;600&display=swap');
-});
+/* ==========================================================
+   Child Theme Assets
+========================================================== */
 
 
 function vivi_enqueue_assets() {
