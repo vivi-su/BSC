@@ -1,119 +1,379 @@
 /* ===================================================
    Buttons
+   Benjamin Schulz Counselling
 =================================================== */
 
-/* Button group */
+
+/* ===================================================
+   Button Group
+=================================================== */
+
 .button-group {
   display: flex;
-  flex-wrap: wrap; /* stack on mobile */
-  gap: 1rem;
-  margin-top: 2rem;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-md);
+  margin-top: var(--space-xl);
 }
 
-/* Base button */
-.btn {
-  display: inline-block;
-  align-items:center;
-  justify-content:center;
-  gap:0.5rem;
-  
-  padding: 1rem 2rem;
-  border: 2px solid transparent;
-  border-radius: 999px;
-  margin-bottom:var(--space-lg);
 
-  font-family: var(--font-body, 'Poppins', sans-serif);
-  font-size: 1rem;
-  font-weight: 600;
+/* ===================================================
+   Base Button
+=================================================== */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-xs);
+
+  min-height: var(--button-height, 3rem);
+
+  padding:
+    var(--button-padding-block, 0.875rem)
+    var(--button-padding-inline, 1.5rem);
+
+  border: 1px solid transparent;
+  border-radius: var(--button-radius, var(--radius-sm));
+
+  margin: 0;
+
+  font-family: var(--font-body, "Poppins", sans-serif);
+  font-size: var(--button-font-size, 0.9375rem);
+  font-weight: var(--button-font-weight, 600);
   line-height: 1.2;
+  letter-spacing: var(--letter-spacing-button, 0.02em);
+
   text-align: center;
   text-decoration: none;
+  white-space: nowrap;
 
   cursor: pointer;
+
   transition:
-    background-color 0.3s ease,
-    border-color 0.3s ease,
-    color 0.3s ease,
-    transform 0.3s ease;
+    background-color var(--transition-fast),
+    border-color var(--transition-fast),
+    color var(--transition-fast),
+    box-shadow var(--transition-fast),
+    transform var(--transition-fast);
 }
 
-/* Shared hover movement */
+
+/* ===================================================
+   Interaction
+=================================================== */
+
 .btn:hover {
-  transform: translateY(-2px);
+  text-decoration: none;
+  transform: translateY(-1px);
 }
 
-/* Keyboard accessibility */
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn:focus {
+  outline: none;
+}
+
 .btn:focus-visible {
-  outline: 3px solid currentColor;
-  outline-offset: 4px;
+  outline: 3px solid rgba(56, 88, 70, 0.25);
+  outline-offset: 3px;
+  box-shadow: var(--shadow-focus);
 }
 
-/* Primary: filled */
+
+/* ===================================================
+   Primary Button
+=================================================== */
+
 .btn--primary {
-  background-color: var(--color-primary);
-  border-color: var(--color-primary);
-  color: #fff;
+  background-color: var(
+    --button-primary-background,
+    var(--color-primary)
+  );
+
+  border-color: var(
+    --button-primary-background,
+    var(--color-primary)
+  );
+
+  color: var(
+    --button-primary-text,
+    var(--color-white)
+  );
+
+  box-shadow: var(--shadow-xs);
 }
 
-.btn--primary:hover {
-  background-color: var(--color-accent);
-  border-color: var(--color-accent);
-  color: #fff;
+.btn--primary:hover,
+.btn--primary:focus-visible {
+  background-color: var(
+    --button-primary-background-hover,
+    var(--color-primary-dark)
+  );
+
+  border-color: var(
+    --button-primary-background-hover,
+    var(--color-primary-dark)
+  );
+
+  color: var(--color-white);
+
+  box-shadow: var(--shadow-sm);
 }
 
-/* Secondary: outlined */
+
+/* ===================================================
+   Secondary Button
+=================================================== */
+
 .btn--secondary {
-  background-color: #fff;
-  border-color: var(--color-primary);
-  color: var(--color-accent);
+  background-color: var(
+    --button-secondary-background,
+    transparent
+  );
+
+  border-color: var(
+    --button-secondary-border,
+    var(--color-secondary)
+  );
+
+  color: var(
+    --button-secondary-text,
+    var(--color-primary-dark)
+  );
 }
 
-.btn--secondary:hover {
-  background-color: var(--color-light);
-  border-color: var(--color-primary);
-  color: #fff;
+.btn--secondary:hover,
+.btn--secondary:focus-visible {
+  background-color: var(
+    --button-secondary-background-hover,
+    var(--color-secondary-soft)
+  );
+
+  border-color: var(--color-secondary);
+
+  color: var(--color-primary-dark);
 }
 
-/* Optional alternate colour */
+
+/* ===================================================
+   Accent Button
+=================================================== */
+
 .btn--accent {
   background-color: var(--color-secondary);
   border-color: var(--color-secondary);
-  color: #fff;
+  color: var(--color-white);
+
+  box-shadow: var(--shadow-xs);
 }
 
-.btn--accent:hover {
-  background-color: var(--color-accent);
-  border-color: var(--color-accent);
+.btn--accent:hover,
+.btn--accent:focus-visible {
+  background-color: var(--color-secondary-dark);
+  border-color: var(--color-secondary-dark);
+  color: var(--color-white);
+
+  box-shadow: var(--shadow-sm);
 }
 
-/* Optional sizes */
+
+/* ===================================================
+   Light Button
+   For dark or coloured backgrounds
+=================================================== */
+
+.btn--light {
+  background-color: var(--color-white);
+  border-color: var(--color-white);
+  color: var(--color-primary-dark);
+
+  box-shadow: var(--shadow-xs);
+}
+
+.btn--light:hover,
+.btn--light:focus-visible {
+  background-color: var(--color-background-warm);
+  border-color: var(--color-background-warm);
+  color: var(--color-primary-dark);
+
+  box-shadow: var(--shadow-sm);
+}
+
+
+/* ===================================================
+   Light Outline Button
+   For dark hero and CTA sections
+=================================================== */
+
+.btn--outline-light {
+  background-color: transparent;
+  border-color: rgba(255, 255, 255, 0.8);
+  color: var(--color-white);
+}
+
+.btn--outline-light:hover,
+.btn--outline-light:focus-visible {
+  background-color: var(--color-white);
+  border-color: var(--color-white);
+  color: var(--color-primary-dark);
+}
+
+
+/* ===================================================
+   Text Link Button
+=================================================== */
+
+.btn--text {
+  min-height: auto;
+  padding: 0;
+
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+
+  color: var(--color-primary);
+
+  box-shadow: none;
+
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.3em;
+}
+
+.btn--text:hover,
+.btn--text:focus-visible {
+  background: transparent;
+  color: var(--color-secondary);
+  box-shadow: none;
+}
+
+
+/* ===================================================
+   Button Sizes
+=================================================== */
+
 .btn--small {
-  padding: 0.75rem 1.5rem;
-  font-size: 0.9375rem;
+  min-height: 2.625rem;
+  padding: 0.7rem 1.25rem;
+  font-size: var(--font-size-sm);
 }
 
 .btn--large {
-  padding: 1.1rem 2.25rem;
+  min-height: 3.375rem;
+  padding: 1rem 1.75rem;
+  font-size: var(--font-size-base);
 }
 
-/* Full-width mobile button when needed */
+
+/* ===================================================
+   Width Modifiers
+=================================================== */
+
+.btn--full {
+  width: 100%;
+}
+
+
+/* ===================================================
+   Icons
+=================================================== */
+
+.btn svg,
+.btn img {
+  flex: 0 0 auto;
+  width: 1.1em;
+  height: 1.1em;
+}
+
+.btn--icon-right svg,
+.btn--icon-right img {
+  order: 2;
+}
+
+
+/* ===================================================
+   Disabled State
+=================================================== */
+
+.btn:disabled,
+.btn[aria-disabled="true"] {
+  opacity: 0.55;
+  cursor: not-allowed;
+  pointer-events: none;
+  transform: none;
+  box-shadow: none;
+}
+
+
+/* ===================================================
+   Divi Button Compatibility
+=================================================== */
+
+.et_pb_button.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding:
+    var(--button-padding-block, 0.875rem)
+    var(--button-padding-inline, 1.5rem) !important;
+
+  border-width: 1px !important;
+  border-radius: var(--button-radius, var(--radius-sm));
+
+  font-family: var(--font-body);
+  font-size: var(--button-font-size, 0.9375rem);
+  font-weight: var(--button-font-weight, 600);
+  line-height: 1.2 !important;
+}
+
+.et_pb_button.btn::after {
+  position: static;
+  margin-left: var(--space-xs);
+  font-size: 1em;
+  line-height: inherit;
+}
+
+
+/* ===================================================
+   Mobile
+=================================================== */
+
 @media (max-width: 767px) {
+
+  .button-group {
+    gap: var(--space-sm);
+    margin-top: var(--space-lg);
+  }
+
   .button-group--stack-mobile {
     flex-direction: column;
+    align-items: stretch;
   }
 
   .button-group--stack-mobile .btn {
     width: 100%;
   }
+
 }
 
-/* Respect reduced-motion preferences */
+
+/* ===================================================
+   Reduced Motion
+=================================================== */
+
 @media (prefers-reduced-motion: reduce) {
+
   .btn {
     transition: none;
   }
 
-  .btn:hover {
+  .btn:hover,
+  .btn:active {
     transform: none;
   }
+
 }
