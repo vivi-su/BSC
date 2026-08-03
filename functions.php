@@ -94,6 +94,10 @@ function vivi_enqueue_assets() {
             'path' => '/assets/css/components/hero.css',
             'deps' => array('vivi-variables', 'vivi-typography'),
         ),
+           'vivi-credentials-strip' => array(
+            'path' => '/assets/css/modules/credentials-strip.css',
+            'deps' => array('vivi-variables', 'vivi-typography'),
+        ),
         'vivi-faq' => array(
             'path' => '/assets/css/components/faq.css',
             'deps' => array('vivi-variables', 'vivi-typography'),
