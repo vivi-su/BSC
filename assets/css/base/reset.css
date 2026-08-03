@@ -88,82 +88,64 @@ body{
 
 
 /* ===================================================
-   Divi Custom Module Wrapper Reset
+   Remove spacing before first custom homepage section
 =================================================== */
 
-/* Section */
+body.home #main-content {
+  padding-top: 0 !important;
+}
+
+body.home #main-content > .container {
+  width: 100% !important;
+  max-width: none !important;
+  padding-top: 0 !important;
+}
+
+body.home .entry-content {
+  padding-top: 0 !important;
+}
+
+body.home .entry-content > .et_pb_section:first-child,
+body.home .et-l--post .et_builder_inner_content > .et_pb_section:first-child,
+body.home .et-l--body .et_builder_inner_content > .et_pb_section:first-child {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+
+/* ===================================================
+   Custom Divi Section Reset
+=================================================== */
+
 .et_pb_section.custom-module {
   width: 100% !important;
   max-width: none !important;
 
-  min-height: 0 !important;
-
   margin: 0 !important;
   padding: 0 !important;
 }
 
-
-/* Row */
-.et_pb_row.custom-module,
-.et_pb_section.custom-module > .et_pb_row {
+.et_pb_section.custom-module > .et_pb_row,
+.et_pb_row.custom-module {
   width: 100% !important;
   max-width: none !important;
 
-  min-height: 0 !important;
-
   margin: 0 !important;
   padding: 0 !important;
 }
 
-
-/* Column */
-.et_pb_column.custom-module,
 .et_pb_section.custom-module .et_pb_column {
-  width: 100% !important;
-
-  min-height: 0 !important;
-
   margin: 0 !important;
   padding: 0 !important;
 }
 
-
-/* Code Module */
+.et_pb_section.custom-module .et_pb_code,
 .et_pb_code.custom-module,
-.et_pb_section.custom-module .et_pb_code {
+.et_pb_section.custom-module .et_pb_code_inner,
+.et_pb_code.custom-module .et_pb_code_inner {
   width: 100% !important;
   max-width: none !important;
 
-  min-height: 0 !important;
-
   margin: 0 !important;
   padding: 0 !important;
-}
-
-
-/* Code Module inner wrapper */
-.et_pb_code.custom-module .et_pb_code_inner,
-.et_pb_section.custom-module .et_pb_code_inner {
-  width: 100% !important;
-  max-width: none !important;
-
-  min-height: 0 !important;
-
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
-
-/* Remove Divi module bottom spacing */
-.et_pb_section.custom-module .et_pb_module,
-.et_pb_row.custom-module .et_pb_module {
-  margin-bottom: 0 !important;
-}
-
-
-/* Remove spacing from the final module in a column */
-.et_pb_section.custom-module
-.et_pb_column
-.et_pb_module:last-child {
-  margin-bottom: 0 !important;
 }
