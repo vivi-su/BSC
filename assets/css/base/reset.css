@@ -85,3 +85,16 @@ body{
     padding:0;
     margin:0;
 }
+
+
+/* ===================================================
+   Divi Custom Module Reset
+=================================================== */
+
+.et_pb_code.custom-module,
+.et_pb_code.custom-module .et_pb_code_inner {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+}
