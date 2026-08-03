@@ -88,29 +88,82 @@ body{
 
 
 /* ===================================================
-   Divi Custom Section Reset
+   Divi Custom Module Wrapper Reset
 =================================================== */
 
-.et_pb_section.custom-module,
-.et_pb_section.custom-module > .et_pb_row,
-.et_pb_section.custom-module .et_pb_column,
-.et_pb_section.custom-module .et_pb_module,
-.et_pb_section.custom-module .et_pb_code,
-.et_pb_section.custom-module .et_pb_code_inner {
+/* Section */
+.et_pb_section.custom-module {
   width: 100% !important;
-  max-width: 100% !important;
+  max-width: none !important;
+
+  min-height: 0 !important;
 
   margin: 0 !important;
   padding: 0 !important;
 }
 
-/* Remove Divi row width constraints */
+
+/* Row */
+.et_pb_row.custom-module,
 .et_pb_section.custom-module > .et_pb_row {
   width: 100% !important;
   max-width: none !important;
+
+  min-height: 0 !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
-/* Prevent module spacing from reappearing */
-.et_pb_section.custom-module .et_pb_module {
+
+/* Column */
+.et_pb_column.custom-module,
+.et_pb_section.custom-module .et_pb_column {
+  width: 100% !important;
+
+  min-height: 0 !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+
+/* Code Module */
+.et_pb_code.custom-module,
+.et_pb_section.custom-module .et_pb_code {
+  width: 100% !important;
+  max-width: none !important;
+
+  min-height: 0 !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+
+/* Code Module inner wrapper */
+.et_pb_code.custom-module .et_pb_code_inner,
+.et_pb_section.custom-module .et_pb_code_inner {
+  width: 100% !important;
+  max-width: none !important;
+
+  min-height: 0 !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+
+/* Remove Divi module bottom spacing */
+.et_pb_section.custom-module .et_pb_module,
+.et_pb_row.custom-module .et_pb_module {
+  margin-bottom: 0 !important;
+}
+
+
+/* Remove spacing from the final module in a column */
+.et_pb_section.custom-module
+.et_pb_column
+.et_pb_module:last-child {
   margin-bottom: 0 !important;
 }
