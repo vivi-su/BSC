@@ -90,7 +90,7 @@
 .btn--primary {
   background-color: var(
     --button-primary-background,
-    var(--color-primary)
+    var(--color-primary-light)
   );
 
   border-color: var(
