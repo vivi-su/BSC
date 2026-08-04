@@ -377,3 +377,85 @@
   }
 
 }
+
+/* ===================================================
+   Nav Primary Button
+=================================================== */
+.btn-primary,
+.et_pb_menu .et-menu-nav > ul > li.nav-primary-btn > a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: var(--button-height);
+  padding: var(--button-padding-y) var(--button-padding-x);
+
+  font-family: var(--font-body);
+  font-size: var(--button-font-size);
+  font-weight: var(--font-weight-semibold);
+  line-height: 1;
+  letter-spacing: var(--button-letter-spacing);
+  text-decoration: none;
+
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+  border-radius: var(--button-radius);
+
+  transition:
+    background-color var(--transition-base),
+    border-color var(--transition-base),
+    color var(--transition-base),
+    transform var(--transition-base);
+}
+
+/* reuse the hover state */
+.btn-primary:hover,
+.et_pb_menu .et-menu-nav > ul > li.nav-primary-btn > a:hover {
+  color: var(--color-white);
+  background-color: var(--color-primary-dark);
+  border-color: var(--color-primary-dark);
+  transform: translateY(-1px);
+}
+
+/* Divi-specific corrections */
+.et_pb_menu .et-menu-nav > ul > li.nav-primary-btn {
+  align-items: center;
+  padding-left: var(--space-md);
+}
+
+.et_pb_menu .et-menu-nav > ul > li.nav-primary-btn > a {
+  padding-top: var(--button-padding-y);
+  padding-bottom: var(--button-padding-y);
+  opacity: 1;
+}
+
+.et_pb_menu .et-menu-nav > ul > li.nav-primary-btn > a::after {
+  display: none;
+}
+
+/*mobile manu nav-primary-btn */
+.et_mobile_menu li.nav-primary-btn {
+  padding: var(--space-sm) 5%;
+}
+
+.et_mobile_menu li.nav-primary-btn > a {
+  display: flex;
+  justify-content: center;
+
+  padding: var(--button-padding-y) var(--button-padding-x);
+
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+  border-radius: var(--button-radius);
+
+  text-align: center;
+}
+
+.et_mobile_menu li.nav-primary-btn > a:hover {
+  color: var(--color-white);
+  background-color: var(--color-primary-dark);
+  border-color: var(--color-primary-dark);
+  opacity: 1;
+}
