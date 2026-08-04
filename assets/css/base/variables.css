@@ -10,7 +10,7 @@
 
    Core palette:
    Indigo navy, slate blue, warm gray, cream,
-   burnished copper, and forest green.
+   burnished bronze, and forest green.
 =================================================== */
 
 :root {
@@ -122,16 +122,26 @@
   --letter-spacing-navigation: 0.035em;
 
 
-  /* ========================================
-     Core Brand Palette
-  ======================================== */
 
-  --color-indigo-navy: #162544;
-  --color-slate-blue: #30415A;
-  --color-warm-gray: #666F74;
-  --color-cream: #F6F5EE;
-  --color-copper: #995528;
-  --color-forest-green: #193D2E;
+/* ========================================
+   Core Brand Palette
+======================================== */
+
+--color-indigo-navy: #162544;
+--color-slate-blue: #30415A;
+--color-warm-gray: #666F74;
+
+--color-cream: #F6F5EE;
+
+--color-bronze: #BD6A3A;
+--color-bronze-dark: #995528;
+--color-bronze-light: #D08A5B;
+--color-bronze-soft: #F5E6DB;
+
+--color-forest-green: #193D2E;
+--color-forest-green-dark: #102A20;
+--color-forest-green-light: #315846;
+--color-forest-green-soft: #E5ECE8;
 
 
   /* ========================================
@@ -153,36 +163,22 @@
   --color-cream-dark: #EDEBE1;
   --color-cream-light: #FBFAF6;
 
-  --color-copper-dark: #7F451F;
-  --color-copper-light: #B46A36;
-  --color-copper-soft: #F1E5DA;
 
-  /* Legacy aliases retained for existing component CSS */
-  --color-terracotta: var(--color-copper);
-  --color-terracotta-dark: var(--color-copper-dark);
-  --color-terracotta-light: var(--color-copper-light);
-  --color-terracotta-soft: var(--color-copper-soft);
+/* ========================================
+   Primary Brand Roles
+======================================== */
 
-  --color-forest-green-dark: #102A20;
-  --color-forest-green-light: #315846;
-  --color-forest-green-soft: #E5ECE8;
+--color-primary: var(--color-bronze);
+--color-primary-dark: var(--color-bronze-dark);
+--color-primary-light: var(--color-bronze-light);
+--color-primary-soft: var(--color-bronze-soft);
 
+--color-secondary: var(--color-forest-green);
+--color-secondary-dark: var(--color-forest-green-dark);
+--color-secondary-light: var(--color-forest-green-light);
+--color-secondary-soft: var(--color-forest-green-soft);
 
-  /* ========================================
-     Primary Brand Roles
-  ======================================== */
-
-  --color-primary: var(--color-copper);
-  --color-primary-dark: var(--color-copper-dark);
-  --color-primary-light: var(--color-copper-light);
-  --color-primary-soft: var(--color-copper-soft);
-
-  --color-secondary: var(--color-forest-green);
-  --color-secondary-dark: var(--color-forest-green-dark);
-  --color-secondary-light: var(--color-forest-green-light);
-  --color-secondary-soft: var(--color-forest-green-soft);
-
-  --color-accent: var(--color-indigo-navy);
+--color-accent: var(--color-indigo-navy);
 
 
   /* ========================================
@@ -230,8 +226,8 @@
   --color-text-on-dark: rgba(246, 245, 238, 0.84);
   --color-text-inverse: var(--color-white);
 
-  --color-link: var(--color-copper);
-  --color-link-hover: var(--color-indigo-navy);
+  --color-link: var(--color-primary);
+  --color-link-hover: var(--color-primary-light);
 
   --color-border: #D9D8D1;
   --color-border-light: #E7E6DF;
@@ -359,7 +355,7 @@
   --navigation-gap: 1.75rem;
 
   --navigation-color: var(--color-cream);
-  --navigation-color-hover: var(--color-copper-light);
+  --navigation-color-hover: var(--color-primary-light);
 
 
   /* ========================================
@@ -376,10 +372,10 @@
 
   --button-radius: var(--radius-sm);
 
-  --button-primary-background: var(--color-copper);
-  --button-primary-background-hover: var(--color-copper-dark);
+  --button-primary-background: var(--color-primary);
+  --button-primary-background-hover: var(--color-primary-dark);
   --button-primary-text: var(--color-white);
-  --button-primary-border: var(--color-copper);
+  --button-primary-border: var(--color-primary);
 
   --button-secondary-background: transparent;
   --button-secondary-background-hover:
@@ -466,9 +462,11 @@
 
   --shadow-image:
     0 18px 42px rgba(13, 24, 45, 0.14);
+  
+  --color-focus-ring: rgba(189, 106, 58, 0.24);
 
   --shadow-focus:
-    0 0 0 3px rgba(153, 85, 40, 0.24);
+  0 0 0 3px var(--color-focus-ring);
 
 
   /* ========================================
@@ -482,9 +480,9 @@
   --icon-size-xl: 3rem;
 
   --icon-color: var(--color-indigo-navy);
-  --icon-color-accent: var(--color-copper);
+  --icon-color-accent: var(--color-primary);
   --icon-background: var(--color-indigo-navy-soft);
-  --icon-background-accent: var(--color-copper-soft);
+  --icon-background-accent: var(--color-primary-soft);
 
 
   /* ========================================
@@ -530,7 +528,7 @@
   --hero-background: var(--color-indigo-navy);
   --hero-heading-color: var(--color-cream);
   --hero-text-color: rgba(246, 245, 238, 0.84);
-  --hero-accent-color: var(--color-copper);
+  --hero-accent-color: var(--color-primary);
 
   --hero-content-width: 42rem;
   --hero-heading-width: 11ch;
@@ -563,7 +561,7 @@
 
   --review-quote-color: var(--color-indigo-navy);
   --review-meta-color: var(--color-warm-gray);
-  --review-star-color: var(--color-copper);
+  --review-star-color: var(--color-primary);
 
   --review-card-width: 22rem;
   --review-card-gap: 1.5rem;
@@ -589,7 +587,7 @@
   --form-field-background: var(--color-white);
   --form-field-border: var(--color-border);
   --form-field-border-hover: var(--color-border-dark);
-  --form-field-border-focus: var(--color-copper);
+  --form-field-border-focus: var(--color-primary);
 
   --form-field-text: var(--color-slate-blue);
   --form-field-placeholder: var(--color-warm-gray-light);
@@ -606,7 +604,7 @@
 
   --focus-outline-width: 2px;
   --focus-outline-offset: 3px;
-  --focus-outline-color: var(--color-copper);
+  --focus-outline-color: var(--color-primary);
 
   --focus-outline:
     var(--focus-outline-width)
