@@ -1,0 +1,84 @@
+:root{font-size:16px;--font-heading:"Playfair Display",
+    Georgia,
+    "Times New Roman",
+    serif;--font-body:"Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Helvetica,
+    Arial,
+    sans-serif;--font-size-xs:0.75rem;--font-size-sm:0.875rem;--font-size-base:1rem;--font-size-lg:1.125rem;--font-size-xl:1.25rem;--font-size-2xl:1.5rem;--font-size-3xl:2rem;--font-size-4xl:2.5rem;--font-size-5xl:3rem;--font-size-6xl:4rem;--font-size-display:clamp(
+    3.25rem,
+    7vw,
+    6.75rem
+  );--font-size-h1:clamp(
+    2.75rem,
+    5vw,
+    5rem
+  );--font-size-h2:clamp(
+    2.125rem,
+    3.5vw,
+    3.75rem
+  );--font-size-h3:clamp(
+    1.5rem,
+    1.7vw,
+    2rem
+  );--font-size-h4:clamp(
+    1.125rem,
+    0.8vw + 0.9rem,
+    1.375rem
+  );--font-weight-normal:400;--font-weight-medium:500;--font-weight-semibold:600;--font-weight-bold:700;--line-height-body:1.7;--line-height-body-compact:1.55;--line-height-heading:1.1;--line-height-display:0.92;--line-height-h1:0.98;--line-height-h2:1.06;--line-height-h3:1.2;--line-height-h4:1.35;--letter-spacing-display:-0.045em;--letter-spacing-h1:-0.035em;--letter-spacing-h2:-0.03em;--letter-spacing-h3:-0.018em;--letter-spacing-label:0.1em;--letter-spacing-button:0.06em;--letter-spacing-navigation:0.035em;--color-indigo-navy:#162544;--color-slate-blue:#30415A;--color-warm-gray:#666F74;--color-cream:#F6F5EE;--color-bronze:#BD6A3A;--color-bronze-dark:#995528;--color-bronze-light:#D08A5B;--color-bronze-soft:#F5E6DB;--color-forest-green:#193D2E;--color-forest-green-dark:#102A20;--color-forest-green-light:#315846;--color-forest-green-soft:#E5ECE8;--color-indigo-navy-dark:#0D182D;--color-indigo-navy-light:#273A5E;--color-indigo-navy-soft:#E9EDF3;--color-slate-blue-dark:#26364D;--color-slate-blue-light:#526177;--color-slate-blue-soft:#E9ECF0;--color-warm-gray-dark:#4C555A;--color-warm-gray-light:#858C90;--color-warm-gray-soft:#E7E7E3;--color-cream-dark:#EDEBE1;--color-cream-light:#FBFAF6;--color-primary:var(--color-bronze);--color-primary-dark:var(--color-bronze-dark);--color-primary-light:var(--color-bronze-light);--color-primary-soft:var(--color-bronze-soft);--color-secondary:var(--color-forest-green);--color-secondary-dark:var(--color-forest-green-dark);--color-secondary-light:var(--color-forest-green-light);--color-secondary-soft:var(--color-forest-green-soft);--color-accent:var(--color-indigo-navy);--color-white:#FFFFFF;--color-black:#000000;--color-neutral-50:#FBFAF6;--color-neutral-100:#F6F5EE;--color-neutral-200:#EDEBE1;--color-neutral-300:#D9D8D1;--color-neutral-400:#B6B7B3;--color-neutral-500:#858C90;--color-neutral-600:#666F74;--color-neutral-700:#4C555A;--color-neutral-800:#30415A;--color-neutral-900:#162544;--color-background:var(--color-cream);--color-background-soft:var(--color-cream-light);--color-background-muted:var(--color-warm-gray-soft);--color-background-dark:var(--color-indigo-navy);--color-background-deep:var(--color-indigo-navy-dark);--color-surface:var(--color-white);--color-surface-soft:var(--color-cream-light);--color-surface-muted:#F0EFE9;--color-surface-dark:var(--color-indigo-navy);--color-surface-accent:var(--color-forest-green);--color-heading:var(--color-indigo-navy);--color-text:var(--color-slate-blue);--color-text-light:var(--color-warm-gray);--color-text-soft:var(--color-warm-gray-light);--color-text-muted:var(--color-neutral-500);--color-heading-on-dark:var(--color-cream);--color-text-on-dark:rgba(246, 245, 238, 0.84);--color-text-inverse:var(--color-white);--color-link:var(--color-primary);--color-link-hover:var(--color-primary-light);--color-border:#D9D8D1;--color-border-light:#E7E6DF;--color-border-dark:#B6B7B3;--color-success:#3F6B55;--color-warning:#A76832;--color-error:#A83F35;--color-info:var(--color-slate-blue);--space-3xs:0.125rem;--space-2xs:0.25rem;--space-xs:0.5rem;--space-sm:0.75rem;--space-md:1rem;--space-lg:1.5rem;--space-xl:2rem;--space-2xl:3rem;--space-3xl:4rem;--space-4xl:6rem;--space-5xl:8rem;--section-space-xs:clamp(
+    2.5rem,
+    5vw,
+    4rem
+  );--section-space-sm:clamp(
+    3rem,
+    6vw,
+    4.5rem
+  );--section-space-md:clamp(
+    4rem,
+    8vw,
+    6rem
+  );--section-space-lg:clamp(
+    5rem,
+    10vw,
+    8rem
+  );--section-space-xl:clamp(
+    6rem,
+    12vw,
+    10rem
+  );--container-width:1200px;--container-wide-width:1360px;--container-content-width:1088px;--container-narrow-width:760px;--container-text-width:680px;--container-padding:1rem;--container-padding-tablet:1.5rem;--container-padding-desktop:2rem;--content-gap-xs:0.75rem;--content-gap-sm:1rem;--content-gap-md:1.5rem;--content-gap-lg:2rem;--content-gap-xl:3rem;--content-gap-2xl:4rem;--grid-gap:clamp(
+    1.25rem,
+    2vw,
+    2rem
+  );--grid-gap-large:clamp(
+    2rem,
+    4vw,
+    4rem
+  );--text-width-xs:28rem;--text-width-sm:36rem;--text-width-md:47.5rem;--text-width-lg:56rem;--heading-width-narrow:11ch;--heading-width-medium:15ch;--heading-width-wide:20ch;--header-height:5rem;--header-height-mobile:4.5rem;--header-background:rgba(22, 37, 68, 0.98);--header-background-light:rgba(246, 245, 238, 0.97);--header-border-color:rgba(246, 245, 238, 0.12);--navigation-font-size:var(--font-size-xs);--navigation-font-weight:var(--font-weight-medium);--navigation-letter-spacing:var(--letter-spacing-navigation);--navigation-gap:1.75rem;--navigation-color:var(--color-cream);--navigation-color-hover:var(--color-primary-light);--button-font-size:var(--font-size-xs);--button-font-weight:var(--font-weight-semibold);--button-letter-spacing:var(--letter-spacing-button);--button-height:3rem;--button-padding-inline:1.5rem;--button-padding-block:0.875rem;--button-radius:var(--radius-sm);--button-primary-background:var(--color-primary);--button-primary-background-hover:var(--color-primary-dark);--button-primary-text:var(--color-white);--button-primary-border:var(--color-primary);--button-secondary-background:transparent;--button-secondary-background-hover:var(--color-indigo-navy-soft);--button-secondary-border:var(--color-indigo-navy);--button-secondary-border-hover:var(--color-indigo-navy);--button-secondary-text:var(--color-indigo-navy);--button-light-background:var(--color-cream);--button-light-background-hover:var(--color-white);--button-light-text:var(--color-indigo-navy);--button-light-border:var(--color-cream);--button-dark-background:var(--color-indigo-navy);--button-dark-background-hover:var(--color-indigo-navy-dark);--button-dark-text:var(--color-cream);--card-background:var(--color-surface);--card-background-soft:var(--color-surface-soft);--card-border:var(--color-border-light);--card-padding-sm:1.25rem;--card-padding-md:1.75rem;--card-padding-lg:2rem;--card-padding-xl:3rem;--card-radius:var(--radius-md);--card-gap:1rem;--card-shadow:var(--shadow-sm);--card-shadow-hover:var(--shadow-md);--radius-none:0;--radius-xs:2px;--radius-sm:3px;--radius-md:6px;--radius-lg:10px;--radius-xl:16px;--radius-round:999px;--border-width:1px;--border-width-strong:2px;--border-default:var(--border-width) solid var(--color-border);--border-light:var(--border-width) solid var(--color-border-light);--border-dark:var(--border-width) solid var(--color-border-dark);--shadow-xs:0 1px 3px rgba(13, 24, 45, 0.04);--shadow-sm:0 4px 14px rgba(13, 24, 45, 0.06);--shadow-md:0 12px 32px rgba(13, 24, 45, 0.09);--shadow-lg:0 20px 52px rgba(13, 24, 45, 0.12);--shadow-image:0 18px 42px rgba(13, 24, 45, 0.14);--color-focus-ring:rgba(189, 106, 58, 0.24);--shadow-focus:0 0 0 3px var(--color-focus-ring);--icon-size-xs:1rem;--icon-size-sm:1.25rem;--icon-size-md:1.5rem;--icon-size-lg:2rem;--icon-size-xl:3rem;--icon-color:var(--color-indigo-navy);--icon-color-accent:var(--color-primary);--icon-background:var(--color-indigo-navy-soft);--icon-background-accent:var(--color-primary-soft);--image-radius-sm:var(--radius-sm);--image-radius-md:var(--radius-md);--image-radius-lg:var(--radius-lg);--image-overlay:linear-gradient(
+      90deg,
+      rgba(13, 24, 45, 0.84) 0%,
+      rgba(13, 24, 45, 0.52) 42%,
+      rgba(13, 24, 45, 0.08) 72%,
+      rgba(13, 24, 45, 0) 100%
+    );--image-overlay-dark:linear-gradient(
+      90deg,
+      rgba(13, 24, 45, 0.94) 0%,
+      rgba(13, 24, 45, 0.68) 45%,
+      rgba(13, 24, 45, 0.12) 78%,
+      rgba(13, 24, 45, 0) 100%
+    );--image-overlay-soft:linear-gradient(
+      90deg,
+      rgba(246, 245, 238, 1) 0%,
+      rgba(246, 245, 238, 0.9) 38%,
+      rgba(246, 245, 238, 0.2) 70%,
+      rgba(246, 245, 238, 0) 100%
+    );--hero-background:var(--color-indigo-navy);--hero-heading-color:var(--color-cream);--hero-text-color:rgba(246, 245, 238, 0.84);--hero-accent-color:var(--color-primary);--hero-content-width:42rem;--hero-heading-width:11ch;--hero-min-height:clamp(
+    40rem,
+    78vh,
+    52rem
+  );--trust-strip-background:var(--color-cream-light);--trust-strip-border:var(--color-border-light);--trust-icon-color:var(--color-indigo-navy);--trust-title-color:var(--color-indigo-navy);--trust-text-color:var(--color-warm-gray);--review-card-background:var(--color-white);--review-card-border:var(--color-border-light);--review-quote-color:var(--color-indigo-navy);--review-meta-color:var(--color-warm-gray);--review-star-color:var(--color-primary);--review-card-width:22rem;--review-card-gap:1.5rem;--insurance-background:var(--color-cream-light);--insurance-logo-opacity:0.76;--insurance-logo-height:2rem;--insurance-logo-filter:grayscale(1);--form-field-height:3rem;--form-field-padding:0.875rem 1rem;--form-field-background:var(--color-white);--form-field-border:var(--color-border);--form-field-border-hover:var(--color-border-dark);--form-field-border-focus:var(--color-primary);--form-field-text:var(--color-slate-blue);--form-field-placeholder:var(--color-warm-gray-light);--form-field-radius:var(--radius-sm);--form-label-color:var(--color-indigo-navy);--form-error-color:var(--color-error);--focus-outline-width:2px;--focus-outline-offset:3px;--focus-outline-color:var(--color-primary);--focus-outline:var(--focus-outline-width)
+    solid
+    var(--focus-outline-color);--transition-fast:0.2s ease;--transition-normal:0.3s ease;--transition-slow:0.5s ease;--transition-color:color var(--transition-fast),
+    background-color var(--transition-fast),
+    border-color var(--transition-fast);--transition-transform:transform var(--transition-fast);--transition-shadow:box-shadow var(--transition-normal);--transition-opacity:opacity var(--transition-normal);--z-index-base:1;--z-index-raised:10;--z-index-dropdown:100;--z-index-sticky:500;--z-index-header:1000;--z-index-overlay:1500;--z-index-modal:2000}
