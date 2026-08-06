@@ -73,36 +73,62 @@ function vivi_enqueue_assets() {
     $theme_dir = get_stylesheet_directory();
     $theme_uri = get_stylesheet_directory_uri();
 
-    $styles = array(
-        'vivi-variables'  => array(
-            'path' => '/assets/css/base/variables.css',
-            'deps' => array(),
-        ),
-        'vivi-reset' => array(
-            'path' => '/assets/css/base/reset.css',
-            'deps' => array('vivi-variables'),
-        ),
-        'vivi-typography' => array(
-            'path' => '/assets/css/base/typography.css',
-            'deps' => array('vivi-reset'),
-        ),
-        'vivi-buttons' => array(
-            'path' => '/assets/css/components/buttons.css',
-            'deps' => array('vivi-variables', 'vivi-typography'),
-        ),
-        'vivi-hero' => array(
-            'path' => '/assets/css/components/hero.css',
-            'deps' => array('vivi-variables', 'vivi-typography'),
-        ),
-           'vivi-credentials-strip' => array(
-            'path' => '/assets/css/sections/credentials-strip.css',
-            'deps' => array('vivi-variables', 'vivi-typography'),
-        ),
-        'vivi-faq' => array(
-            'path' => '/assets/css/components/faq.css',
-            'deps' => array('vivi-variables', 'vivi-typography'),
-        ),
-    );
+$styles = array(
+    'vivi-variables' => array(
+        'path' => '/assets/css/base/variables.css',
+        'deps' => array(),
+    ),
+
+    'vivi-reset' => array(
+        'path' => '/assets/css/base/reset.css',
+        'deps' => array('vivi-variables'),
+    ),
+
+    'vivi-typography' => array(
+        'path' => '/assets/css/base/typography.css',
+        'deps' => array('vivi-reset'),
+    ),
+
+    'vivi-buttons' => array(
+        'path' => '/assets/css/components/buttons.css',
+        'deps' => array('vivi-variables', 'vivi-typography'),
+    ),
+
+    'vivi-hero' => array(
+        'path' => '/assets/css/sections/hero.css',
+        'deps' => array('vivi-variables', 'vivi-typography'),
+    ),
+    
+    'vivi-container' => array(
+    'path' => '/assets/css/layout/container.css',
+    'deps' => array('vivi-variables'),
+    ),
+
+    'vivi-credentials-strip' => array(
+        'path' => '/assets/css/sections/credentials-strip.css',
+        'deps' => array('vivi-variables', 'vivi-typography'),
+    ),
+
+    'vivi-services' => array(
+        'path' => '/assets/css/sections/services.css',
+        'deps' => array('vivi-variables', 'vivi-typography'),
+    ),
+
+    'vivi-testimonials' => array(
+        'path' => '/assets/css/sections/testimonials.css',
+        'deps' => array('vivi-variables', 'vivi-typography'),
+    ),
+
+    'vivi-insurance' => array(
+        'path' => '/assets/css/sections/insurance.css',
+        'deps' => array('vivi-variables', 'vivi-typography'),
+    ),
+
+    'vivi-faq' => array(
+        'path' => '/assets/css/sections/faq.css',
+        'deps' => array('vivi-variables', 'vivi-typography'),
+    ),
+);
 
     foreach ($styles as $handle => $style) {
 

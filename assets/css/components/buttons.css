@@ -222,6 +222,7 @@
 }
 
 
+
 /* ===================================================
    Text Link Button
 =================================================== */
@@ -249,6 +250,8 @@
   color: var(--color-secondary);
   box-shadow: none;
 }
+
+
 
 
 /* ===================================================
@@ -377,6 +380,50 @@
   }
 
 }
+
+
+
+/* ===================================================
+   Text Link
+=================================================== */
+
+.text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  width: fit-content;
+
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+
+  color: var(--color-secondary);
+  text-decoration: none;
+}
+
+.text-link::after {
+  content: "→";
+  transition: var(--transition-transform);
+}
+
+.text-link:hover,
+.text-link:focus-visible {
+  color: var(--color-primary-dark);
+}
+
+.text-link:hover::after,
+.text-link:focus-visible::after {
+  transform: translateX(var(--space-2xs));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .text-link::after {
+    transition: none;
+  }
+}
+
+
+
+
 
 /* ===================================================
    Navigation Primary Button
