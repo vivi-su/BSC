@@ -117,15 +117,15 @@
 
 .cta-banner__button--primary {
   color: var(--color-white);
-  background-color: var(--color-secondary);
-  border-color: var(--color-secondary);
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
 }
 
 .cta-banner__button--primary:hover,
 .cta-banner__button--primary:focus-visible {
   color: var(--color-white);
-  background-color: var(--color-secondary-dark);
-  border-color: var(--color-secondary-dark);
+  background-color: var(--color-primary-dark);
+  border-color: var(--color-primary-dark);
 }
 
 
