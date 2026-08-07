@@ -69,7 +69,6 @@
   border: var(--border-light);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-xs);
-  margin-bottom: var(--space-5xl);
 }
 
 .service-card__image {

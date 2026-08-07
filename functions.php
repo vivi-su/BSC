@@ -113,7 +113,15 @@ $styles = array(
         'path' => '/assets/css/sections/services.css',
         'deps' => array('vivi-variables', 'vivi-typography'),
     ),
-
+    
+    'vivi-cta' => array(
+    'path' => '/assets/css/sections/cta.css',
+    'deps' => array(
+        'vivi-variables',
+        'vivi-typography',
+        'vivi-buttons',
+    ),
+    ),
     'vivi-testimonials' => array(
         'path' => '/assets/css/sections/testimonials.css',
         'deps' => array('vivi-variables', 'vivi-typography'),
