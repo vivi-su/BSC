@@ -3,14 +3,17 @@
 =================================================== */
 
 .cta-banner {
-padding:var(--section-space-sm);
+padding:var(--section-space-xs);
   background-color: var(--color-background-soft);
   border-radius: var(--radius-md);
 }
 
 .cta-banner__inner {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
+   grid-template-columns:
+        minmax(22rem,1fr)
+        auto;
+  /* grid-template-columns: minmax(0, 1fr) auto; */
   align-items: start;
   gap: clamp(2rem, 4vw, 4rem);
   background-color:var(--color-background-muted);
@@ -73,9 +76,18 @@ padding:var(--section-space-sm);
 
 .cta-banner__actions {
   display: grid;
-  grid-template-columns: repeat(2, minmax(16rem, 19rem));
+  grid-template-columns:
+        minmax(13rem, 15rem)
+        minmax(13rem, 15rem);
+
+    justify-content: end;
+
+    gap: var(--space-md);
+
+    flex-shrink: 0;
+  /* grid-template-columns: repeat(2, minmax(16rem, 19rem));
   justify-content: end;
-  gap: clamp(1rem, 2vw, 1.5rem);
+  gap: clamp(1rem, 2vw, 1.5rem); */
 }
 
 .cta-banner__button {
@@ -178,6 +190,17 @@ padding:var(--section-space-sm);
 /* ===================================================
    Large Tablet
 =================================================== */
+
+@media (max-width:1200px){
+
+    .cta-banner__actions{
+
+        grid-template-columns:1fr;
+
+        width:15rem;
+    }
+
+}
 
 @media (max-width: 1180px) {
   .cta-banner__inner {
