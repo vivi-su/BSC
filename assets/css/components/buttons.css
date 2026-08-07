@@ -27,22 +27,21 @@
   justify-content: center;
   gap: var(--space-xs);
 
-  min-height: var(--button-height, 3rem);
+  min-height: var(--button-height);
 
   padding:
-    var(--button-padding-block, 0.875rem)
-    var(--button-padding-inline, 1.5rem);
+    var(--button-padding-block)
+    var(--button-padding-inline);
 
   border: 1px solid transparent;
-  border-radius: var(--button-radius, var(--radius-sm));
+  border-radius: var(--button-radius);
 
   margin: 0;
 
-  font-family: var(--font-body, "Poppins", sans-serif);
-  font-size: var(--button-font-size, 0.9375rem);
-  font-weight: var(--button-font-weight, 600);
+  font-size: var(--button-font-size);
+  font-weight: var(--button-font-weight);
   line-height: 1.2;
-  letter-spacing: var(--letter-spacing-button, 0.02em);
+  letter-spacing: var(--letter-spacing-button);
 
   text-align: center;
   text-decoration: none;
