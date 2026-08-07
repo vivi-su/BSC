@@ -183,32 +183,46 @@ padding:var(--section-space-xs);
 
 
 /* ===================================================
-   Laptop / Large Tablet
-   Move buttons BELOW copy before text gets squeezed
+   Desktop
+=================================================== */
+
+.cta-banner__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: start;
+  gap: clamp(2rem, 4vw, 4rem);
+}
+
+.cta-banner__actions {
+  display: grid;
+  grid-template-columns: 15rem 15rem;
+  gap: var(--space-md);
+  justify-content: end;
+}
+
+
+/* ===================================================
+   Below 1100px
+   Keep horizontal layout, shrink buttons
 =================================================== */
 
 @media (max-width: 1100px) {
-  .cta-banner__inner {
-    grid-template-columns:
-      minmax(18rem, 1fr)
-      auto;
 
+  .cta-banner__inner {
+    grid-template-columns: minmax(0, 1fr) auto;
     gap: 1.5rem;
   }
 
   .cta-banner__actions {
-    grid-template-columns:
-      10.5rem
-      12rem;
-
-    gap: .75rem;
+    grid-template-columns: 11rem 12.5rem;
+    gap: 0.75rem;
   }
 
   .cta-banner__button {
     min-height: 3.5rem;
-    padding: .75rem 1rem;
+    padding: 0.75rem 0.9rem;
 
-    font-size: .9rem;
+    font-size: 0.875rem;
   }
 
   .cta-banner__arrow {
@@ -219,38 +233,23 @@ padding:var(--section-space-xs);
     font-size: 1.6rem;
     max-width: none;
   }
-
-  .cta-banner__description {
-    max-width: 30rem;
-  }
-}
-
-@media (max-width: 950px) {
-  .cta-banner__actions {
-    grid-template-columns:
-      9.5rem
-      10.5rem;
-  }
-
-  .cta-banner__button {
-    padding: .7rem .8rem;
-    font-size: .85rem;
-  }
 }
 
 
 /* ===================================================
    Tablet
+   Buttons move below content
 =================================================== */
 
-@media (max-width: 760px) {
+@media (max-width: 850px) {
+
+  .cta-banner__inner {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
 
   .cta-banner__actions {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    width: 100%;
-  }
-
-  .cta-banner__button {
     width: 100%;
   }
 }
@@ -260,81 +259,13 @@ padding:var(--section-space-xs);
    Mobile
 =================================================== */
 
-@media (max-width: 680px) {
-
-  .cta-banner {
-    padding: 0;
-    overflow: hidden;
-  }
-
-  .cta-banner__inner {
-    width: auto;
-
-    margin-inline: calc(50% - 50vw);
-
-    padding:
-      var(--space-xl)
-      var(--space-lg);
-
-    border-radius: 0;
-  }
-
-  .cta-banner__content {
-    align-items: flex-start;
-  }
-
-  .cta-banner__title {
-    font-size: clamp(1.5rem, 6vw, 1.75rem);
-  }
-
-  .cta-banner__description {
-    max-width: none;
-    font-size: 1rem;
-    line-height: 1.6;
-  }
+@media (max-width: 600px) {
 
   .cta-banner__actions {
     grid-template-columns: 1fr;
-    width: 100%;
   }
 
   .cta-banner__button {
     width: 100%;
-    min-height: 4rem;
-    padding: 0.875rem 1.25rem;
-  }
-}
-
-
-/* ===================================================
-   Small Mobile
-=================================================== */
-
-@media (max-width: 420px) {
-
-  .cta-banner__content {
-    flex-direction: column;
-  }
-
-  .cta-banner__icon {
-    margin-top: 0;
-  }
-}
-
-
-/* ===================================================
-   Reduced Motion
-=================================================== */
-
-@media (prefers-reduced-motion: reduce) {
-
-  .cta-banner__button,
-  .cta-banner__arrow {
-    transition: none;
-  }
-
-  .cta-banner__button:hover .cta-banner__arrow,
-  .cta-banner__button:focus-visible .cta-banner__arrow {
-    transform: none;
   }
 }
