@@ -204,7 +204,7 @@
      Semantic Colors
   ======================================== */
 
-  --color-background: var(--color-cream);
+  --color-background: var(--color-white);
   --color-background-soft: var(--color-cream-light);
   --color-background-muted: var(--color-warm-gray-soft);
   --color-background-dark: var(--color-indigo-navy);
