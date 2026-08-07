@@ -60,7 +60,7 @@ padding:var(--section-space-xs);
   margin: 0 0 var(--space-xs);
   font-size:2rem;
   line-height: 1.25;
-  max-width: 20ch;
+
 
 }
 
@@ -188,30 +188,53 @@ padding:var(--section-space-xs);
 =================================================== */
 
 @media (max-width: 1100px) {
-
   .cta-banner__inner {
-    grid-template-columns: 1fr;
-    gap: var(--space-xl);
-  }
+    grid-template-columns:
+      minmax(18rem, 1fr)
+      auto;
 
-  .cta-banner__content {
-    width: 100%;
-  }
-
-  .cta-banner__copy {
-    width: 100%;
-  }
-
-  .cta-banner__description {
-    max-width: 38rem;
+    gap: 1.5rem;
   }
 
   .cta-banner__actions {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 15rem));
-    justify-content: start;
-    width: auto;
-    gap: var(--space-md);
+    grid-template-columns:
+      10.5rem
+      12rem;
+
+    gap: .75rem;
+  }
+
+  .cta-banner__button {
+    min-height: 3.5rem;
+    padding: .75rem 1rem;
+
+    font-size: .9rem;
+  }
+
+  .cta-banner__arrow {
+    font-size: 1.2rem;
+  }
+
+  .cta-banner__title {
+    font-size: 1.6rem;
+    max-width: none;
+  }
+
+  .cta-banner__description {
+    max-width: 30rem;
+  }
+}
+
+@media (max-width: 950px) {
+  .cta-banner__actions {
+    grid-template-columns:
+      9.5rem
+      10.5rem;
+  }
+
+  .cta-banner__button {
+    padding: .7rem .8rem;
+    font-size: .85rem;
   }
 }
 
