@@ -83,11 +83,6 @@ padding:var(--section-space-xs);
     justify-content: end;
 
     gap: var(--space-md);
-
-    flex-shrink: 0;
-  /* grid-template-columns: repeat(2, minmax(16rem, 19rem));
-  justify-content: end;
-  gap: clamp(1rem, 2vw, 1.5rem); */
 }
 
 .cta-banner__button {
@@ -188,29 +183,35 @@ padding:var(--section-space-xs);
 
 
 /* ===================================================
-   Large Tablet
+   Laptop / Large Tablet
+   Move buttons BELOW copy before text gets squeezed
 =================================================== */
 
-@media (max-width:1200px){
-
-    .cta-banner__actions{
-
-        grid-template-columns:1fr;
-
-        width:15rem;
-    }
-
-}
-
 @media (max-width: 1100px) {
+
   .cta-banner__inner {
     grid-template-columns: 1fr;
     gap: var(--space-xl);
   }
 
+  .cta-banner__content {
+    width: 100%;
+  }
+
+  .cta-banner__copy {
+    width: 100%;
+  }
+
+  .cta-banner__description {
+    max-width: 38rem;
+  }
+
   .cta-banner__actions {
+    display: grid;
     grid-template-columns: repeat(2, minmax(0, 15rem));
     justify-content: start;
+    width: auto;
+    gap: var(--space-md);
   }
 }
 
@@ -219,22 +220,14 @@ padding:var(--section-space-xs);
    Tablet
 =================================================== */
 
-@media (max-width: 900px) {
-  .cta-banner__inner {
-    grid-template-columns: 1fr;
-    gap: var(--space-xl);
-  }
+@media (max-width: 760px) {
 
   .cta-banner__actions {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    justify-content: stretch;
     width: 100%;
   }
-}
 
-@media (max-width: 760px) {
-  .cta-banner__actions {
-    grid-template-columns: 1fr 1fr;
+  .cta-banner__button {
     width: 100%;
   }
 }
@@ -245,39 +238,9 @@ padding:var(--section-space-xs);
 =================================================== */
 
 @media (max-width: 680px) {
-  .cta-banner {
-    padding: var(--space-xl) var(--space-lg);
-  }
-
-  .cta-banner__title {
-    font-size: clamp(1.5rem, 7vw, 1.875rem);
-  }
-
-  .cta-banner__description {
-    font-size: 1rem;
-    line-height: 1.6;
-  }
-
-  .cta-banner__actions {
-    grid-template-columns: 1fr;
-  }
-
-  .cta-banner__button {
-     width: 100%;
-    min-height: 4rem;
-    padding: 0.875rem 1.25rem;
-  }
-  .cta-banner__inner {
-    margin:0;
-}
-
-/* ===================================================
-   Mobile for strech grey area
-=================================================== */
-
-@media (max-width: 680px) {
 
   .cta-banner {
+    padding: 0;
     overflow: hidden;
   }
 
@@ -286,17 +249,46 @@ padding:var(--section-space-xs);
 
     margin-inline: calc(50% - 50vw);
 
-    padding: var(--space-xl) var(--space-lg);
+    padding:
+      var(--space-xl)
+      var(--space-lg);
 
     border-radius: 0;
   }
+
+  .cta-banner__content {
+    align-items: flex-start;
+  }
+
+  .cta-banner__title {
+    font-size: clamp(1.5rem, 6vw, 1.75rem);
+  }
+
+  .cta-banner__description {
+    max-width: none;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .cta-banner__actions {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+
+  .cta-banner__button {
+    width: 100%;
+    min-height: 4rem;
+    padding: 0.875rem 1.25rem;
+  }
 }
+
 
 /* ===================================================
    Small Mobile
 =================================================== */
 
 @media (max-width: 420px) {
+
   .cta-banner__content {
     flex-direction: column;
   }
@@ -312,6 +304,7 @@ padding:var(--section-space-xs);
 =================================================== */
 
 @media (prefers-reduced-motion: reduce) {
+
   .cta-banner__button,
   .cta-banner__arrow {
     transition: none;
