@@ -99,7 +99,7 @@
 
   /* Line heights */
 
-  --line-height-body: 1.7;
+  --line-height-body: 1.75;
   --line-height-body-compact: 1.55;
 
   --line-height-heading: 1.1;
@@ -363,7 +363,7 @@
   ======================================== */
 
   --button-font-size: var(--font-size-xs);
-  --button-font-weight: var(--font-weight-semibold);
+  --button-font-weight: var(--font-weight-medium);
   --button-letter-spacing: var(--letter-spacing-button);
 
   --button-height: 3rem;
