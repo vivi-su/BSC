@@ -363,30 +363,43 @@
    Approx. 1101px – 1440px
 =================================================== */
 
+/* ===================================================
+   Laptop / Medium Desktop
+   1101px – 1440px
+=================================================== */
+
 @media (min-width: 1101px) and (max-width: 1440px) {
 
   .about-hero {
     min-height: max(620px, 60vh);
   }
 
-  .about-hero__inner {
-    width: 100%;
-    max-width: none;
 
-    min-height: max(620px, 60vh);
+  .about-hero__inner {
+    /*
+     * Keep the whole content area centered instead
+     * of letting it touch the edges of the viewport.
+     */
+    width: min(calc(100% - 10rem), 1240px);
+
+    min-height: inherit;
+
+    margin-inline: auto;
 
     padding-inline: 0;
 
     box-sizing: border-box;
   }
 
+
   .about-hero__content {
     width: min(56%, 48rem);
     max-width: none;
-    margin-left: 0;
 
-    transform: translateX(clamp(5rem, 7vw, 7rem));
+    margin: 0;
+    transform: none;
   }
+
 
   .about-hero__media {
     width: 74%;
@@ -394,9 +407,11 @@
     min-height: 0;
   }
 
+
   .about-hero__media img {
     object-position: 69% center;
   }
+
 }
 
 
