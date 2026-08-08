@@ -57,6 +57,11 @@ function vivi_enqueue_assets() {
     $theme_dir = get_stylesheet_directory();
     $theme_uri = get_stylesheet_directory_uri();
 
+
+  /* ==========================================================
+       Base CSS
+    ========================================================== */
+
 $styles = array(
     'vivi-variables' => array(
         'path' => '/assets/css/base/variables.css',
@@ -73,6 +78,18 @@ $styles = array(
         'deps' => array('vivi-reset'),
     ),
 
+    /* ==========================================================
+       Layout
+    ========================================================== */
+    'vivi-container' => array(
+    'path' => '/assets/css/layout/container.css',
+    'deps' => array('vivi-variables'),
+    ),
+
+    /* ==========================================================
+       Shared Sections / Components
+    ========================================================== */
+
     'vivi-buttons' => array(
         'path' => '/assets/css/components/buttons.css',
         'deps' => array('vivi-variables', 'vivi-typography'),
@@ -83,10 +100,6 @@ $styles = array(
         'deps' => array('vivi-variables', 'vivi-typography'),
     ),
     
-    'vivi-container' => array(
-    'path' => '/assets/css/layout/container.css',
-    'deps' => array('vivi-variables'),
-    ),
 
     'vivi-credentials-strip' => array(
         'path' => '/assets/css/sections/credentials-strip.css',
@@ -122,6 +135,11 @@ $styles = array(
     ),
 );
 
+
+    /* ==========================================================
+       Enqueue Shared Styles
+    ========================================================== */
+
     foreach ($styles as $handle => $style) {
 
         $file_path = $theme_dir . $style['path'];
@@ -138,6 +156,32 @@ $styles = array(
             error_log('Missing stylesheet: ' . $file_path);
         }
     }
-}
+
+
+    /* ==========================================================
+       Page-Specific CSS
+    ========================================================== */
+
+    if (is_page('about-me')) {
+
+        wp_enqueue_style(
+            'vivi-about',
+            $theme_uri . '/assets/css/pages/about.css',
+            array(
+                'vivi-variables',
+                'vivi-reset',
+                'vivi-typography',
+                'vivi-container'
+            ),
+            filemtime(
+                $theme_dir . '/assets/css/pages/about.css'
+            )
+        );
+
+    }
+
+
+
+    }
 
 add_action('wp_enqueue_scripts', 'vivi_enqueue_assets', 20);
