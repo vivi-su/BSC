@@ -369,9 +369,7 @@
     width: 100%;
     max-width: none;
 
-    /* Pull content away from the far-left edge */
-    padding-inline:
-      clamp(4rem, 6vw, 6.5rem);
+    padding-inline: 0;
 
     box-sizing: border-box;
   }
@@ -379,16 +377,17 @@
   .about-hero__content {
     width: min(56%, 48rem);
     max-width: none;
+
+    margin-left: clamp(6rem, 8vw, 8rem);
   }
 
-    .about-hero__media {
+  .about-hero__media {
     width: 74%;
   }
 
   .about-hero__media img {
     object-position: 69% center;
   }
-
 }
 
 
