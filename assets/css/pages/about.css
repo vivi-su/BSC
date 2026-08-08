@@ -305,7 +305,7 @@
    Large Desktop
 =================================================== */
 
-@media (min-width: 1500px) {
+@media (min-width: 1601px) {
 
 
   .about-hero__inner {
@@ -330,33 +330,6 @@
 }
 
 
-/* ===================================================
-   Medium Desktop
-=================================================== */
-
-@media (min-width: 981px) and (max-width: 1100px) {
-
-  .about-hero__media {
-    width: 70%;
-  }
-
-
-  .about-hero__media img {
-    object-position: 72% center;
-  }
-
-
-  .about-hero__content {
-    width: min(47%, 39rem);
-  }
-
-
-  .about-hero .about-hero__quote p {
-    font-size: clamp(2.55rem, 3.4vw, 3.5rem);
-  }
-
-}
-
 
 /* ===================================================
    Laptop / Medium Desktop
@@ -368,7 +341,7 @@
    1101px – 1440px
 =================================================== */
 
-@media (min-width: 1101px) and (max-width: 1440px) {
+@media (min-width: 1101px) and (max-width: 1600px) {
 
   .about-hero {
      height: max(620px, 60vh);
@@ -418,6 +391,35 @@
   }
 
 }
+
+
+/* ===================================================
+   Medium Desktop
+=================================================== */
+
+@media (min-width: 981px) and (max-width: 1100px) {
+
+  .about-hero__media {
+    width: 70%;
+  }
+
+
+  .about-hero__media img {
+    object-position: 72% center;
+  }
+
+
+  .about-hero__content {
+    width: min(47%, 39rem);
+  }
+
+
+  .about-hero .about-hero__quote p {
+    font-size: clamp(2.55rem, 3.4vw, 3.5rem);
+  }
+
+}
+
 
 
 /* ===================================================
