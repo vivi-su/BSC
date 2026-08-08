@@ -155,7 +155,8 @@
   margin: 0;
 
   font-family: var(--font-heading);
-  font-size: clamp(2.75rem, 3.25vw, 3.9rem);
+  /* font-size: clamp(2.75rem, 3.25vw, 3.9rem); */
+  font-size:clamp(4.5rem,6vw,5rem);
   font-weight: var(--font-weight-normal);
   line-height: 1.04;
   letter-spacing: -0.03em;
@@ -375,7 +376,7 @@
 
     min-height: max(620px, 60vh);
 
-    padding-inline: clamp(4rem, 6vw, 6.5rem);
+    padding-inline: 0;
 
     box-sizing: border-box;
   }
@@ -383,6 +384,9 @@
   .about-hero__content {
     width: min(56%, 48rem);
     max-width: none;
+    margin-left: 0;
+
+    transform: translateX(clamp(5rem, 7vw, 7rem));
   }
 
   .about-hero__media {
