@@ -16,7 +16,7 @@
   isolation: isolate;
 
   width: 100%;
-  min-height: clamp(38rem, 46vw, 46rem);
+  min-height: max(620px, 60vh);
 
   overflow: hidden;
 
@@ -37,7 +37,8 @@
   bottom: 0;
 
   width: 72%;
-
+ 
+ height: 100%;
   overflow: hidden;
 }
 
@@ -106,10 +107,8 @@
 
   margin-inline: auto;
 
-  padding:
-         clamp(2.75rem, 4vw, 4.25rem)
-        var(--container-padding-desktop)
-        clamp(3.75rem, 5vw, 5.25rem);
+ padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 
@@ -243,7 +242,7 @@
 
   gap: clamp(1rem, 1.5vw, 1.5rem);
 
-  margin-top: 5rem;
+  margin-top: 3rem;
 }
 
 
@@ -299,10 +298,6 @@
 =================================================== */
 
 @media (min-width: 1500px) {
-
-  .about-hero {
-    min-height: 44rem;
-  }
 
 
   .about-hero__inner {
@@ -360,10 +355,6 @@
 =================================================== */
 
 @media (max-width: 1100px) {
-
-  .about-hero {
-    min-height: 42rem;
-  }
 
 
   .about-hero__media {
@@ -441,6 +432,14 @@
   .about-hero__actions .btn {
     width: min(32rem, 100%);
 }
+
+}
+
+@media (min-width: 768px) and (max-width: 1100px) {
+
+  .about-hero {
+    min-height: 42rem;
+  }
 
 }
 
