@@ -364,15 +364,14 @@
     position: relative;
     left: 2rem;
 
-    /* padding-inline: 0; */
-    margin-left:5rem;
+    padding-inline: 0;
 
     box-sizing: border-box;
   }
 
 
   .about-hero__content {
-    width: min(56%, 48rem);
+    width: min(70%, 68rem);
     max-width: none;
 
     margin: 0;
