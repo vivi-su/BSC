@@ -17,22 +17,6 @@ function divi_child_enqueue_styles() {
 add_action('wp_enqueue_scripts', 'divi_child_enqueue_styles');
 
 
-/* ==========================================================
-   Google Fonts
-========================================================== */
-
-function vivi_enqueue_google_fonts() {
-
-    wp_enqueue_style(
-        'vivi-google-fonts',
-        'https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Poppins:wght@400;500;600;700&display=swap',
-        array(),
-        null
-    );
-
-}
-add_action('wp_enqueue_scripts', 'vivi_enqueue_google_fonts');
-
 
 /* ==========================================================
    Hero Image Preload
