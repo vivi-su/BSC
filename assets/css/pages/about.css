@@ -334,7 +334,7 @@
    Medium Desktop
 =================================================== */
 
-@media (max-width: 1280px) {
+@media (min-width: 981px) and (max-width: 1100px) {
 
   .about-hero__media {
     width: 70%;
@@ -365,9 +365,15 @@
 
 @media (min-width: 1101px) and (max-width: 1440px) {
 
+  .about-hero {
+    min-height: max(620px, 60vh);
+  }
+
   .about-hero__inner {
     width: 100%;
     max-width: none;
+
+    min-height: max(620px, 60vh);
 
     padding-inline: clamp(4rem, 6vw, 6.5rem);
 
@@ -381,6 +387,8 @@
 
   .about-hero__media {
     width: 74%;
+    height: 100%;
+    min-height: 0;
   }
 
   .about-hero__media img {
