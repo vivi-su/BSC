@@ -294,6 +294,14 @@
 }
 
 /* ===================================================
+1441px+       Wide desktop
+1101–1440px   Laptop
+768–1100px    Tablet
+0–767px       Mobile
+=================================================== */
+
+
+/* ===================================================
    Large Desktop
 =================================================== */
 
@@ -345,6 +353,40 @@
 
   .about-hero .about-hero__quote p {
     font-size: clamp(2.55rem, 3.4vw, 3.5rem);
+  }
+
+}
+
+
+/* ===================================================
+   Laptop / Medium Desktop
+   Approx. 1101px – 1440px
+=================================================== */
+
+@media (min-width: 1101px) and (max-width: 1440px) {
+
+  .about-hero__inner {
+    width: 100%;
+    max-width: none;
+
+    /* Pull content away from the far-left edge */
+    padding-inline:
+      clamp(4rem, 6vw, 6.5rem);
+
+    box-sizing: border-box;
+  }
+
+  .about-hero__content {
+    width: min(56%, 48rem);
+    max-width: none;
+  }
+
+    .about-hero__media {
+    width: 74%;
+  }
+
+  .about-hero__media img {
+    object-position: 69% center;
   }
 
 }
