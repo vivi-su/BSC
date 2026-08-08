@@ -369,7 +369,7 @@
     width: 100%;
     max-width: none;
 
-    padding-inline: 0;
+    padding-inline: clamp(4rem, 6vw, 6.5rem);
 
     box-sizing: border-box;
   }
@@ -377,8 +377,6 @@
   .about-hero__content {
     width: min(56%, 48rem);
     max-width: none;
-
-    margin-left: clamp(6rem, 8vw, 8rem);
   }
 
   .about-hero__media {
