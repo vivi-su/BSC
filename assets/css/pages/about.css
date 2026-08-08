@@ -371,7 +371,8 @@
 @media (min-width: 1101px) and (max-width: 1440px) {
 
   .about-hero {
-    min-height: max(620px, 60vh);
+     height: max(620px, 60vh);
+    min-height: 0;
   }
 
 
@@ -382,9 +383,13 @@
      */
     width: min(calc(100% - 10rem), 1240px);
 
-    min-height: inherit;
+    height: 100%;
+    min-height:0;
 
     margin-inline: auto;
+
+    position: relative;
+    left: 2rem;
 
     padding-inline: 0;
 
