@@ -365,14 +365,14 @@
     left: 2rem;
 
     /* padding-inline: 0; */
-    margin-left:3rem;
+    margin-left:5rem;
 
     box-sizing: border-box;
   }
 
 
   .about-hero__content {
-    width: min(70%, 48rem);
+    width: min(56%, 48rem);
     max-width: none;
 
     margin: 0;
@@ -381,7 +381,7 @@
 
 
   .about-hero__media {
-    width: 64%;
+    width: 74%;
     height: 100%;
     min-height: 0;
   }
