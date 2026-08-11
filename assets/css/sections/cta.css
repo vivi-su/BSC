@@ -15,7 +15,7 @@
 
   gap: clamp(2rem, 4vw, 4rem);
 
-  background-color: var(--color-background-muted);
+  background-color: var( --color-warm-gray-soft);
   padding: var(--section-space-sm);
   border-radius: var(--radius-md);
 }

@@ -14,7 +14,7 @@
 =================================================== */
 
 .services {
-  background-color: var(--color-background-soft);
+  background-color: var(--color-indigo-navy-soft);
 }
 
 .services__header {
@@ -66,9 +66,11 @@
   min-width: 0;
   padding: var(--space-md);
   background-color: var(--card-background-soft);
-  border: var(--border-light);
+   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.04);
+  /* border: var(--border-light); */
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-xs);
+  margin-bottom: var(--space-2xl);
 }
 
 .service-card__image {
