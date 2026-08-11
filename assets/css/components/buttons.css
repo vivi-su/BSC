@@ -27,14 +27,12 @@
   justify-content: center;
   gap: var(--space-xs);
 
-  min-height: var(--button-height);
-
-  padding:
-    var(--button-padding-block)
-    var(--button-padding-inline);
+   min-height: 4.5rem;
+  padding: 1.35rem 2.75rem;
+  border-radius: 24px;
 
   border: 1px solid transparent;
-  border-radius: var(--button-radius);
+
 
   margin: 0;
 
@@ -265,8 +263,8 @@
 
 .btn--large {
   min-height: 3.375rem;
-  padding: 1rem 1.75rem;
-  font-size: var(--font-size-base);
+  padding:1.45rem 3rem;
+  font-size: var(--font-size-md);
 }
 
 
@@ -319,16 +317,18 @@
   align-items: center;
   justify-content: center;
 
-  padding:
-    var(--button-padding-block, 0.875rem)
-    var(--button-padding-inline, 1.5rem) !important;
+    min-height: 4.5rem;
+  padding: 1.45rem 3rem !important;
+  border-radius: 24px !important;
+
+  padding: 1.35rem 2.75rem!important;
 
   border-width: 1px !important;
-  border-radius: var(--button-radius, var(--radius-sm));
+
 
   font-family: var(--font-body);
-  font-size: var(--button-font-size, 0.9375rem);
-  font-weight: var(--button-font-weight, 600);
+  font-size: var(--button-font-size);
+  font-weight: var(--button-font-weight);
   line-height: 1.2 !important;
 }
 
@@ -459,26 +459,35 @@
     padding-right: 0;
   }
 
-  #top-menu-nav #top-menu li.nav-primary-btn > a {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+#top-menu-nav #top-menu li.nav-primary-btn > a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 
-    padding: 16px 20px;
+  /* Same rounded style as site buttons,
+     slightly more compact for navigation */
+  min-height: 3.5rem;
+  padding: 1rem 1.75rem;
 
-    font-size: inherit;
-    font-weight: var(--font-weight-semibold, 600);
-    letter-spacing: 0.02em;
+  font-size: inherit;
+  font-weight: var(--font-weight-semibold, 600);
+  letter-spacing: 0.02em;
 
-    line-height: 1;
-    white-space: nowrap;
+  line-height: 1;
+  white-space: nowrap;
 
-    color: var(--color-white, #ffffff);
-    background-color: var(--color-primary, #bd6a3a);
-    border-radius: var(--button-radius, 0.25rem);
+  color: var(--color-white, #ffffff);
+  background-color: var(--color-primary, #bd6a3a);
 
-    opacity: 1;
-  }
+  border-radius: 24px;
+
+  opacity: 1;
+
+  transition:
+    background-color var(--transition-fast),
+    color var(--transition-fast),
+    transform var(--transition-fast);
+}
 
   #top-menu-nav #top-menu li.nav-primary-btn > a:hover {
     color: var(--color-white, #ffffff);
@@ -514,5 +523,38 @@
     color: var(--color-white, #ffffff);
     background-color: var(--color-primary-dark, #995528);
     opacity: 1;
+  }
+}
+
+/* ===================================================
+   Hero Buttons — Equal Size
+   Tablet
+=================================================== */
+
+@media (min-width: 768px) and (max-width: 980px) {
+
+  .button-group.hero-buttons {
+    width: 100%;
+
+    justify-items: start;
+    justify-content: start;
+
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .button-group.hero-buttons .btn {
+    width: 24rem ;
+    max-width: 100%;
+    min-height: 4.5rem ;
+
+    margin-left: 0;
+    margin-right: 0;
+
+    padding: 1.35rem 2rem;
+
+    border-radius: 24px;
+
+    justify-content: center;
   }
 }
