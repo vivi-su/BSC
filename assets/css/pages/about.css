@@ -151,6 +151,10 @@
 }
 
 
+/* ===================================================
+   About Hero Quote
+=================================================== */
+
 .about-hero .about-hero__quote p {
   margin: 0;
 
@@ -160,8 +164,29 @@
   line-height: 1.04;
   letter-spacing: -0.03em;
 
-  color: var(--color-heading-on-dark, #F6F5EE)!important;
+  color: var(--color-white);
+}
 
+
+/* ===================================================
+   About Hero Text Colors
+=================================================== */
+
+.about-hero {
+  color: var(--color-white);
+}
+
+.about-hero__quote,
+.about-hero__quote p {
+  color: var(--color-white);
+}
+
+.about-hero__credentials {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.about-hero__eyebrow {
+  color: var(--color-primary);
 }
 
 
