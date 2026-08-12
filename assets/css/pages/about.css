@@ -160,7 +160,7 @@
   line-height: 1.04;
   letter-spacing: -0.03em;
 
-  color: var(--color-heading-on-dark, #F6F5EE);
+  color: var(--color-heading-on-dark, #F6F5EE)!important;
 
 }
 
