@@ -447,6 +447,44 @@ img.wp-post-image {
 
 
 /* ===================================================
+   ARTICLE CONTENT — VERTICAL RHYTHM
+=================================================== */
+
+/* Normal paragraph spacing */
+.article-reading-column p {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+
+/* Major article sections */
+.article-reading-column > section:not(.article-cta) {
+  margin-top: clamp(3.5rem, 6vw, 5rem);
+}
+
+
+/* H2 headings */
+.article-reading-column h2 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+
+/* H3 subsections */
+.article-reading-column h3 {
+  margin-top: 2.75rem;
+  margin-bottom: 1rem;
+}
+
+
+/* Prevent the final paragraph from creating
+   extra space inside a section */
+.article-reading-column section > *:last-child {
+  margin-bottom: 0;
+}
+
+
+/* ===================================================
    Article Blockquotes
 =================================================== */
 
