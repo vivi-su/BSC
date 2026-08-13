@@ -911,22 +911,55 @@ a:hover {
     }
 
 
-
+    /*
+     * Match hero and article content gutters exactly on mobile.
+     * The !important values here override Divi's mobile row width.
+     */
 
     .article-hero__inner,
     .article-shell {
-        width: calc(100% - 2rem);
-        max-width: none;
-        margin-inline: auto;
+        width: calc(100% - 2rem) !important;
+        max-width: none !important;
+
+        margin-left: auto !important;
+        margin-right: auto !important;
     }
+
+
+    .article-hero__inner.et_pb_row {
+        width: calc(100% - 2rem) !important;
+        max-width: none !important;
+
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+
+    /*
+     * Keep the internal Divi hero structure from adding
+     * another mobile width restriction.
+     */
+
+    .article-hero__inner .et_pb_column,
+    .article-hero__inner .et_pb_module {
+        width: 100% !important;
+        max-width: none !important;
+    }
+
+
+    /*
+     * Article content stays full width inside the
+     * 1rem left/right mobile gutter.
+     */
 
     .article-shell .et_pb_row,
     .article-shell .et_pb_column,
     .article-shell .et_pb_module,
     .article-shell .et_pb_post_content {
-        width: 100%;
-        max-width: none;
+        width: 100% !important;
+        max-width: none !important;
     }
+
 
     .article-reading-column,
     .article-toc-column {
@@ -935,8 +968,8 @@ a:hover {
     }
 
 
-
     .article-hero .et_pb_title_container {
+        width: 100% !important;
         max-width: none;
     }
 
@@ -956,6 +989,8 @@ a:hover {
 
 
     .article-hero .et_pb_title_featured_container {
+        width: 100% !important;
+
         margin-top: 2rem;
     }
 
