@@ -981,17 +981,6 @@ a:hover {
     }
 
 
-    .article-shell .et_pb_row,
-    .article-shell .et_pb_column,
-    .article-shell .et_pb_module,
-    .article-shell .et_pb_post_content {
-       width: calc(100% - 1.5rem) !important;
-        max-width: none !important;
-        margin-left: auto !important;
-        margin-right: auto !important;
-    }
-
-
     .article-reading-column,
     .article-toc-column {
         width: 100%;
@@ -1086,6 +1075,60 @@ a:hover {
     .article-cta__actions .btn,
     .article-cta .button-group .btn {
         width: 100%;
+    }
+
+}
+
+
+
+/* ===================================================
+   Mobile — Article Width / Divi Row Override
+=================================================== */
+
+@media (max-width: 767px) {
+
+    /* Remove section-level horizontal padding */
+    .article-hero,
+    .article-shell {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+
+    /* MAIN mobile gutter:
+       1rem on each side of the screen */
+    .article-hero__inner,
+    .article-shell,
+    .article-hero > .et_pb_row,
+    .article-shell.et_pb_row,
+    .article-shell.et_pb_section > .et_pb_row {
+        width: calc(100% - 2rem) !important;
+        max-width: none !important;
+
+        margin-left: auto !important;
+        margin-right: auto !important;
+
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+
+        box-sizing: border-box;
+    }
+
+
+    /* IMPORTANT:
+       Nested Divi elements should fill the row.
+       Do NOT subtract another 1.5rem here. */
+    .article-shell .et_pb_row,
+    .article-shell .et_pb_column,
+    .article-shell .et_pb_module,
+    .article-shell .et_pb_post_content,
+    .article-reading-column,
+    .article-toc-column {
+        width: 100% !important;
+        max-width: none !important;
+
+        margin-left: 0 !important;
+        margin-right: 0 !important;
     }
 
 }
