@@ -985,8 +985,10 @@ a:hover {
     .article-shell .et_pb_column,
     .article-shell .et_pb_module,
     .article-shell .et_pb_post_content {
-        width: 100%;
-        max-width: none;
+       width: calc(100% - 1.5rem) !important;
+        max-width: none !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
     }
 
 
