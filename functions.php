@@ -158,30 +158,57 @@ $styles = array(
     }
 
 
-    /* ==========================================================
-       Page-Specific CSS
-    ========================================================== */
+/* ==========================================================
+   Page-Specific CSS
+========================================================== */
 
-    if (is_page('about-me')) {
+/* About Page */
+if (is_page('about-me')) {
 
-        wp_enqueue_style(
-            'vivi-about',
-            $theme_uri . '/assets/css/pages/about.css',
-            array(
-                'vivi-variables',
-                'vivi-reset',
-                'vivi-typography',
-                'vivi-container'
-            ),
-            filemtime(
-                $theme_dir . '/assets/css/pages/about.css'
-            )
-        );
-
-    }
-
+    wp_enqueue_style(
+        'vivi-about',
+        $theme_uri . '/assets/css/pages/about.css',
+        array(
+            'vivi-variables',
+            'vivi-reset',
+            'vivi-typography',
+            'vivi-container'
+        ),
+        filemtime(
+            $theme_dir . '/assets/css/pages/about.css'
+        )
+    );
+}
 
 
-    }
+/* Single Blog Posts */
+if (is_single()) {
+
+    wp_enqueue_style(
+        'vivi-article',
+        $theme_uri . '/assets/css/pages/article.css',
+        array(
+            'vivi-variables',
+            'vivi-reset',
+            'vivi-typography',
+            'vivi-container'
+        ),
+        filemtime(
+            $theme_dir . '/assets/css/pages/article.css'
+        )
+    );
+
+    wp_enqueue_script(
+        'vivi-article',
+        $theme_uri . '/assets/js/article.js',
+        array(),
+        filemtime(
+            $theme_dir . '/assets/js/article.js'
+        ),
+        true
+    );
+}
+
+}
 
 add_action('wp_enqueue_scripts', 'vivi_enqueue_assets', 20);
