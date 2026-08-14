@@ -988,15 +988,9 @@ a:hover {
 
 @media (max-width: 767px) {
 
-.et_pb_section.et_pb_section_1_tb_body, .et_section_regular{
+/* .et_pb_section.et_pb_section_1_tb_body, .et_section_regular{
      padding-top: 0.4rem !important;
-}
-
-
-        /* .article-hero.et_pb_section {
-        padding-top: 0!important;
-        padding-bottom: 0 !important;
-    } */
+} */
 
 
     .article-hero .et_pb_title_featured_container {
