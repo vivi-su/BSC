@@ -150,6 +150,15 @@ img.wp-post-image {
     color: var(--color-text);
 }
 
+/* ===================================================
+   Hero → Article Transition
+=================================================== */
+
+.article-hero + .article-shell {
+    margin-top: 0 !important;
+    /* padding-top: clamp(2rem, 3vw, 3rem) !important; */
+    padding-top: 0 !important;
+}
 
 /* ===================================================
    Divi Sticky Fix
@@ -881,11 +890,24 @@ a:hover {
 }
 
 
+.article-shell.et_pb_section,
+.et_pb_row_0_tb_body {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.et_pb_section.et_pb_section_1_tb_body, .et_section_regular{
+     padding-top: 1.5rem !important;
+    padding-bottom: 0 !important;
+}
+
+
 /* ===================================================
    Tablet
 =================================================== */
 
 @media (max-width: 980px) {
+
 
     .article-hero .et_pb_title_container {
         max-width: 850px;
@@ -960,168 +982,65 @@ a:hover {
 
 
 /* ===================================================
-   Mobile
+   MOBILE — ARTICLE WIDTH
+   Same approach as the working .ic-body layout
 =================================================== */
 
 @media (max-width: 767px) {
 
-    .article-hero {
-        padding-top: 3rem;
-        padding-bottom: 2rem;
-    }
+.et_pb_section.et_pb_section_1_tb_body, .et_section_regular{
+     padding-top: 0.4rem !important;
+}
 
 
-    .article-hero__inner,
-    .article-shell {
-       width: 100%;
-        max-width: none;
-        margin-inline: auto;
-        padding-inline: 0.75rem;
-        box-sizing: border-box;
-    }
-
-
-    .article-reading-column,
-    .article-toc-column {
-        width: 100%;
-        max-width: none;
-    }
-
-
-    .article-hero .et_pb_title_container {
-        max-width: none;
-    }
-
-
-    .article-hero .entry-title {
-        font-size: clamp(2.5rem, 10vw, 3.4rem);
-        line-height: 1.06;
-        letter-spacing: -0.025em;
-    }
-
-
-    .article-hero .et_pb_title_meta_container {
-        margin-top: 1rem;
-
-        font-size: 0.875rem;
+        .article-hero.et_pb_section {
+        padding-top: 0!important;
+        padding-bottom: 0 !important;
     }
 
 
     .article-hero .et_pb_title_featured_container {
-        margin-top: 2rem;
+        margin-top: 1.75rem;
     }
 
-
-    .article-hero
-    .et_pb_title_featured_container
-    img,
-    .article-hero
-    .et_pb_title_featured_container
-    img.wp-post-image {
-        height: clamp(190px, 55vw, 260px) !important;
-
-        object-position: center 42% !important;
-    }
-
-
-    .article-shell .et_pb_post_content {
-        font-size: 1.0625rem;
-        line-height: 1.72;
-    }
-
-
-    /*
-     * Slightly tighter major-section spacing
-     * on mobile.
-     */
-
-    .article-reading-column > section[id] {
-        padding-top: 3.75rem;
-    }
-
-
-    .article-reading-column > section[id]:first-of-type {
-        padding-top: 0;
-    }
-
-
-    .article-shell .et_pb_post_content h2 {
-        margin-top: 0;
-
-        font-size: clamp(2.1rem, 9vw, 2.75rem);
-    }
-
-
-    .article-shell .et_pb_post_content h3 {
-        margin-top: 2.75rem;
-
-        font-size: clamp(1.65rem, 7vw, 2.1rem);
-    }
-
-
-    .article-cta {
-        padding: 2rem 1.5rem;
-    }
-
-
-    .article-cta__actions,
-    .article-cta .button-group {
-        flex-direction: column;
-
-        align-items: stretch;
-    }
-
-
-    .article-cta__actions .btn,
-    .article-cta .button-group .btn {
-        width: 100%;
-    }
-
-}
-
-
-
-/* ===================================================
-   Mobile — Article Width / Divi Row Override
-=================================================== */
-
-@media (max-width: 767px) {
-
-    /* Remove section-level horizontal padding */
-    .article-hero,
-    .article-shell {
-        padding-left: 0 !important;
-        padding-right: 0 !important;
-    }
-
-
-    /* MAIN mobile gutter:
-       1rem on each side of the screen */
-    .article-hero__inner,
-    .article-shell,
-    .article-hero > .et_pb_row,
-    .article-shell.et_pb_row,
-    .article-shell.et_pb_section > .et_pb_row {
-        width: calc(100% - 2rem) !important;
+    /* Hero row */
+    .article-hero__inner.et_pb_row,
+    .article-hero > .et_pb_row {
+        width: 100% !important;
         max-width: none !important;
 
         margin-left: auto !important;
         margin-right: auto !important;
 
-        padding-left: 0 !important;
-        padding-right: 0 !important;
+        padding-left: 1.25rem !important;
+        padding-right: 1.25rem !important;
 
         box-sizing: border-box;
     }
 
 
-    /* IMPORTANT:
-       Nested Divi elements should fill the row.
-       Do NOT subtract another 1.5rem here. */
-    .article-shell .et_pb_row,
+    /* Article shell / Divi row */
+    .article-shell.et_pb_row,
+    .article-shell > .et_pb_row,
+    .article-shell .et_pb_row {
+        width: 100% !important;
+        max-width: none !important;
+
+        margin-left: auto !important;
+        margin-right: auto !important;
+
+        padding-left: 0.625rem !important;
+        padding-right: 0.625rem !important;
+
+        box-sizing: border-box;
+    }
+
+
+    /* Everything INSIDE the row should use all available width */
     .article-shell .et_pb_column,
     .article-shell .et_pb_module,
     .article-shell .et_pb_post_content,
+    .article-layout,
     .article-reading-column,
     .article-toc-column {
         width: 100% !important;
@@ -1129,6 +1048,36 @@ a:hover {
 
         margin-left: 0 !important;
         margin-right: 0 !important;
+
+        padding-left: 0 !important;
+        padding-right: 0 !important;
     }
+
+
+        .article-cta__actions,
+    .article-cta .button-group {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+
+        width: 100%;
+
+        gap: 1rem;
+    }
+
+    .article-cta__actions .btn,
+    .article-cta .button-group .btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 100% !important;
+        max-width: none !important;
+
+        margin: 0 !important;
+
+        box-sizing: border-box;
+    }
+
 
 }
