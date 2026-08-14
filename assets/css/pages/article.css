@@ -889,12 +889,12 @@ a:hover {
     margin: 0;
 }
 
-
+/* 
 .article-shell.et_pb_section,
 .et_pb_row_0_tb_body {
     padding-top: 0 !important;
     padding-bottom: 0 !important;
-}
+} */
 
 .et_pb_section.et_pb_section_1_tb_body, .et_section_regular{
      padding-top: 1.5rem !important;
