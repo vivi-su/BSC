@@ -108,38 +108,49 @@ img.wp-post-image {
    Article Content Shell
 =================================================== */
 
-.article-shell {
-    width: min(90%, 1100px);
+/*
+ * article-shell is the BLUE Divi Section.
+ * The section itself should always be full width.
+ */
+.article-shell.et_pb_section {
+    width: 100% !important;
+    max-width: none !important;
 
-    margin-top: 0 !important;
-    margin-right: auto;
-    margin-bottom: 0;
-    margin-left: auto;
+    margin: 0 !important;
 
-    padding-top: 0 !important;
+    padding-top: 1.5rem !important;
+    padding-bottom: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
 
     overflow: visible !important;
 }
 
 
 /*
- * Remove Divi spacing above Post Content.
+ * The GREEN Divi Row controls the actual page gutter.
+ * Match the hero's outer width.
  */
+.article-shell > .et_pb_row {
+    width: min(90%, 1280px) !important;
+    max-width: 1280px !important;
 
-.article-shell.et_pb_section,
-.article-shell.et_pb_row,
-.article-shell .et_pb_row {
-    margin-top: 0 !important;
-    padding-top: 0 !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+
+    padding: 0 !important;
 }
 
 
+/*
+ * Post Content fills the row.
+ */
 .article-shell .et_pb_post_content {
     width: 100%;
     max-width: none;
 
-    margin-top: 0 !important;
-    padding-top: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
 
     overflow: visible !important;
 
@@ -890,12 +901,6 @@ a:hover {
 
 
 
-.article-shell.et_pb_section.et_pb_section_1_tb_body, .et_section_regular{
-    padding-top: 1.5rem !important;
-    padding-bottom: 0 !important;
-    padding-left: 0.625rem !important;
-    padding-right: 0.625rem !important;
-}
 
 
 /* ===================================================
@@ -903,10 +908,6 @@ a:hover {
 =================================================== */
 
 @media (max-width: 980px) {
-    .article-shell{
-        margin-left:0;
-        margin-right:0;
-    }
 
     .article-hero .et_pb_title_container {
         max-width: 850px;
@@ -1009,39 +1010,37 @@ a:hover {
     }
 
 
-    /* Article shell / Divi row */
-    .article-shell.et_pb_row,
-    .article-shell > .et_pb_row,
-    .article-shell .et_pb_row {
-        width: 100% !important;
-        max-width: none !important;
+/* Article body row — same gutter as hero */
+.article-shell > .et_pb_row {
+    width: 100% !important;
+    max-width: none !important;
 
-        margin-left: auto !important;
-        margin-right: auto !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
 
-        padding-left: 0 !important;
-        padding-right: 0 !important;
+    padding-left: 0.625rem !important;
+    padding-right: 0.625rem !important;
 
-        box-sizing: border-box;
-    }
+    box-sizing: border-box;
+}
 
 
-    /* Everything INSIDE the row should use all available width */
-    .article-shell .et_pb_column,
-    .article-shell .et_pb_module,
-    .article-shell .et_pb_post_content,
-    .article-layout,
-    .article-reading-column,
-    .article-toc-column {
-        width: 100% !important;
-        max-width: none !important;
+/* Everything inside uses the full available row width */
+.article-shell .et_pb_column,
+.article-shell .et_pb_module,
+.article-shell .et_pb_post_content,
+.article-layout,
+.article-reading-column,
+.article-toc-column {
+    width: 100% !important;
+    max-width: none !important;
 
-        margin-left: 0 !important;
-        margin-right: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
 
-        padding-left: 0 !important;
-        padding-right: 0 !important;
-    }
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
 
 
         .article-cta__actions,
