@@ -1011,7 +1011,8 @@ a:hover {
 
 .article-shell.et_pb_row,
 .article-shell > .et_pb_row,
-.article-shell .et_pb_row {
+.article-shell .et_pb_row,
+.article-shell .et_pb_row_1_tb_body{
     width: 100% !important;
     max-width: none !important;
 
@@ -1022,7 +1023,6 @@ a:hover {
     padding-right: 0 !important;
 
     box-sizing: border-box;
-    background-color:var(--color-cream);
 }
 
 
