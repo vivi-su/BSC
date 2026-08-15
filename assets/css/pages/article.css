@@ -1022,6 +1022,7 @@ a:hover {
     padding-right: 0 !important;
 
     box-sizing: border-box;
+    background-color:var(--color-cream);
 }
 
 
@@ -1073,51 +1074,5 @@ a:hover {
 }
 
 
-/* ===================================================
-   ARTICLE SHELL — DIVI ROW WIDTH FIX
-=================================================== */
 
-/* Blue Divi section */
-.article-shell.et_pb_section {
-    width: 100% !important;
-    max-width: none !important;
-
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-}
-
-
-/* Green Divi row inside article section */
-.article-shell.et_pb_section > .et_pb_row {
-    width: min(90%, 1100px) !important;
-    max-width: 1100px !important;
-
-    margin-left: auto !important;
-    margin-right: auto !important;
-
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-}
-
-
-/* ===================================================
-   Mobile
-=================================================== */
-
-@media (max-width: 767px) {
-
-    .article-shell.et_pb_section > .et_pb_row {
-        width: 100% !important;
-        max-width: none !important;
-
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-
-        padding-left: 0!important;
-        padding-right: 0!important;
-
-        box-sizing: border-box;
-    }
-
-}
 
