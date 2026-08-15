@@ -1011,8 +1011,7 @@ a:hover {
 
 .article-shell.et_pb_row,
 .article-shell > .et_pb_row,
-.article-shell .et_pb_row,
-.article-shell .et_pb_row_1_tb_body{
+.article-shell .et_pb_row{
     width: 100% !important;
     max-width: none !important;
 
