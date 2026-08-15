@@ -1002,11 +1002,11 @@ a:hover {
     .article-hero__inner.et_pb_row,
     .article-hero > .et_pb_row,
     .article-shell > .et_pb_row {
-        width: calc(100% - 48px) !important;
+        width: calc(100% - 40px) !important;
         max-width: none !important;
 
-        margin-left: 24px !important;
-        margin-right: 24px !important;
+        margin-left: 20px !important;
+        margin-right: 20px !important;
 
         padding-left: 0 !important;
         padding-right: 0 !important;
