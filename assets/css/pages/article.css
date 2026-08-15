@@ -132,7 +132,7 @@ img.wp-post-image {
  * Match the hero's outer width.
  */
 .article-shell > .et_pb_row {
-    width: min(100%, 1280px) !important;
+    width: min(90%, 1280px) !important;
 
     max-width: 1280px !important;
 
@@ -1010,14 +1010,15 @@ a:hover {
         box-sizing: border-box;
     }
 
-.article-shell.et_pb_row,
-.article-shell > .et_pb_row,
-.article-shell .et_pb_row{
-    width: 100% !important;
+/* Article body Divi row:
+   exactly 1rem margin on left and right */
+
+.article-shell > .et_pb_row {
+    width: calc(100% - 2rem) !important;
     max-width: none !important;
 
-    margin-left: auto !important;
-    margin-right: auto !important;
+    margin-left: 1rem !important;
+    margin-right: 1rem !important;
 
     padding-left: 0 !important;
     padding-right: 0 !important;
