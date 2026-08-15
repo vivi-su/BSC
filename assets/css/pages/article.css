@@ -891,10 +891,10 @@ a:hover {
 
 
 .article-shell.et_pb_section.et_pb_section_1_tb_body, .et_section_regular{
-     padding-top: 1.5rem !important;
+    padding-top: 1.5rem !important;
     padding-bottom: 0 !important;
-    padding-left: 1.25rem !important;
-    padding-right: 1.25rem !important;
+    padding-left: 0.625rem !important;
+    padding-right: 0.625rem !important;
 }
 
 
@@ -999,8 +999,8 @@ a:hover {
         margin-left: auto !important;
         margin-right: auto !important;
 
-        padding-left: 1.25rem !important;
-        padding-right: 1.25rem !important;
+        padding-left: 0.625rem !important;
+        padding-right: 0.625rem !important;
 
         box-sizing: border-box;
     }
@@ -1015,9 +1015,9 @@ a:hover {
 
         margin-left: auto !important;
         margin-right: auto !important;
-
+/* 
         padding-left: 0.625rem !important;
-        padding-right: 0.625rem !important;
+        padding-right: 0.625rem !important; */
 
         box-sizing: border-box;
     }
