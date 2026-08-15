@@ -274,6 +274,10 @@
 =================================================== */
 
 @media (max-width: 850px) {
+  .cta-banner .container {
+  padding-left: 0!important;
+  padding-right: 0!important;
+}
 
   .cta-banner__inner {
     grid-template-columns: 1fr;
