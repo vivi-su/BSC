@@ -995,55 +995,43 @@ a:hover {
         margin-top: 1.75rem;
     }
 
-    /* Hero row */
+    /* ===================================================
+       MOBILE GUTTER — EXACTLY 24PX EACH SIDE
+    =================================================== */
+
     .article-hero__inner.et_pb_row,
-    .article-hero > .et_pb_row {
-        width: 100% !important;
+    .article-hero > .et_pb_row,
+    .article-shell > .et_pb_row {
+        width: calc(100% - 48px) !important;
         max-width: none !important;
 
-        margin-left: auto !important;
-        margin-right: auto !important;
+        margin-left: 24px !important;
+        margin-right: 24px !important;
 
-        padding-left: 0.625rem !important;
-        padding-right: 0.625rem !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
 
         box-sizing: border-box;
     }
 
-/* Article body Divi row:
-   exactly 1rem margin on left and right */
 
-.article-shell > .et_pb_row {
-    width: calc(100% - 1rem) !important;
-    max-width: none !important;
+    /* Inner content must not create another gutter */
 
-    margin-left: 1 !important;
-    margin-right: 1rem !important;
+    .article-shell .et_pb_column,
+    .article-shell .et_pb_module,
+    .article-shell .et_pb_post_content,
+    .article-layout,
+    .article-reading-column,
+    .article-toc-column {
+        width: 100% !important;
+        max-width: none !important;
 
-    padding-left: 0 !important;
-    padding-right: 0 !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
 
-    box-sizing: border-box;
-}
-
-
-
-/* Everything inside uses the full available row width */
-.article-shell .et_pb_column,
-.article-shell .et_pb_module,
-.article-shell .et_pb_post_content,
-.article-layout,
-.article-reading-column,
-.article-toc-column {
-    width: 100% !important;
-    max-width: none !important;
-
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-}
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
 
 
         .article-cta__actions,
