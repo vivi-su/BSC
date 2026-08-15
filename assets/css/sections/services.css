@@ -12,6 +12,10 @@
 /* ===================================================
    Services Section
 =================================================== */
+.services .container {
+  padding-left: 0;
+  padding-right: 0;
+}
 
 .services {
   background-color: var(--color-indigo-navy-soft);
@@ -248,17 +252,7 @@
    Responsive
 =================================================== */
 
-@media (min-width: 768px) {
-  .services {
-    padding-inline: var(--container-padding-tablet);
-  }
-}
 
-@media (min-width: 1101px) {
-  .services {
-    padding-inline: var(--container-padding-desktop);
-  }
-}
 
 @media (max-width: 1100px) {
   .services__grid {
