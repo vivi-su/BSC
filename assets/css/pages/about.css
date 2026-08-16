@@ -808,16 +808,17 @@
 =================================================== */
 
 @media (max-width: 480px) {
+  
 
   .about-hero__media {
     height: 27rem;
   }
 
 
-  .about-hero__inner {
+  /* .about-hero__inner {
     padding-inline:
       var(--container-padding);
-  }
+  } */
 
 
   .about-hero .about-hero__quote p {
