@@ -585,11 +585,6 @@
 
 @media (max-width: 767px) {
 
-    .about-dr-container{
-      margin-left:0;
-      margin-right:0;
-    }
-
 
       .quote-desktop,
     .quote-tablet {
@@ -815,10 +810,10 @@
   }
 
 
-  /* .about-hero__inner {
+  .about-hero__inner {
     padding-inline:
       var(--container-padding);
-  } */
+  }
 
 
   .about-hero .about-hero__quote p {
