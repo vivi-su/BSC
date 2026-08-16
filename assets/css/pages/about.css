@@ -745,7 +745,7 @@
   .about-hero .about-hero__credentials {
     margin-top: 1.5rem;
 
-    font-size: var(--font-size-base);
+    font-size: 1.125rem;
     line-height: 1.7;
 
     white-space: normal;
@@ -818,9 +818,5 @@
     font-size: clamp(2.15rem, 10vw, 2.85rem);
   }
 
-
-  .about-hero .about-hero__credentials {
-    font-size: 0.9rem;
-  }
 
 }
