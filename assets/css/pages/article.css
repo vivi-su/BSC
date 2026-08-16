@@ -989,7 +989,11 @@ a:hover {
 
 @media (max-width: 767px) {
 
+    .article-cta {
 
+    padding: clamp(1rem, 5vw, 4rem);
+
+    }
 
     .article-hero .et_pb_title_featured_container {
         margin-top: 1.75rem;
