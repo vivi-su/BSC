@@ -106,7 +106,7 @@
 
   font-family: var(--font-heading);
   font-size: clamp(1rem, 1vw, 1.125rem);
-  font-weight: var(--font-weight-medium);
+  font-weight: var(--font-weight-semibold);
   line-height: 1.25;
 
   text-decoration: none;
