@@ -692,7 +692,7 @@
 
     padding:
       2rem
-      var(--container-padding, 1rem)
+      var(--container-padding)
       3rem;
   }
 
@@ -709,7 +709,7 @@
   .about-hero .about-hero__eyebrow {
     margin: 0 0 1.5rem;
 
-    font-size: 1rem;
+    font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.08em;
 
@@ -811,7 +811,7 @@
 
   .about-hero__inner {
     padding-inline:
-      var(--container-padding, 1rem);
+      var(--container-padding);
   }
 
 
@@ -820,5 +820,10 @@
   }
 
 
+   .about-hero .about-hero__credentials {
+
+   font-size: var(--font-size-base);
+
+  }
 
 }
