@@ -104,7 +104,7 @@
 
   padding: 1.35rem 2rem;
 
-  font-family: var(--font-heading);
+  font-family: var(--font-body);
   font-size: clamp(1rem, 1vw, 1.125rem);
   font-weight: var(--font-weight-semibold);
   line-height: 1.25;
