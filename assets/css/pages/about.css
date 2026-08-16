@@ -585,6 +585,11 @@
 
 @media (max-width: 767px) {
 
+    .about-dr-container{
+      padding-left:0;
+      padding-right:0;
+    }
+
 
       .quote-desktop,
     .quote-tablet {
