@@ -212,3 +212,35 @@ if (is_single()) {
 }
 
 add_action('wp_enqueue_scripts', 'vivi_enqueue_assets', 20);
+
+
+
+
+/* ==========================================================
+   BSC Article Meta — Show Updated Date
+========================================================== */
+
+function bsc_last_modified_date( $the_date ) {
+
+    if ( 'post' === get_post_type() && ! is_admin() ) {
+
+        $published_time = get_post_time( 'U' );
+        $modified_time  = get_post_modified_time( 'U' );
+
+        /*
+         * If the post has been modified after publication,
+         * show "Updated" + modified date.
+         * Otherwise show the original publication date.
+         */
+        if ( $modified_time > $published_time ) {
+            return 'Updated ' . get_post_modified_time( 'M j, Y' );
+        }
+
+        return get_post_time( 'M j, Y' );
+    }
+
+    return $the_date;
+}
+
+add_filter( 'get_the_date', 'bsc_last_modified_date' );
+add_filter( 'get_the_time', 'bsc_last_modified_date' );
