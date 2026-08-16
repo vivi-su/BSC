@@ -709,7 +709,7 @@
   .about-hero .about-hero__eyebrow {
     margin: 0 0 1.5rem;
 
-    font-size: 1rem;
+    font-size: var(--font-size-base);
     line-height: 1.5;
     letter-spacing: 0.08em;
 
@@ -742,7 +742,7 @@
      Credentials
   ========================================== */
 
-  .about-hero .about-hero__credentials {
+  .about-hero .about-hero__credentials p{
     margin-top: 1.5rem;
 
     font-size: 1.125rem;
@@ -750,6 +750,7 @@
 
     white-space: normal;
   }
+
 
 
   /* ==========================================
@@ -817,6 +818,7 @@
   .about-hero .about-hero__quote p {
     font-size: clamp(2.15rem, 10vw, 2.85rem);
   }
+
 
 
 }
