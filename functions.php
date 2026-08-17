@@ -95,13 +95,22 @@ $styles = array(
         'deps' => array('vivi-variables', 'vivi-typography'),
     ),
 
-        'vivi-toc' => array(
-        'path' => '/assets/css/components/toc.css',
-        'deps' => array(
-            'vivi-variables',
-            'vivi-typography',
-        ),
-    ),
+    /* ==========================================================
+    Shared TOC Script
+    ========================================================== */
+
+    $toc_js_path = $theme_dir . '/assets/js/toc.js';
+
+    if (file_exists($toc_js_path)) {
+
+        wp_enqueue_script(
+            'vivi-toc',
+            $theme_uri . '/assets/js/toc.js',
+            array(),
+            filemtime($toc_js_path),
+            true
+        );
+    }
 
     'vivi-hero' => array(
         'path' => '/assets/css/sections/hero.css',
@@ -207,15 +216,6 @@ if (is_single()) {
         )
     );
 
-    wp_enqueue_script(
-        'vivi-article',
-        $theme_uri . '/assets/js/article.js',
-        array(),
-        filemtime(
-            $theme_dir . '/assets/js/article.js'
-        ),
-        true
-    );
 }
 
 }
