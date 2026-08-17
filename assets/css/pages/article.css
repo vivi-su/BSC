@@ -313,9 +313,9 @@ img.wp-post-image {
     margin: 0;
     padding: 0;
 
-    background: transparent;
-    border: 0;
-    border-radius: 0;
+  background: #fafafc;
+  padding: 1rem;
+  border-radius: var(--radius-sm);
 }
 
 

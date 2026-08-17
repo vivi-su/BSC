@@ -216,8 +216,10 @@
   --color-surface-dark: var(--color-indigo-navy);
   --color-surface-accent: var(--color-forest-green);
 
-  --color-heading: var(--color-indigo-navy);
-  --color-text: var(--color-slate-blue);
+  /* --color-heading: var(--color-indigo-navy);
+  --color-text: var(--color-slate-blue); */
+  --color-heading: var(--color-indigo-navy-dark);
+  --color-text: var(--color-indigo-navy);
   --color-text-light: var(--color-warm-gray);
   --color-text-soft: var(--color-warm-gray-light);
   --color-text-muted: var(--color-neutral-500);
