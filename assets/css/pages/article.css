@@ -328,7 +328,7 @@ img.wp-post-image {
 
     font-family: var(--font-body);
     font-size: var(--font-size-sm);
-    font-weight: var(--font-weight-semibold);
+    font-weight: var(--font-weight-bold);
     line-height: 1.4;
 
     letter-spacing: 0.06em;
@@ -390,6 +390,8 @@ img.wp-post-image {
 .article-toc__list a.is-active {
     font-weight: var(--font-weight-semibold);
     color: var(--color-heading);
+    border-left: 3px solid var(--color-slate-blue);
+    padding-left: 0.5rem;
 }
 
 
