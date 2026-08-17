@@ -275,7 +275,13 @@
   padding-right: 0!important;
 }
   .services__header {
+    padding-left:1rem;
+    padding-right:1rem;
     margin-bottom: var(--space-xl);
+  }
+
+  .service-card{
+    border-radius: 0;
   }
 
   .services__grid {
