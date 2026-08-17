@@ -95,6 +95,14 @@ $styles = array(
         'deps' => array('vivi-variables', 'vivi-typography'),
     ),
 
+        'vivi-toc' => array(
+        'path' => '/assets/css/components/toc.css',
+        'deps' => array(
+            'vivi-variables',
+            'vivi-typography',
+        ),
+    ),
+
     'vivi-hero' => array(
         'path' => '/assets/css/sections/hero.css',
         'deps' => array('vivi-variables', 'vivi-typography'),
@@ -191,7 +199,8 @@ if (is_single()) {
             'vivi-variables',
             'vivi-reset',
             'vivi-typography',
-            'vivi-container'
+            'vivi-container',
+            'vivi-toc'
         ),
         filemtime(
             $theme_dir . '/assets/css/pages/article.css'

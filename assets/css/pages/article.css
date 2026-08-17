@@ -294,105 +294,6 @@ img.wp-post-image {
 }
 
 
-/* ===================================================
-   Article TOC Column
-=================================================== */
-
-.article-toc-column {
-    min-width: 0;
-    align-self: stretch;
-    overflow: visible !important;
-}
-
-
-.article-toc {
-    position: sticky;
-    top: 8rem;
-
-    width: 100%;
-    margin: 0;
-    padding: 0;
-
-  background: var(--color-background-gray);
-  padding: 1rem;
-  border-radius: var(--radius-sm);
-}
-
-
-/* ===================================================
-   TOC Title
-=================================================== */
-
-.article-toc__title {
-    margin: 0 0 0.9rem;
-
-    font-family: var(--font-body);
-    font-size: var(--font-size-sm);
-    font-weight: var(--font-weight-bold);
-    line-height: 1.4;
-
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-
-    color: var(--color-heading);
-}
-
-
-/* ===================================================
-   TOC List
-=================================================== */
-
-.article-toc__list {
-    margin: 0 !important;
-    padding: 0 !important;
-
-    list-style: none !important;
-}
-
-
-.article-toc__list li {
-    margin: 0 !important;
-    padding: 0 !important;
-
-    list-style: none !important;
-}
-
-
-/* ===================================================
-   TOC Links
-=================================================== */
-
-.article-toc__list a {
-    display: block;
-
-    padding: 0.38rem 0;
-
-    font-family: var(--font-body);
-    font-size: 0.95rem;
-    font-weight: var(--font-weight-normal);
-    line-height: 1.5;
-
-    color: var(--color-slate-blue);
-
-    text-decoration: none;
-
-    transition:
-        color 180ms ease,
-        font-weight 180ms ease;
-}
-
-
-/* ===================================================
-   TOC Hover / Active
-=================================================== */
-
-.article-toc__list a:hover,
-.article-toc__list a.is-active {
-    font-weight: var(--font-weight-semibold);
-    color: var(--color-heading);
-    border-left: 3px solid var(--color-slate-blue);
-    padding-left: 0.5rem;
-}
 
 
 /* ===================================================
@@ -849,16 +750,16 @@ a:hover {
 
 @media (max-width: 980px) {
 
+    .article-hero {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
 
-   .article-hero {
-    padding-top: 0;
-    padding-bottom: 0;
-   }
 
     .article-cta {
-
-    padding: clamp(1rem, 5vw, 4rem);
+        padding: clamp(1rem, 5vw, 4rem);
     }
+
 
     .article-hero .et_pb_title_container {
         max-width: 850px;
@@ -878,56 +779,29 @@ a:hover {
 
     .article-reading-column {
         max-width: 47.5rem;
-
         margin-inline: auto;
     }
 
 
-    .article-toc-column {
+    .toc-column {
         width: 100%;
         max-width: 47.5rem;
         margin-inline: auto;
-    }
-
-
-    .article-toc {
-        position: static;
-
-        margin-bottom: clamp(3rem, 6vw, 4rem);
-        padding: 1.25rem 1.5rem;
-/* 
-        background-color: var(--color-background-soft);
-        border-radius: var(--radius-md); */
-    }
-
-
-    .article-toc__title {
-        margin-bottom: 0.75rem;
-    }
-
-
-    .article-toc__list a {
-        padding: 0.35rem 0;
     }
 
 }
 
 
 /* ===================================================
-   MOBILE — ARTICLE WIDTH
-   Same approach as the working .ic-body layout
+   Mobile — Article Width
 =================================================== */
 
 @media (max-width: 767px) {
-
 
     .article-hero .et_pb_title_featured_container {
         margin-top: 1.75rem;
     }
 
-    /* ===================================================
-       MOBILE GUTTER — EXACTLY 24PX EACH SIDE
-    =================================================== */
 
     .article-hero__inner.et_pb_row,
     .article-hero > .et_pb_row,
@@ -945,36 +819,33 @@ a:hover {
     }
 
 
-    /* Inner content must not create another gutter */
-
     .article-shell .et_pb_column,
     .article-shell .et_pb_module,
     .article-shell .et_pb_post_content,
     .article-layout,
     .article-reading-column,
-    .article-toc-column {
+    .toc-column {
         width: 100% !important;
         max-width: none !important;
 
         margin-left: 0 !important;
         margin-right: 0 !important;
 
-
         padding-left: 0 !important;
         padding-right: 0 !important;
     }
 
 
-        .article-cta__actions,
+    .article-cta__actions,
     .article-cta .button-group {
         display: flex;
         flex-direction: column;
         align-items: stretch;
 
         width: 100%;
-
         gap: 1rem;
     }
+
 
     .article-cta__actions .btn,
     .article-cta .button-group .btn {
@@ -989,7 +860,6 @@ a:hover {
 
         box-sizing: border-box;
     }
-
 
 }
 

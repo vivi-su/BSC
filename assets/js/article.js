@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const tocLinks = document.querySelectorAll('.article-toc__list a');
+    const tocLinks = document.querySelectorAll('.toc__list a');
 
     const sections = Array.from(tocLinks)
         .map(function (link) {
