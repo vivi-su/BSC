@@ -44,8 +44,8 @@
 
   /* Supporting text sizes */
 
-  --font-size-xs: 0.75rem;       /* 12px */
-  --font-size-sm: 0.875rem;      /* 14px */
+  --font-size-xs: 0.875rem;       /* 14px */
+  --font-size-sm: 1rem;           /* 16px */
   --font-size-base: 1.125rem;    /* 18px */
   --font-size-lg: 1.125rem;      /* 18px */
   --font-size-xl: 1.25rem;       /* 20px */
@@ -130,6 +130,7 @@
 --color-indigo-navy: #2F3250;
 --color-slate-blue: #30415A;
 --color-warm-gray: #666F74;
+--color-background-gray: #F7F7F7;
 
 --color-cream: #F6F5EE;
 
