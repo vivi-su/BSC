@@ -313,7 +313,7 @@ img.wp-post-image {
     margin: 0;
     padding: 0;
 
-  background: var(--color-background-muted);
+  background: #F7F7F7;
   padding: 1rem;
   border-radius: var(--radius-sm);
 }
@@ -851,8 +851,8 @@ a:hover {
 
 
    .article-hero {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding-top: 0;
+    padding-bottom: 0;
    }
 
     .article-cta {
