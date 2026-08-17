@@ -313,7 +313,7 @@ img.wp-post-image {
     margin: 0;
     padding: 0;
 
-  background: #F7F7F7;
+  background: var(--color-background-gray);
   padding: 1rem;
   border-radius: var(--radius-sm);
 }
@@ -958,6 +958,7 @@ a:hover {
 
         margin-left: 0 !important;
         margin-right: 0 !important;
+
 
         padding-left: 0 !important;
         padding-right: 0 !important;

@@ -15,7 +15,7 @@
 
 
 .services {
-  background-color: #F7F7F7;
+  background-color: var(--color-background-gray);
 }
 
 .services__header {
@@ -145,7 +145,7 @@
   margin: 0 0 var(--space-xl);
   padding: 0;
   list-style: none;
-  font-size: var(--font-size-xs);
+  font-size: var(--font-size-sm);
   line-height: var(--line-height-body-compact);
 }
 
