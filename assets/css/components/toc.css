@@ -1,12 +1,11 @@
 /* ===================================================
    Table of Contents
-   Shared BSC Component
 =================================================== */
 
 .toc-column {
     min-width: 0;
     align-self: stretch;
-    overflow: visible;
+    overflow: visible !important;
 }
 
 
@@ -16,9 +15,10 @@
 
     width: 100%;
     margin: 0;
-    padding: 0;
+    padding: 1rem;
 
-    background: transparent;
+    background-color: var(--color-background-gray);
+    border-radius: var(--radius-sm);
 }
 
 
@@ -27,11 +27,11 @@
 =================================================== */
 
 .toc__title {
-    margin: 0 0 1rem;
+    margin: 0 0 0.9rem;
 
     font-family: var(--font-body);
     font-size: var(--font-size-sm);
-    font-weight: var(--font-weight-semibold);
+    font-weight: var(--font-weight-bold);
     line-height: 1.4;
 
     letter-spacing: 0.06em;
@@ -68,10 +68,10 @@
 .toc__list a {
     display: block;
 
-    padding: 0.4rem 0;
+    padding: 0.38rem 0;
 
     font-family: var(--font-body);
-    font-size: 0.925rem;
+    font-size: var(--font-size-sm);
     font-weight: var(--font-weight-normal);
     line-height: 1.5;
 
@@ -81,50 +81,43 @@
 
     transition:
         color 180ms ease,
-        font-weight 180ms ease;
+        font-weight 180ms ease,
+        border-color 180ms ease,
+        padding-left 180ms ease;
 }
 
 
 /* ===================================================
-   Hover
+   TOC Hover / Active
 =================================================== */
 
-.toc__list a:hover {
-    color: var(--color-heading);
-    font-weight: var(--font-weight-semibold);
-}
-
-
-/* ===================================================
-   Active Section
-=================================================== */
-
+.toc__list a:hover,
 .toc__list a.is-active {
-    color: var(--color-heading);
+    padding-left: 0.5rem;
+
     font-weight: var(--font-weight-semibold);
+    color: var(--color-heading);
+
+    border-left: 3px solid var(--color-slate-blue);
 }
-
-
-/* ===================================================
-   Tablet / Mobile
-=================================================== */
 
 @media (max-width: 980px) {
 
     .toc {
         position: static;
 
-        margin-bottom: clamp(2.5rem, 5vw, 3.5rem);
-        padding: 1.5rem;
+        margin-bottom: clamp(3rem, 6vw, 4rem);
+        padding: 1.25rem 1.5rem;
+    }
 
-        background-color: var(--color-background-soft);
 
-        border-radius: var(--radius-md);
+    .toc__title {
+        margin-bottom: 0.75rem;
     }
 
 
     .toc__list a {
-        padding: 0.4rem 0;
+        padding: 0.35rem 0;
     }
 
 }
