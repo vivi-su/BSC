@@ -115,6 +115,29 @@ function vivi_enqueue_assets() {
 
 
         /* ==========================================================
+           Shared Page Systems
+        ========================================================== */
+
+        /*
+         * Individual counselling service pages.
+         * Loaded globally so new service pages do not require
+         * another functions.php update. All selectors are scoped
+         * under .service-single.
+         */
+        'vivi-service-single' => array(
+            'path' => '/assets/css/pages/service-single-page.css',
+            'deps' => array(
+                'vivi-variables',
+                'vivi-reset',
+                'vivi-typography',
+                'vivi-container',
+                'vivi-buttons',
+                'vivi-toc',
+            ),
+        ),
+
+
+        /* ==========================================================
            Shared Sections
         ========================================================== */
 
