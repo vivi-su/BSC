@@ -270,7 +270,7 @@
 }
 
 @media (max-width: 720px) {
-    #main-content .services .container {
+   body #main-content .services .container {
     padding-top: 0;
     padding-inline: 0;
   }
