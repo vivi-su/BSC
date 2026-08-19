@@ -67,7 +67,7 @@
   color: var(--color-primary-light);
 }
 
-.service-single__title {
+.service-single__title{
   max-width: 14ch;
   margin: 0;
 
@@ -76,7 +76,9 @@
   font-weight: var(--font-weight-normal);
   line-height: 1.03;
   letter-spacing: -0.035em;
+}
 
+.service-single .service-single__hero h1.service-single__title {
   color: var(--color-heading-on-dark);
 }
 
@@ -86,7 +88,9 @@
 
   font-size: clamp(1.125rem, 1.6vw, 1.35rem);
   line-height: 1.7;
+}
 
+.service-single .service-single__hero p.service-single__subtitle {
   color: var(--color-text-on-dark);
 }
 
