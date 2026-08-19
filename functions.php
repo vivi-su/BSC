@@ -63,7 +63,7 @@ function vivi_enqueue_assets() {
 
         'vivi-variables' => array(
             'path' => '/assets/css/base/variables.css',
-            'deps' => array(),
+            'deps' => array('divi-parent-style'),
         ),
 
         'vivi-reset' => array(
