@@ -267,6 +267,16 @@
   font-size: var(--font-size-md);
 }
 
+/* ===================================================
+   Button Font Weight
+=================================================== */
+.btn--semibold {
+  font-weight: 600;
+}
+
+.btn--bold {
+  font-weight: var(--font-weight-bold);
+}
 
 /* ===================================================
    Width Modifiers

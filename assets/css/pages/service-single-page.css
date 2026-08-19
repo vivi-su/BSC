@@ -92,6 +92,7 @@
 
 .service-single .service-single__hero p.service-single__subtitle {
   color: var(--color-text-on-dark);
+  font-weight: var(--font-weight-medium);
 }
 
 .service-single__hero .button-group {
@@ -243,7 +244,8 @@
 =================================================== */
 
 .service-single__figure {
-  margin: var(--space-2xl) 0;
+  width: 75%;
+  margin: var(--space-xl) auto;
 }
 
 .service-single__figure img {
@@ -374,6 +376,10 @@
 =================================================== */
 
 @media (max-width: 767px) {
+
+   .service-single__figure {
+    width: 100%;
+  }  
 
   .service-single__hero {
     padding-block: 3.5rem;
