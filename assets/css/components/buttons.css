@@ -192,9 +192,9 @@
 
 .btn--light:hover,
 .btn--light:focus-visible {
-  background-color: var(--color-background-warm);
-  border-color: var(--color-background-warm);
-  color: var(--color-primary-dark);
+  background-color: var(--color-bronze);
+  border-color: var(--color-bronze);
+  color: var(--color-white);
 
   box-shadow: var(--shadow-sm);
 }
