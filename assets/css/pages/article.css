@@ -751,6 +751,30 @@ a:hover {
 }
 
 
+/* ===================================================
+   Article CTA — Color Protection
+=================================================== */
+
+.article-shell .et_pb_post_content .article-cta,
+.article-shell .et_pb_post_content .article-cta p {
+    color: var(--color-white) !important;
+}
+
+.article-shell .et_pb_post_content .article-cta__eyebrow {
+    color: var(--color-primary) !important;
+}
+
+.article-shell .et_pb_post_content .article-cta__title,
+.article-shell .et_pb_post_content .article-cta__text {
+    color: var(--color-white) !important;
+}
+
+.article-shell .et_pb_post_content .article-cta .btn,
+.article-shell .et_pb_post_content .article-cta .btn:visited,
+.article-shell .et_pb_post_content .article-cta .btn:hover {
+    color: var(--color-white) !important;
+}
+
 
 
 
@@ -884,3 +908,4 @@ a:hover {
     }
 
 }
+
