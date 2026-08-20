@@ -789,6 +789,10 @@ a:hover {
         padding-bottom: 0;
     }
 
+      .article-hero + .article-shell {
+        padding-top: 2rem;
+    }
+
 
     .article-cta {
         padding: clamp(1rem, 5vw, 4rem);
