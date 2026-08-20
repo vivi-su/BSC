@@ -825,6 +825,25 @@ a:hover {
 
 }
 
+/* Tablet */
+@media (min-width: 768px) and (max-width: 980px) {
+
+    .article-hero {
+        padding-top: 2rem;
+    }
+
+}
+
+
+/* Mobile */
+@media (max-width: 767px) {
+
+    .article-hero {
+        padding-top: 1.5rem;
+    }
+
+}
+
 
 /* ===================================================
    Mobile â€” Article Width
