@@ -1,5 +1,11 @@
 /* ===================================================
    BSC Single Post
+
+   !important is intentionally limited to Divi conflicts:
+   - row widths / mobile gutters
+   - featured image sizing and crop
+   - sticky overflow ancestry
+   - mobile button sizing
 =================================================== */
 
 
@@ -27,7 +33,7 @@
 
 
 .article-hero__inner {
-    width: min(90%, 1280px);
+    width: min(90%, 1200px);
     margin-inline: auto;
 }
 
@@ -95,7 +101,7 @@ img,
 img.wp-post-image {
     display: block;
 
-    width: 100% !important;
+    width: 100%;
    
     height: clamp(240px, 17vw, 300px) !important;
 
@@ -115,15 +121,15 @@ img.wp-post-image {
  * The section itself should always be full width.
  */
 .article-shell.et_pb_section {
-    width: 100% !important;
-    max-width: none !important;
+    width: 100%;
+    max-width: none;
 
-    margin: 0 !important;
+    margin: 0;
 
-    padding-top: 1.5rem !important;
-    padding-bottom: 2rem !important;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
+    padding-top: 1.5rem;
+    padding-bottom: 2rem;
+    padding-left: 0;
+    padding-right: 0;
 
     overflow: visible !important;
 }
@@ -134,9 +140,9 @@ img.wp-post-image {
  * Match the hero's outer width.
  */
 .article-shell > .et_pb_row {
-    width: min(90%, 1280px) !important;
+    width: min(90%, 1200px) !important;
 
-    max-width: 1280px !important;
+    max-width: 1200px !important;
 
     margin-left: auto !important;
     margin-right: auto !important;
@@ -152,7 +158,7 @@ img.wp-post-image {
     width: 100%;
     max-width: none;
 
-    margin: 0 !important;
+    margin: 0;
     padding: 0 !important;
 
     overflow: visible !important;
@@ -169,8 +175,8 @@ img.wp-post-image {
 =================================================== */
 
 .article-hero + .article-shell {
-    margin-top: 0 !important;
-    padding-top: 0 !important;
+    margin-top: 0;
+    padding-top: 0;
 }
 
 /* ===================================================
@@ -342,7 +348,7 @@ img.wp-post-image {
 
 .article-shell .et_pb_post_content
 .article-reading-column > section[id] > h2 {
-    margin-top: 0 !important;
+    margin-top: 0;
     margin-bottom: 1.5rem;
 }
 
@@ -684,7 +690,7 @@ a:hover {
     letter-spacing: 0.08em;
     text-transform: uppercase;
 
-    color: var(--color-primary) !important;
+    color: var(--color-primary);
 }
 
 
@@ -698,7 +704,7 @@ a:hover {
     font-weight: var(--font-weight-medium);
     line-height: 1.1;
 
-    color: var(--color-white) !important;
+    color: var(--color-white);
 }
 
 
@@ -711,14 +717,14 @@ a:hover {
     font-size: 1.05rem;
     line-height: 1.7;
 
-    color: var(--color-white) !important;
+    color: var(--color-white);
 }
 
 
 /* Prevent Divi paragraph rules overriding CTA */
 
 .article-shell .et_pb_post_content .article-cta p {
-    color: var(--color-white) !important;
+    color: var(--color-white);
 }
 
 
@@ -810,13 +816,13 @@ a:hover {
     .article-hero > .et_pb_row,
     .article-shell > .et_pb_row {
         width: calc(100% - 32px) !important;
-        max-width: none !important;
+        max-width: none;
 
         margin-left: 1rem !important;
         margin-right: 1rem !important;
 
-        padding-left: 0 !important;
-        padding-right: 0 !important;
+        padding-left: 0;
+        padding-right: 0;
 
         box-sizing: border-box;
     }
@@ -828,14 +834,14 @@ a:hover {
     .article-layout,
     .article-reading-column,
     .toc-column {
-        width: 100% !important;
-        max-width: none !important;
+        width: 100%;
+        max-width: none;
 
         margin-left: 0 !important;
         margin-right: 0 !important;
 
-        padding-left: 0 !important;
-        padding-right: 0 !important;
+        padding-left: 0;
+        padding-right: 0;
     }
 
 
@@ -877,6 +883,3 @@ a:hover {
     }
 
 }
-
-
-
