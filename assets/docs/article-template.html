@@ -23,7 +23,8 @@
      IMPORTANT:
      - Do not add inline CSS.
      - Do not add JavaScript here.
-     - article.css controls styling.
+     - article.css controls styling and mobile page gutters.
+     - Do not add inline padding/margins to article-layout, toc-column, or article-reading-column.
      - article.js controls TOC active states.
 ================================================== -->
 
@@ -39,15 +40,15 @@
          LEFT COLUMN — STICKY TABLE OF CONTENTS
     ================================================== -->
 
-    <aside class="article-toc-column">
+    <aside class="toc-column">
 
-        <nav class="article-toc" aria-label="Table of contents">
+        <nav class="toc" aria-label="Table of contents">
 
-            <p class="article-toc__title">
+            <p class="toc__title">
                 On This Page
             </p>
 
-            <ul class="article-toc__list">
+            <ul class="toc__list">
 
                 <li>
                     <a href="#section-one">
