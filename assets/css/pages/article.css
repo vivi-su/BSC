@@ -752,6 +752,35 @@ a:hover {
 
 
 /* ===================================================
+   Article Figure
+=================================================== */
+
+.article-figure {
+    margin:
+        clamp(2.5rem, 5vw, 4rem)
+        0
+        clamp(3rem, 5vw, 4rem);
+}
+
+.article-figure img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    border-radius: var(--radius-md);
+}
+
+.article-figure figcaption {
+    margin-top: 0.75rem;
+
+    font-size: 0.9rem;
+    line-height: 1.5;
+
+    color: var(--color-text-muted);
+}
+
+/* ===================================================
    Article CTA — Color Protection
 =================================================== */
 
