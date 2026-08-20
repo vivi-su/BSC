@@ -2,7 +2,7 @@
    BSC Single Post
 
    !important is intentionally limited to Divi conflicts:
-   - row widths / mobile gutters
+   - Divi row widths / mobile gutters
    - featured image sizing and crop
    - sticky overflow ancestry
    - mobile button sizing
@@ -32,16 +32,14 @@
 }
 
 
-.article-hero__inner {
-    width: min(90%, 1200px);
-    margin-inline: auto;
-}
 
-.article-hero__inner.et_pb_row {
-    width: min(90%, 1120px) !important;
-    max-width: 1120px !important;
+
+.article-hero > .et_pb_row {
+    width: min(90%, 1080px) !important;
+    max-width: 1080px !important;
 
     margin-inline: auto !important;
+    padding: 0 !important;
 }
 
 
@@ -133,10 +131,7 @@ img.wp-post-image {
 
     margin: 0;
 
-    padding-top: 1.5rem;
-    padding-bottom: 2rem;
-    padding-left: 0;
-    padding-right: 0;
+    padding: 1.5rem 0 2rem;
 
     overflow: visible !important;
 }
@@ -147,9 +142,9 @@ img.wp-post-image {
  * Match the hero's outer width.
  */
 .article-shell > .et_pb_row {
-    width: min(90%, 1120px) !important;
+    width: min(90%, 1080px) !important;
 
-    max-width: 1120px !important;
+    max-width: 1080px !important;
 
     margin-left: auto !important;
     margin-right: auto !important;
@@ -178,7 +173,7 @@ img.wp-post-image {
 }
 
 /* ===================================================
-   Hero → Article Transition
+   Hero â†’ Article Transition
 =================================================== */
 
 .article-hero + .article-shell {
@@ -323,7 +318,7 @@ img.wp-post-image {
 
 
 /* ===================================================
-   Article Content — Vertical Rhythm
+   Article Content â€” Vertical Rhythm
 =================================================== */
 
 /*
@@ -808,7 +803,7 @@ a:hover {
 
 
 /* ===================================================
-   Mobile — Article Width
+   Mobile â€” Article Width
 =================================================== */
 
 @media (max-width: 767px) {
@@ -819,17 +814,16 @@ a:hover {
     }
 
 
-    .article-hero__inner.et_pb_row,
     .article-hero > .et_pb_row,
     .article-shell > .et_pb_row {
         width: calc(100% - 32px) !important;
-        max-width: none;
+        max-width: none !important;
 
         margin-left: 1rem !important;
         margin-right: 1rem !important;
 
-        padding-left: 0;
-        padding-right: 0;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
 
         box-sizing: border-box;
     }
