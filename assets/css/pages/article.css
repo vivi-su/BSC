@@ -37,6 +37,13 @@
     margin-inline: auto;
 }
 
+.article-hero__inner.et_pb_row {
+    width: min(90%, 1120px) !important;
+    max-width: 1120px !important;
+
+    margin-inline: auto !important;
+}
+
 
 /* ===================================================
    Article Title
@@ -140,9 +147,9 @@ img.wp-post-image {
  * Match the hero's outer width.
  */
 .article-shell > .et_pb_row {
-    width: min(90%, 1200px) !important;
+    width: min(90%, 1120px) !important;
 
-    max-width: 1200px !important;
+    max-width: 1120px !important;
 
     margin-left: auto !important;
     margin-right: auto !important;
