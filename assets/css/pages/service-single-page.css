@@ -426,3 +426,164 @@
     padding: var(--space-lg);
   }
 }
+
+/* ===================================================
+   Helpful / Trusted Resources
+=================================================== */
+
+.service-resources {
+  margin-top: var(--section-space-xs);
+  padding-top: var(--space-2xl);
+
+  border-top: var(--border-light);
+}
+
+
+/* ===================================================
+   Header
+=================================================== */
+
+.service-resources__eyebrow {
+  display: block;
+  margin: 0 0 var(--space-md);
+
+  font-family: var(--font-body);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  line-height: 1.4;
+
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  color: var(--color-primary);
+}
+
+.service-resources__title {
+  margin: 0 0 var(--space-lg);
+}
+
+.service-resources__intro {
+  max-width: var(--text-width-sm);
+  margin: 0 0 var(--space-xl);
+}
+
+
+/* ===================================================
+   Resource List
+=================================================== */
+
+.service-resources__list {
+  display: grid;
+  gap: var(--space-md);
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+
+/* ===================================================
+   Resource Card
+=================================================== */
+
+.service-resource {
+  margin: 0;
+}
+
+.service-resource__link {
+  display: block;
+
+  padding: var(--space-lg);
+
+  color: var(--color-text);
+  text-decoration: none !important;
+
+  background-color: var(--color-background-soft);
+  border: var(--border-light);
+  border-radius: var(--radius-md);
+
+  transition:
+    transform var(--transition-default),
+    background-color var(--transition-default),
+    border-color var(--transition-default),
+    box-shadow var(--transition-default);
+}
+
+.service-resource__link:hover,
+.service-resource__link:focus-visible {
+  color: var(--color-text);
+
+  background-color: var(--color-surface);
+  border-color: var(--color-border);
+
+  transform: translateY(-2px);
+}
+
+.service-resource__link:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+}
+
+
+/* ===================================================
+   Resource Typography
+=================================================== */
+
+.service-resource__title {
+  display: block;
+
+  margin: 0 0 var(--space-xs);
+
+  font-family: var(--font-heading);
+  font-size: clamp(1.25rem, 1.5vw, 1.4rem);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.3;
+
+  color: var(--color-heading);
+}
+
+.service-resource__description {
+  display: block;
+
+  margin: 0;
+
+  font-family: var(--font-body);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-body);
+
+  color: var(--color-text-muted);
+}
+
+
+/* ===================================================
+   External Link Indicator
+=================================================== */
+
+.service-resource__title::after {
+  content: " ↗";
+
+  font-family: var(--font-body);
+  font-size: 0.8em;
+  font-weight: var(--font-weight-normal);
+
+  color: var(--color-primary);
+}
+
+
+/* ===================================================
+   Mobile
+=================================================== */
+
+@media (max-width: 767px) {
+
+  .service-resources {
+    margin-top: var(--space-2xl);
+    padding-top: var(--space-xl);
+  }
+
+  .service-resource__link {
+    padding: var(--space-md);
+  }
+
+}
