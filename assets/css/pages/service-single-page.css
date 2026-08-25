@@ -469,6 +469,7 @@
   display: grid;
   gap: var(--space-md);
 
+  width: 100%;
   margin: 0;
   padding: 0;
 
@@ -550,7 +551,7 @@
   font-size: var(--font-size-base);
   line-height: var(--line-height-body);
 
-  color: var(--color-text-muted);
+   color: var(--color-neutral-600);
 }
 
 
@@ -585,7 +586,13 @@
     padding-top: var(--space-xl);
   }
 
+  .service-resources__list {
+    width: min(100%, 34rem);
+    margin-inline: auto;
+  }
+
   .service-resource__link {
+    width: 100%;
     padding: var(--space-md);
   }
 
