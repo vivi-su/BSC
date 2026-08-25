@@ -434,14 +434,7 @@
 .service-resources {
   margin-top: var(--section-space-xs);
   padding-top: var(--space-2xl);
-
-  border-top: var(--border-light);
 }
-
-
-/* ===================================================
-   Header
-=================================================== */
 
 .service-resources__eyebrow {
   display: block;
@@ -482,6 +475,12 @@
   list-style: none;
 }
 
+.service-resources__list li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 
 /* ===================================================
    Resource Card
@@ -499,23 +498,20 @@
   color: var(--color-text);
   text-decoration: none !important;
 
-  background-color: var(--color-background-soft);
-  border: var(--border-light);
+  background-color: #f4f7f5;
+  border: 0;
   border-radius: var(--radius-md);
 
   transition:
     transform var(--transition-default),
     background-color var(--transition-default),
-    border-color var(--transition-default),
     box-shadow var(--transition-default);
 }
 
 .service-resource__link:hover,
 .service-resource__link:focus-visible {
   color: var(--color-text);
-
-  background-color: var(--color-surface);
-  border-color: var(--color-border);
+  background-color: #f4f7f5;
 
   transform: translateY(-2px);
 }
@@ -532,8 +528,10 @@
 
 .service-resource__title {
   display: block;
+  position: relative;
 
   margin: 0 0 var(--space-xs);
+  padding-right: 1.75rem;
 
   font-family: var(--font-heading);
   font-size: clamp(1.25rem, 1.5vw, 1.4rem);
@@ -557,17 +555,22 @@
 
 
 /* ===================================================
-   External Link Indicator
+   External Link Arrow
 =================================================== */
 
 .service-resource__title::after {
-  content: " ↗";
+  content: "↗";
+
+  position: absolute;
+  top: 0;
+  right: 0;
 
   font-family: var(--font-body);
-  font-size: 0.8em;
+  font-size: 0.9em;
   font-weight: var(--font-weight-normal);
+  line-height: 1;
 
-  color: var(--color-primary);
+  color: #385846;
 }
 
 
