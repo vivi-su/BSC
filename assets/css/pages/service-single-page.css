@@ -596,4 +596,8 @@
     padding: var(--space-md);
   }
 
+  .service-single__content ul, .service-single__content ol {
+    padding-left: 0;
+}
+
 }
