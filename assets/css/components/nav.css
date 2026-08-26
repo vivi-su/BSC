@@ -1,0 +1,21 @@
+/* ==========================================================
+   Navigation
+========================================================== */
+
+@media (max-width: 980px) {
+
+  /* Hamburger icon */
+  .mobile_menu_bar:before {
+    color: var(--color-forest-green) !important;
+  }
+
+  /* Mobile header bottom border */
+  #main-header {
+    border-bottom-color: var(--color-forest-green) !important;
+  }
+
+}
+
+body {
+  outline: 8px solid red !important;
+}
