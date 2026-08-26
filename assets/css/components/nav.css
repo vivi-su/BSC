@@ -10,10 +10,8 @@
   }
 
   /* Mobile header bottom border */
-  /* #main-header {
-    border-bottom-color: var(--color-forest-green) !important;
-  } */
+  
   .et_mobile_menu {
-    border-color: var(--color-forest-green) !important;
+    border-top: 2px solid var(--color-forest-green) !important;
   }
 }
