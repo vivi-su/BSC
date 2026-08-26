@@ -114,6 +114,15 @@ function vivi_enqueue_assets() {
         ),
 
 
+        'vivi-nav' => array(
+            'path' => '/assets/css/components/nav.css',
+            'deps' => array(
+                'vivi-variables',
+                'vivi-typography',
+            ),
+        ),
+
+
         /* ==========================================================
            Shared Page Systems
         ========================================================== */
