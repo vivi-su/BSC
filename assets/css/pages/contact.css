@@ -56,6 +56,7 @@
 .contact-about {
   margin-top: var(--section-space-sm);
   background-color: var(--color-background-gray);
+  border-radius: var(--radius-xl);
 }
 
 .contact-about__inner {
@@ -93,6 +94,74 @@
 
   .contact-about {
     margin-top: var(--space-2xl);
+  }
+
+}
+
+
+/* ===================================================
+   What Happens Next
+=================================================== */
+
+.contact-next {
+  margin-top: var(--section-space-sm);
+}
+
+.contact-next__inner {
+  padding-top: var(--section-space-sm);
+  padding-bottom: var(--section-space-sm);
+}
+
+.contact-next__header {
+  max-width: 42rem;
+  margin-bottom: var(--space-xl);
+}
+
+.contact-next__header h2 {
+  margin-bottom: var(--space-sm);
+}
+
+.contact-next__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-xl);
+}
+
+.contact-next__item {
+  position: relative;
+}
+
+.contact-next__number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 44px;
+  height: 44px;
+  margin-bottom: var(--space-md);
+
+  border-radius: 50%;
+  background-color: var(--color-background-gray);
+
+  font-weight: 700;
+}
+
+.contact-next__item h3 {
+  margin-bottom: var(--space-sm);
+}
+
+.contact-next__item p {
+  margin-bottom: 0;
+}
+
+
+/* Mobile */
+
+@media (max-width: 767px) {
+
+  .contact-next__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
   }
 
 }
