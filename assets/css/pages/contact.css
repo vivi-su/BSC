@@ -1,11 +1,16 @@
 /* ===================================================
+
    Contact Page
+
    Benjamin Schulz Counselling
+
 =================================================== */
 
 
 /* ===================================================
+
    Contact Intro
+
 =================================================== */
 
 .contact-intro {
@@ -14,8 +19,11 @@
 
 .contact-intro__inner {
   padding-top: var(--space-lg);
-  padding-bottom: var(--section-space-sm);
+  padding-bottom: var(--space-xl);
 }
+
+
+/* Main heading */
 
 .contact-intro__header {
   max-width: 48rem;
@@ -26,27 +34,67 @@
   margin-bottom: var(--space-md);
 }
 
-.contact-intro__grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: var(--space-xl);
-  max-width: 70rem;
+.contact-intro__header p {
+  margin-bottom: 0;
 }
 
-.contact-intro__item {
+
+/* Primary contact pathway */
+
+.contact-intro__primary {
+  max-width: 52rem;
   padding-top: var(--space-lg);
   border-top: 1px solid rgba(47, 50, 80, 0.15);
 }
 
-.contact-intro__item h3 {
+.contact-intro__primary h2 {
   margin-bottom: var(--space-sm);
 }
 
-.contact-intro__item p {
-  margin-bottom: var(--space-md);
+.contact-intro__primary p {
+  margin-bottom: 0;
 }
 
-.contact-intro__item .btn {
+
+/* ===================================================
+
+   Direct Booking Option
+
+=================================================== */
+
+.contact-booking {
+  margin-top: var(--space-xl);
+  margin-bottom: var(--section-space-sm);
+}
+
+.contact-intro__booking {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-xl);
+
+  max-width: 70rem;
+
+  padding: var(--space-lg);
+
+  background-color: var(--color-background-gray);
+  border-radius: 16px;
+}
+
+.contact-intro__booking-copy {
+  max-width: 42rem;
+}
+
+.contact-intro__booking-copy h3 {
+  margin-bottom: var(--space-sm);
+}
+
+.contact-intro__booking-copy p {
+  margin-bottom: 0;
+}
+
+.contact-intro__booking-button {
+  flex-shrink: 0;
   width: fit-content;
 }
 
@@ -55,58 +103,40 @@
 
 @media (max-width: 767px) {
 
-  .contact-intro__grid {
-    grid-template-columns: 1fr;
-    gap: var(--space-xl);
+  .contact-intro__inner {
+    padding-top: var(--space-lg);
+    padding-bottom: var(--space-lg);
   }
 
-  .contact-intro__item .btn {
-    width: 100%;
+  .contact-intro__header {
+    margin-bottom: var(--space-lg);
   }
 
-}
+  .contact-intro__primary {
+    padding-top: var(--space-lg);
+  }
 
+  .contact-intro__booking {
+    display: block;
+    padding: var(--space-lg);
+  }
 
-/* Coverage note */
+  .contact-intro__booking-copy {
+    max-width: none;
+  }
 
-.contact-intro__coverage {
-  max-width: 70rem;
-  margin-top: var(--space-xl);
-  padding: var(--space-lg);
+  .contact-intro__booking-button {
+    width: auto;
+    margin-top: var(--space-md);
+  }
 
-  background-color: var(--color-background-gray);
-  border-radius: 16px;
-}
-
-.contact-intro__coverage p {
-  margin: 0;
-}
-
-.contact-intro__coverage strong {
-  font-weight: 700;
-}
-
-/* ===================================================
-   Direct Booking Option
-=================================================== */
-
-.contact-page__booking {
-  margin-top: var(--space-xl);
-  padding-top: var(--space-lg);
-  border-top: 1px solid rgba(47, 50, 80, 0.15);
-}
-
-.contact-page__booking p {
-  margin-bottom: var(--space-md);
-}
-
-.contact-page__booking .btn {
-  width: fit-content;
 }
 
 
 /* ===================================================
+
    Counselling with Dr. Schulz
+
 =================================================== */
 
 .contact-about {
@@ -161,7 +191,9 @@
 
 
 /* ===================================================
+
    What Happens Next
+
 =================================================== */
 
 .contact-next {
@@ -199,6 +231,7 @@
 
   width: 44px;
   height: 44px;
+
   margin-bottom: var(--space-md);
 
   border-radius: 50%;
@@ -227,8 +260,11 @@
 
 }
 
+
 /* ===================================================
+
    Contact Form Messages
+
 =================================================== */
 
 .bsc-contact-form .et-pb-contact-message {
@@ -241,13 +277,16 @@
 
 .bsc-contact-form .et-pb-contact-message.is-error {
   padding: var(--space-lg) var(--space-xl);
+
   background-color: var(--color-background-gray);
   border-radius: 20px;
+
   text-align: left;
 }
 
 .bsc-contact-form .et-pb-contact-message.is-error p {
   margin: 0 0 var(--space-md);
+
   font-size: 1.1rem;
   line-height: 1.5;
   font-weight: 700;
@@ -272,20 +311,25 @@
 
 .bsc-contact-form .et-pb-contact-message.is-success {
   padding: var(--space-xl);
+
   background-color: var(--color-background-gray);
   border-radius: 20px;
+
   text-align: center;
 }
 
 .bsc-contact-form .et-pb-contact-message.is-success p {
   margin: 0;
+
   font-size: 1.15rem;
   line-height: 1.7;
 }
 
 .bsc-contact-form .et-pb-contact-message.is-success strong {
   display: block;
+
   margin-bottom: var(--space-sm);
+
   font-family: var(--font-heading);
   font-size: 1.6rem;
   line-height: 1.3;
@@ -306,4 +350,5 @@
   .bsc-contact-form .et-pb-contact-message.is-success strong {
     font-size: 1.4rem;
   }
+
 }
