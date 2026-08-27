@@ -19,7 +19,7 @@
 
 .contact-intro__inner {
   padding-top: var(--space-lg);
-  padding-bottom: var(--space-3lg);
+  padding-bottom: 0;
 }
 
 
@@ -42,8 +42,9 @@
 /* Primary contact pathway */
 
 .contact-intro__primary {
-  max-width: 52rem;
-  padding-top: var(--space-2lg);
+  max-width: 70rem;
+  margin-top: var(--space-xl);
+  padding-top: var(--space-xl);
   border-top: 1px solid rgba(47, 50, 80, 0.15);
 }
 
