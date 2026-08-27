@@ -1,0 +1,98 @@
+/* ===================================================
+   Contact Page
+   Benjamin Schulz Counselling
+=================================================== */
+
+
+/* ===================================================
+   Intro
+=================================================== */
+
+.contact-page {
+  background-color: var(--color-cream);
+}
+
+.contact-page__inner {
+  padding-top: var(--section-space-sm);
+  padding-bottom: var(--space-2xl);
+}
+
+.contact-page__header {
+  max-width: 52rem;
+}
+
+.contact-page__header h1 {
+  margin-bottom: var(--space-lg);
+}
+
+.contact-page__header > p {
+  max-width: 48rem;
+}
+
+
+/* ===================================================
+   Direct Booking Option
+=================================================== */
+
+.contact-page__booking {
+  margin-top: var(--space-xl);
+  padding-top: var(--space-lg);
+  border-top: 1px solid rgba(47, 50, 80, 0.15);
+}
+
+.contact-page__booking p {
+  margin-bottom: var(--space-md);
+}
+
+.contact-page__booking .btn {
+  width: fit-content;
+}
+
+
+/* ===================================================
+   Dr. Schulz Information
+=================================================== */
+
+.contact-about {
+  margin-top: var(--section-space-sm);
+  background-color: var(--color-background-gray);
+}
+
+.contact-about__inner {
+  padding-top: var(--section-space-sm);
+  padding-bottom: var(--section-space-sm);
+}
+
+.contact-about__inner {
+  max-width: 70rem;
+}
+
+.contact-about h2 {
+  max-width: 42rem;
+}
+
+.contact-about p {
+  max-width: 52rem;
+}
+
+
+/* ===================================================
+   Mobile
+=================================================== */
+
+@media (max-width: 767px) {
+
+  .contact-page__inner {
+    padding-top: var(--space-2xl);
+    padding-bottom: var(--space-xl);
+  }
+
+  .contact-page__booking .btn {
+    width: 100%;
+  }
+
+  .contact-about {
+    margin-top: var(--space-2xl);
+  }
+
+}

@@ -279,6 +279,30 @@ function vivi_enqueue_assets() {
     }
 
 
+            /* Contact Page */
+        if (is_page('contact-us')) {
+
+            $contact_css_path = $theme_dir . '/assets/css/pages/contact.css';
+
+            if (file_exists($contact_css_path)) {
+
+                wp_enqueue_style(
+                    'vivi-contact',
+                    $theme_uri . '/assets/css/pages/contact.css',
+                    array(
+                        'vivi-variables',
+                        'vivi-reset',
+                        'vivi-typography',
+                        'vivi-container',
+                        'vivi-buttons',
+                    ),
+                    filemtime($contact_css_path)
+                );
+            }
+        }
+
+
+
     /* ==========================================================
        Single Blog Posts
     ========================================================== */
