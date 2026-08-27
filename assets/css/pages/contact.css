@@ -86,13 +86,11 @@
 
 
 /* ===================================================
-   Dr. Schulz Information
+   Counselling with Dr. Schulz
 =================================================== */
 
 .contact-about {
   margin-top: var(--section-space-sm);
-  background-color: var(--color-background-gray);
-  border-radius: var(--radius-xl);
 }
 
 .contact-about__inner {
@@ -100,36 +98,43 @@
   padding-bottom: var(--section-space-sm);
 }
 
-.contact-about__inner {
+.contact-about__header {
+  max-width: 48rem;
+  margin-bottom: var(--space-xl);
+}
+
+.contact-about__header h2 {
+  margin-bottom: 0;
+}
+
+.contact-about__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-xl);
   max-width: 70rem;
 }
 
-.contact-about h2 {
-  max-width: 42rem;
+.contact-about__item {
+  padding-top: var(--space-lg);
+  border-top: 1px solid rgba(47, 50, 80, 0.15);
 }
 
-.contact-about p {
-  max-width: 52rem;
+.contact-about__item h3 {
+  margin-bottom: var(--space-sm);
+}
+
+.contact-about__item p {
+  margin-bottom: 0;
 }
 
 
-/* ===================================================
-   Mobile
-=================================================== */
+/* Mobile */
 
 @media (max-width: 767px) {
 
-  .contact-page__inner {
-    padding-top: var(--space-2xl);
-    padding-bottom: var(--space-xl);
-  }
-
-  .contact-page__booking .btn {
-    width: 100%;
-  }
-
-  .contact-about {
-    margin-top: var(--space-2xl);
+  .contact-about__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
   }
 
 }
