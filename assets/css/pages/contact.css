@@ -19,7 +19,7 @@
 
 .contact-intro__inner {
   padding-top: var(--space-lg);
-  padding-bottom: var(--space-xl);
+  padding-bottom: 0;
 }
 
 
@@ -43,7 +43,7 @@
 
 .contact-intro__primary {
   max-width: 52rem;
-  padding-top: var(--space-lg);
+  padding-top: var(--space-2lg);
   border-top: 1px solid rgba(47, 50, 80, 0.15);
 }
 
@@ -90,7 +90,7 @@
 }
 
 .contact-intro__booking-copy p {
-  margin-bottom: 0;
+  margin-bottom: var(--space-md);
 }
 
 .contact-intro__booking-button {
