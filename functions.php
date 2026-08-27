@@ -279,28 +279,46 @@ function vivi_enqueue_assets() {
     }
 
 
-            /* Contact Page */
-        if (is_page('contact-us')) {
+    /* ==========================================================
+        Contact Page
+    ========================================================== */
 
-            $contact_css_path = $theme_dir . '/assets/css/pages/contact.css';
+if (is_page('contact-us')) {
 
-            if (file_exists($contact_css_path)) {
+    /* Contact Page CSS */
+    $contact_css_path = $theme_dir . '/assets/css/pages/contact.css';
 
-                wp_enqueue_style(
-                    'vivi-contact',
-                    $theme_uri . '/assets/css/pages/contact.css',
-                    array(
-                        'vivi-variables',
-                        'vivi-reset',
-                        'vivi-typography',
-                        'vivi-container',
-                        'vivi-buttons',
-                    ),
-                    filemtime($contact_css_path)
-                );
-            }
-        }
+    if (file_exists($contact_css_path)) {
 
+        wp_enqueue_style(
+            'vivi-contact',
+            $theme_uri . '/assets/css/pages/contact.css',
+            array(
+                'vivi-variables',
+                'vivi-reset',
+                'vivi-typography',
+                'vivi-container',
+                'vivi-buttons',
+            ),
+            filemtime($contact_css_path)
+        );
+    }
+
+
+    /* Contact Page JavaScript */
+    $contact_js_path = $theme_dir . '/assets/js/contact.js';
+
+    if (file_exists($contact_js_path)) {
+
+        wp_enqueue_script(
+            'vivi-contact-js',
+            $theme_uri . '/assets/js/contact.js',
+            array(),
+            filemtime($contact_js_path),
+            true
+        );
+    }
+}
 
 
     /* ==========================================================
