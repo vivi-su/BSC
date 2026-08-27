@@ -5,30 +5,66 @@
 
 
 /* ===================================================
-   Intro
+   Contact Intro
 =================================================== */
 
-.contact-page {
-  background-color: var(--color-cream);
+.contact-intro {
+  margin-top: var(--section-space-sm);
 }
 
-.contact-page__inner {
+.contact-intro__inner {
   padding-top: var(--section-space-sm);
-  padding-bottom: var(--space-2xl);
+  padding-bottom: var(--section-space-sm);
 }
 
-.contact-page__header {
-  max-width: 52rem;
-}
-
-.contact-page__header h1 {
-  margin-bottom: var(--space-lg);
-}
-
-.contact-page__header > p {
+.contact-intro__header {
   max-width: 48rem;
+  margin-bottom: var(--space-xl);
 }
 
+.contact-intro__header h1 {
+  margin-bottom: var(--space-md);
+}
+
+.contact-intro__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-xl);
+  max-width: 70rem;
+}
+
+.contact-intro__item {
+  padding-top: var(--space-lg);
+  border-top: 1px solid rgba(47, 50, 80, 0.15);
+}
+
+.contact-intro__item h3 {
+  margin-bottom: var(--space-sm);
+}
+
+.contact-intro__item p {
+  margin-bottom: var(--space-md);
+}
+
+.contact-intro__item .btn {
+  width: fit-content;
+}
+
+
+/* Mobile */
+
+@media (max-width: 767px) {
+
+  .contact-intro__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+
+  .contact-intro__item .btn {
+    width: 100%;
+  }
+
+}
 
 /* ===================================================
    Direct Booking Option
