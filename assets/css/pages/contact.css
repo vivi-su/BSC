@@ -66,6 +66,26 @@
 
 }
 
+
+/* Coverage note */
+
+.contact-intro__coverage {
+  max-width: 70rem;
+  margin-top: var(--space-xl);
+  padding: var(--space-lg);
+
+  background-color: var(--color-background-gray);
+  border-radius: 16px;
+}
+
+.contact-intro__coverage p {
+  margin: 0;
+}
+
+.contact-intro__coverage strong {
+  font-weight: 700;
+}
+
 /* ===================================================
    Direct Booking Option
 =================================================== */
