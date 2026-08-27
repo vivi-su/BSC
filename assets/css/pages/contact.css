@@ -9,11 +9,11 @@
 =================================================== */
 
 .contact-intro {
-  margin-top: var(--section-space-sm);
+  margin-top: 0;
 }
 
 .contact-intro__inner {
-  padding-top: var(--section-space-sm);
+  padding-top: var(--space-lg);
   padding-bottom: var(--section-space-sm);
 }
 
