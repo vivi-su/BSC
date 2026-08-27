@@ -19,7 +19,7 @@
 
 .contact-intro__inner {
   padding-top: var(--space-lg);
-  padding-bottom: 0;
+  padding-bottom: var(--space-3lg);
 }
 
 
