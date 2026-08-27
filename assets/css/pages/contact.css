@@ -228,30 +228,30 @@
 }
 
 /* ===================================================
-   Contact Form Success Message
+   Contact Form Messages
 =================================================== */
 
-.et-pb-contact-message {
+.bsc-contact-form .et-pb-contact-message {
   max-width: 52rem;
   margin: var(--space-xl) auto;
-  padding: var(--space-xl);
+}
 
+
+/* Validation / error state */
+
+.bsc-contact-form .et-pb-contact-message:has(ul) {
+  padding: var(--space-lg) var(--space-xl);
   background-color: var(--color-background-gray);
   border-radius: 20px;
+  text-align: left;
+}
 
+
+/* Success state */
+
+.bsc-contact-form .et-pb-contact-message:not(:has(ul)) {
+  padding: var(--space-xl);
+  background-color: var(--color-background-gray);
+  border-radius: 20px;
   text-align: center;
-}
-
-.et-pb-contact-message p {
-  margin: 0;
-
-  font-size: 1.15rem;
-  line-height: 1.7;
-  font-weight: 500;
-}
-
-.et-pb-contact-message p:first-child {
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-bottom: var(--space-sm);
 }
