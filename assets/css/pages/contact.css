@@ -237,21 +237,73 @@
 }
 
 
-/* Validation / error state */
+/* Validation / Error */
 
-.bsc-contact-form .et-pb-contact-message:has(ul) {
+.bsc-contact-form .et-pb-contact-message.is-error {
   padding: var(--space-lg) var(--space-xl);
   background-color: var(--color-background-gray);
   border-radius: 20px;
   text-align: left;
 }
 
+.bsc-contact-form .et-pb-contact-message.is-error p {
+  margin: 0 0 var(--space-md);
+  font-size: 1.1rem;
+  line-height: 1.5;
+  font-weight: 700;
+}
 
-/* Success state */
+.bsc-contact-form .et-pb-contact-message.is-error ul {
+  margin: 0;
+  padding-left: 1.5rem;
+}
 
-.bsc-contact-form .et-pb-contact-message:not(:has(ul)) {
+.bsc-contact-form .et-pb-contact-message.is-error li {
+  margin-bottom: var(--space-sm);
+  line-height: 1.5;
+}
+
+.bsc-contact-form .et-pb-contact-message.is-error li:last-child {
+  margin-bottom: 0;
+}
+
+
+/* Success */
+
+.bsc-contact-form .et-pb-contact-message.is-success {
   padding: var(--space-xl);
   background-color: var(--color-background-gray);
   border-radius: 20px;
   text-align: center;
+}
+
+.bsc-contact-form .et-pb-contact-message.is-success p {
+  margin: 0;
+  font-size: 1.15rem;
+  line-height: 1.7;
+}
+
+.bsc-contact-form .et-pb-contact-message.is-success strong {
+  display: block;
+  margin-bottom: var(--space-sm);
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  line-height: 1.3;
+  font-weight: 700;
+}
+
+
+/* Mobile */
+
+@media (max-width: 767px) {
+
+  .bsc-contact-form .et-pb-contact-message.is-error,
+  .bsc-contact-form .et-pb-contact-message.is-success {
+    padding: var(--space-lg);
+    border-radius: 16px;
+  }
+
+  .bsc-contact-form .et-pb-contact-message.is-success strong {
+    font-size: 1.4rem;
+  }
 }

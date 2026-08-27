@@ -10,15 +10,21 @@ document.addEventListener('DOMContentLoaded', function () {
       return;
     }
 
-    /* Ignore validation/error messages */
-    if (message.querySelector('ul')) {
+    const hasContent = message.textContent.trim() !== '';
+    const hasErrors = message.querySelector('ul');
+
+    message.classList.remove('is-success', 'is-error');
+
+    if (!hasContent) {
       return;
     }
 
-    /* Only scroll when there is actual success text */
-    if (message.textContent.trim() === '') {
+    if (hasErrors) {
+      message.classList.add('is-error');
       return;
     }
+
+    message.classList.add('is-success');
 
     setTimeout(function () {
       message.scrollIntoView({
