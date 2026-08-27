@@ -226,3 +226,32 @@
   }
 
 }
+
+/* ===================================================
+   Contact Form Success Message
+=================================================== */
+
+.et-pb-contact-message {
+  max-width: 52rem;
+  margin: var(--space-xl) auto;
+  padding: var(--space-xl);
+
+  background-color: var(--color-background-gray);
+  border-radius: 20px;
+
+  text-align: center;
+}
+
+.et-pb-contact-message p {
+  margin: 0;
+
+  font-size: 1.15rem;
+  line-height: 1.7;
+  font-weight: 500;
+}
+
+.et-pb-contact-message p:first-child {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: var(--space-sm);
+}
