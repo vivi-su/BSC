@@ -208,6 +208,14 @@ h6,
 }
 
 
+.page-lead {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  font-style: italic;
+  color: var(--text-muted);
+  margin-top: 0.75rem;
+}
+
 /* ===================================================
    Display Typography
 =================================================== */
