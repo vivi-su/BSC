@@ -45,7 +45,7 @@
 }
 
 .services__intro {
-  max-width: var(--text-width-sm);
+  max-width: var(--text-width-md);
   margin: 0;
   color: var(--color-text);
 }
