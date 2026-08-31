@@ -55,6 +55,7 @@ function vivi_enqueue_assets() {
     $theme_uri = get_stylesheet_directory_uri();
 
 
+
     /* ==========================================================
        Base CSS
     ========================================================== */
@@ -119,6 +120,15 @@ function vivi_enqueue_assets() {
             'deps' => array(
                 'vivi-variables',
                 'vivi-typography',
+            ),
+        ),
+
+        'vivi-fees' => array(
+            'path' => '/assets/css/components/fees.css',
+            'deps' => array(
+                'vivi-variables',
+                'vivi-typography',
+                'vivi-buttons',
             ),
         ),
 
@@ -253,6 +263,7 @@ function vivi_enqueue_assets() {
     }
 
 
+
     /* ==========================================================
        Page-Specific CSS
     ========================================================== */
@@ -278,6 +289,33 @@ function vivi_enqueue_assets() {
         }
     }
 
+
+    /* ==========================================================
+        Fees & Insurance Page
+    ========================================================== */
+
+    if ( is_page( 'rate' ) ) {
+
+        $rate_css_path = $theme_dir . '/assets/css/pages/rate.css';
+
+        if ( file_exists( $rate_css_path ) ) {
+
+            wp_enqueue_style(
+                'vivi-rate',
+                $theme_uri . '/assets/css/pages/rate.css',
+                array(
+                    'vivi-variables',
+                    'vivi-reset',
+                    'vivi-typography',
+                    'vivi-container',
+                    'vivi-buttons',
+                    'vivi-fees',
+                    'vivi-cta',
+                ),
+                filemtime( $rate_css_path )
+            );
+        }
+    }
 
     /* ==========================================================
         Contact Page

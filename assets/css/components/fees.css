@@ -1,0 +1,182 @@
+/* ============================================================
+   BSC FEES COMPONENT
+   assets/css/components/fees.css
+============================================================ */
+
+.bsc-fees {
+  width: 100%;
+}
+
+.bsc-fees__cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2rem;
+
+  width: 100%;
+
+  margin-top: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.bsc-fees__card {
+  display: flex;
+  flex-direction: column;
+
+  min-width: 0;
+  min-height: 32rem;
+
+  padding: 2.25rem 1.5rem 1.5rem;
+
+  text-align: center;
+
+  background: #fff;
+  border-radius: var(--radius-md);
+
+  box-shadow:
+    0 0.5rem 1.5rem rgba(27, 35, 48, 0.12);
+}
+
+
+/* Icon */
+
+.bsc-fees__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 3.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.bsc-fees__icon img {
+  display: block;
+
+  width: 2rem;
+  height: 2rem;
+
+  object-fit: contain;
+
+  border-radius: 0;
+  box-shadow: none;
+}
+
+
+/* Heading */
+
+.bsc-fees__card h3 {
+  margin: 0 0 0.65rem;
+
+  font-family: var(--font-body);
+  font-size: var(--font-size-h4);
+  font-weight: var(--font-weight-semibold);
+  line-height: 1.35;
+
+  color: var(--color-indigo-navy-dark);
+}
+
+
+/* Audience */
+
+.bsc-fees__audience {
+  margin: 0 0 0.4rem !important;
+
+  font-size: 0.95rem;
+  line-height: 1.45;
+
+  color: var(--color-text-muted);
+}
+
+
+/* Format */
+
+.bsc-fees__format {
+  margin: 0 0 2rem !important;
+
+  font-size: 0.95rem;
+  line-height: 1.45;
+
+  color: var(--color-text);
+}
+
+.bsc-fees__format--strong {
+  font-weight: var(--font-weight-bold);
+}
+
+
+/* Duration */
+
+.bsc-fees__duration {
+  margin: 0 0 1.75rem !important;
+
+  font-size: var(--font-size-sm);
+  line-height: 1.4;
+  font-weight: var(--font-weight-bold);
+
+  color: var(--color-text);
+}
+
+
+/* Price */
+
+.bsc-fees__price {
+  margin: 0 0 2rem !important;
+
+  font-size: 1.35rem;
+  font-weight: var(--font-weight-semibold);
+
+  color: var(--color-heading);
+}
+
+
+/* Button */
+
+.bsc-fees__button {
+  width: 100%;
+  margin-top: auto;
+}
+
+
+/* ============================================================
+   TABLET
+============================================================ */
+
+@media (max-width: 980px) {
+
+  .bsc-fees__cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .bsc-fees__card:last-child {
+    grid-column: 1 / -1;
+
+    width: min(100%, 22rem);
+
+    justify-self: center;
+  }
+
+}
+
+
+/* ============================================================
+   MOBILE
+============================================================ */
+
+@media (max-width: 767px) {
+
+  .bsc-fees__cards {
+    grid-template-columns: 1fr;
+  }
+
+  .bsc-fees__card,
+  .bsc-fees__card:last-child {
+    grid-column: auto;
+
+    width: 100%;
+    min-height: auto;
+  }
+
+  .bsc-fees__button {
+    width: 100%;
+  }
+
+}
