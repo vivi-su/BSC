@@ -24,7 +24,7 @@
   width: 100%;
 
   padding:
-    clamp(4.5rem, 8vw, 7rem)
+    clamp(3.5rem, 6vw, 5rem)
     var(--container-padding-tablet);
 
   text-align: center;
@@ -58,12 +58,12 @@
 
 .rate-page__title {
   max-width: 60rem;
-
+  max-width: none;
   margin:
     0
     auto
     1.5rem;
-
+ white-space: nowrap;
   color: var(--color-heading-on-dark) !important;
 }
 
@@ -343,6 +343,7 @@
 
   .rate-page__title {
     max-width: 100%;
+    white-space: normal;
   }
 
 
