@@ -93,7 +93,7 @@
 }
 
 .service-card--featured .service-card__body {
-    padding: 0 var(--space-lg) var(--space-lg) 0;
+      padding: var(--space-lg) var(--space-lg) var(--space-lg) 0;
 }
 
 .service-card--featured .service-card__list {
@@ -375,6 +375,7 @@
   }
 
   .service-card--featured .service-card__video-wrap {
+     margin-top: var(--space-lg);
     border-radius: var(--image-radius-md);
   }
 
