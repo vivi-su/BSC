@@ -102,6 +102,7 @@
 }
 
 .service-card__video-wrap {
+  margin-top: var(--space-lg);
   position: relative;
   display: block;
   align-self: start;
@@ -375,7 +376,7 @@
   }
 
   .service-card--featured .service-card__video-wrap {
-     margin-top: var(--space-2xl);
+     margin-top: var(--space-lg);
     border-radius: var(--image-radius-md);
   }
 
