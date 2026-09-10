@@ -375,7 +375,7 @@
   }
 
   .service-card--featured .service-card__video-wrap {
-     margin-top: var(--space-lg);
+     margin-top: var(--space-2xl);
     border-radius: var(--image-radius-md);
   }
 
