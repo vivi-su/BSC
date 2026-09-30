@@ -5,15 +5,15 @@
 /* Regular navigation */
 #top-menu > li > a {
     text-transform: none!important;
-    font-size: 16px;
-    font-weight: 500;
+    font-size: var(--font-size-base)!important;
+    font-weight: var(--font-weight-medium);
     letter-spacing: 0.2px;
 }
 
 /* Book a Session button */
 #top-menu > li.nav-primary-btn > a {
-    text-transform: uppercase;
-    font-weight: 600;
+    text-transform: uppercase!important;
+    font-weight: var(--font-weight-semibold);
     letter-spacing: 0.5px;
 }
 
