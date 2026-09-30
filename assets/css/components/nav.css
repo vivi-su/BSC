@@ -3,7 +3,7 @@
 ========================= */
 
 #top-menu li a {
-    text-transform: none;
+    text-transform: none!important;
 }
 
 
