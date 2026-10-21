@@ -27,6 +27,41 @@
 }
 
 
+
+/* =========================================
+   BSC REUSABLE DESKTOP VERTICAL SUBMENU
+========================================= */
+
+@media (min-width: 981px) {
+
+  #top-menu > li.bsc-submenu > ul.sub-menu {
+    display: block !important;
+    width: 280px !important;
+    min-width: 280px !important;
+    column-count: 1 !important;
+  }
+
+  #top-menu > li.bsc-submenu > ul.sub-menu > li {
+    display: block !important;
+    position: relative !important;
+    float: none !important;
+    clear: both !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    margin: 0 !important;
+  }
+
+  #top-menu > li.bsc-submenu > ul.sub-menu > li > a {
+    display: block !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+}
+
+
+
+
 /* ==========================================================
    Navigation
 ========================================================== */
